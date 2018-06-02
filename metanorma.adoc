@@ -9,7 +9,7 @@
 :title-intro-en: Information and documentation
 :title-main-en: Standards reference model and serialization
 :title-intro-fr: Information et documentation
-:title-main-fr: Modèle de référence bibliographique et sérialisation
+:title-main-fr: ****
 :doctype: international-standard
 :docstage: 10
 :docsubstage: 92
@@ -103,11 +103,67 @@ edition of the referenced document (including any amendments) applies.
 
 * [[[isoiecdir2,ISO/IEC DIR 2]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
 
+* [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
+
 * [[[gbt11,GB/T 1.1]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
+
+* [[[relation,ISO xxxx:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
+
+
 
 == Terms and Definitions
 
-== Modelling Hierarchy
+== Modelling Classes
+
+The Metanorma document model is expressed hierarchically. 
+
+* At its base is a _Basic Document_ model, which expresses the structure of generic documents.
+* The Basic Document model is specialised as a _Standards Document_ structure, conveying the structure particular to standards documents as a class.
+* The Standards Document model is specialised into models specific to particular standards. 
+* Specific standards models can form the basis in turn of other standards models. For example, the Chinese GB models are structurally modelled after ISO documents; so the GB Standard model is best expressed as a specialisation of the ISO Standard model.
+
+Specialisation of a model consists of:
+
+* Adding classes to a base model.
+* Changing attributes of a base model class. This is not restricted to adding attributes, as is the case in typical entity subclassing; it can also include removing attributes from a class, changing their obligation and cardinality, and changing their type, including changing enumerations. 
+* For reasons of clarity, renaming classes and attributes is avoided in specialisation.
+
+The classes involved in the document model are of three classes:
+
+* Sections
+* Blocks (paragraph-level groupings of text)
+* Inline elements (groupings of text smaller than a paragraph, including plain strings)
+
+In the Metanorma model, the classes are in a strict hierarchical relation: documents consist of sections, which consist of blocks, which consist of inline elements. Sections can be nested within sections (e.g. clauses and subclauses); blocks can be nested within blocks (e.g. nested lists). Although the model does not currently provide for it, inline elements can also be embedded within other inline elements. However, sections are not expected to be siblings of blocks, nor blocks of inline elements. For example, a list (block) is not expected to occur next to inline text within a paragraph. For that reason, paragraphs cannot contain other block elements.
+
+The Basic Document model contains the bulk of the blocks and inline elements in the Metanorma model. The Standards Model and the standard-specific models mostly deal with the organisation of sections within a standards document.
+
+The Metanorma document model depends on the <<iso690>> bibliography model for its expression of bibliographic references. The specific model instantiation and serialisation it uses is the subject of a separate proposal, <<relaton>>, and is not discussed further here.
+
+== Basic Document Model
+
+TODO: UML diagram
 
 
+== Standards Document Model
+
+TODO: UML diagram
+
+
+== ISO Standard Document Model
+
+The ISO Standard document model is given here as an exemplar of the application of Metanorma modelling to a particular standard
+
+TODO: UML diagram
+
+[[AnnexA]]
+[appendix]
+== Serialisation
+
+The following is a proposed serialisation of the Metanorma document model in XML, expressed as a RelaxNG Compact grammar.
+
+TODO: Grammar
+
+[bibliography]
+== Bibliography 
 
