@@ -125,7 +125,7 @@ The Metanorma document model is expressed hierarchically.
 Specialisation of a model consists of:
 
 * Adding classes to a base model.
-* Changing attributes of a base model class. This is not restricted to adding attributes, as is the case in typical entity subclassing; it can also include removing attributes from a class, changing their obligation and cardinality, and changing their type, including changing enumerations. 
+* Changing attributes of a base model class. This is not restricted to adding attributes, as is the case in typical entity subclassing; it can also include removing attributes from a class, changing their obligation and cardinality, and changing their type, including changing enumerations. Attributes can be overruled at any level; for example, standards-specific models routinely enhance the bibliographic model at the base of the hierarchy.
 * For reasons of clarity, renaming classes and attributes is avoided in specialisation.
 
 The classes involved in the document model are of three classes:
