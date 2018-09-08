@@ -488,7 +488,7 @@ The _Standards Document_ model extends the _Basic Document_ modelling of the doc
 * Zero or more optional _prefaces_ (Standard Hierarchical Sections: <<standardssection>>).
 * One or more _sections_ (Standard Hierarchical Sections).
 * Zero or more _annexes_ (Standard Hierarchical Sections).
-* Zero or more bibliographies (Standard References Sections: <<standardssection>>).
+* Zero or more _bibliographies_ (Standard References Sections: <<standardssection>>).
 
 [plantuml]
 ....
@@ -505,7 +505,7 @@ The _Standards Document_ model extends the _Basic Document_ modelling of section
 * Sections in a standards document fall into two categories: Clause Sections, which are numbered, and form part of the main flow of the document, and Content sections (Standard Hierarchical Sections), which are optionally not numbered, and which lie outside the main flow of the document.
 * The subclauses of Clauses are themselves Clause Sections; they continue the hierarchical numbering of Clause Sections at deeper hierarchical levels. The subclauses of Content sections are Standard Sections, and need not be numbered.
 * Annexes and Clause Sections are modelled in the same way in the _Standards Document_ model. However they are expected to be numbered differently, and to be rendered as separate sequences.  
-* Standard References Sections are a subclass of Standard Section. Like the References Sections of the _Basic Document_ model (<<basicsection>>), they are leaf notes which contain zero or more bibliographical references (as modelled in <<relaton>>).
+* Standard References Sections are a subclass of Standard Section. Like the References Sections of the _Basic Document_ model (<<basicsection>>), they are leaf nodes which contain zero or more bibliographical references (as modelled in <<relaton>>).
 
 Although it is different to capture in a container-based model, the _Standards Document_ model requires "hanging paragraphs" to be avoided: a Clause section in particular should contain either blocks or subsections, but not both. This is a requirement in <<isoiecdir2>>, but the need to reference text in clauses unambiguously by clause number makes the avoidance of hanging paragraphs desirable for standards documents in general. The requirement is less pressing for Content sections (which are unnumbered), and Annexes (as exemplified in <<isoiecdir2>> itself.)
 
@@ -516,8 +516,8 @@ include::standoc_uml/StandardDoc_Sections.wsd[]
 
 The _Standards Document_ model models two further subclasses of Clause Sections:
 
-* Definition Sections consist of one or more Definition lists (<<basiclist>>), and are used to define symbols and abbreviations used in the remainder of the document. They can also be used as glossaries, with simple definitions, in contrast to the more elaborate definitions given in Terms Sections.
-* Terms Sections give elaborated definitions of terms used in the document; they are intended to align to the structure of terms in <<isoiecdir2>>. Term Sections consist of zero or more Terms; Terms in turn are composed of the following elements:
+* _Definition Sections_ consist of one or more Definition lists (<<basiclist>>), and are used to define symbols and abbreviations used in the remainder of the document. They can also be used as glossaries, with simple definitions, in contrast to the more elaborate definitions given in Terms Sections.
+* _Terms Sections_ give elaborated definitions of terms used in the document; they are intended to align to the structure of terms in <<isoiecdir2>>. Term Sections consist of zero or more Terms; _Terms_ in turn are composed of the following elements:
 
 `id`:: An optional identifier for the term, to be used in cross-references.
 `preferred`:: One or more names under which the term being defined is canonically known.
@@ -535,7 +535,6 @@ include::standoc_uml/StandardDoc_Terms.wsd[]
 ....
 
 
-Text
 [[standardsblock]]
 === Block, Data Types
 
@@ -546,14 +545,68 @@ There is no difference in the modelling of blocks or data types between the _Bas
 [appendix]
 == ISO Standard Document Model Profile
 
-The ISO Standard document model is given here as an exemplar of the application of Metanorma modelling to a particular standard
+=== General
 
-TODO: UML diagram
+The _ISO Standard Document_ model is given here as an exemplar of the application of Metanorma modelling to a particular standard.
 
-TODO: Grammar
+[[isodocument]]
+=== Document, Section
+
+The _ISO Standard Document_ model extends the _Standards Document_ modelling of the document by requiring the following specific types of section:
+
+* A _Preface_, consisting of a _Foreword_ (a Basic Section: <<basicsection>>), and an optional _Introduction_ (a ClauseSection: <<standardssection>>, since an ISO Introduction can optionally have numbered subsections).
+* One or more Clause Sections (<<standardssection>>).
+* Zero or more Annexes (<<standardssection>>).
+
+Annexes in the _ISO Standard Document_ can optionally contain one or more _Appendixes_, which can be thought of as annexes of the annex section.
+
+NOTE: Appendixes are not defined in <<isoiecdir2>>, but they appear in the companion standard <<isoiecdir1>>. For example, Annex SL of <<isoiecdir1>> includes Appendix 1, Appendix 2, and Appendix 3; Appendix 2 "High level structure, identical core text, common terms and core definitions" itself contains an Introduction and 10 clauses, including a Terms clause.
+
+The _ISO Standard Document_ model document also includes zero or more `termSources` elements, giving the citations for the documents that the Terms Section draws on for its definitions and repertoire of terms.
+
+The _ISO Standard Document_ model document uses ISO-specific extensions to the <<relaton>> metadata about a document (<<isobib>>).
+
+[plantuml]
+....
+include::iso_uml/IsoDoc_IsoStandardDocument.wsd[]
+....
+
+[[isoblock]]
+=== Block
+
+The _ISO Standard Document_ model extends the _Standards Document_ modelling of blocks for one block definition:
+
+* The types that an Admonition can belong to are overridden to belong to the following set prescribed in <<isoiecdir2>>: _Danger, Caution, Warning, Important, Safety Precaution_.
+
+[[isobib]]
+=== Bibliography
+
+We note here the _ISO Standard Document_ overrides of the <<relaton>> bibliographic model; although the contents of <<relaton>> are out of scope of this document, its customisation for a specific standard are in scope.
+
+<<relaton>> is intended as a highly generic model, and custom bibliographic elements would impede the reuse of bibliographic entries between standards. However, it is useful for the metadata describing the current document (`bibdata`: <<basicdocument>>) to be enriched to provide metadata relevant to the standard class.
+
+The bibliographic modelling of ISO documents is enriched as follows:
+
+* The document identifier is refined to contain three optional parts: a project number, a part number, and a technical committee document number.
+* The document title is broken down into an optional Introductory component, a mandatory Main component, and an optional Part component.
+* The document type is constrained to be one of the following: _International Standard, Technical Specification, Technical Report, Publicly Available Specification, International Workshop Agreement, Guide_.
+* The document status is broken down into an ISO Document Stage code (<<isostage>>), an ISO Document Substage code (<<isostage>>), and an Iteration number.
+* The editorial group responsible for the document is defined with four components: a mandatory Technical Committee, an optional Subcommittee, an optional Workgroup, and an optional Secretariat. The Technical Committee, Subcommittee and Workgroup, in turn, are instances of the ISO Subgroup class, defined as having a name, an optional type, and an optional number.
+* The document has one or more International Classification for Standards classifications <<ics>>. The ICS classification is defined as a code, and an optional text explaining the code.
+* The document has zero or more source URIs.
+* The document has an optional abstract.
+* The document has an optional "All Parts" boolean attribute, indicating whether the bibliographic description applies across all Part documents under the same project number (which makes it a multi-document description).
+
+[plantuml]
+....
+include::iso_uml/IsoDoc_IsoBibliographicItem.wsd[]
+....
+
 
 [bibliography]
 == Bibliography 
+
+* [[[isoiecdir1,ISO/IEC DIR 1]]], _Procedures for the technical work_
 
 * [[[isoiecdir2,ISO/IEC DIR 2]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
 
@@ -566,3 +619,7 @@ TODO: Grammar
 * [[[rfc7991,IETF RFC 7991]]], _The "xml2rfc" Version 3 Vocabulary_
 
 * [[[asciidoctor,Asciidoctor]]], _Asciidoctor User Manual._ https://asciidoctor.org/docs/user-manual/
+
+* [[[ics,ics]]], _ISO International Classification for Standards (ICS)_, https://www.iso.org/publication/PUB100033.html
+
+* [[isostage,isostage]], _International harmonized stage codes_, https://www.iso.org/stage-codes.html
