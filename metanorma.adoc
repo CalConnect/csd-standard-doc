@@ -622,4 +622,4 @@ include::iso_uml/IsoDoc_IsoBibliographicItem.wsd[]
 
 * [[[ics,ics]]], _ISO International Classification for Standards (ICS)_, https://www.iso.org/publication/PUB100033.html
 
-* [[isostage,isostage]], _International harmonized stage codes_, https://www.iso.org/stage-codes.html
+* [[[isostage,isostage]]], _International harmonized stage codes_, https://www.iso.org/stage-codes.html
