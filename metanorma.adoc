@@ -57,10 +57,10 @@ The process of generating standards documents is problematic, and becoming more 
 * The rigorous and detailed directives around document structure articulated in <<isoiecdir2>> are being manually validated by the editorial teams, with mixed results.
 * Editing of documents substantially revolves around Microsoft Word toolsets, with all the problems that conflating document structure and presentation introduce. The editorial process has to spend significant amounts of time on formatting rather than document content, and is vulnerable to error. Opportunities to automate document presentation independently of content (as is routinely done in the HTML world with CSS) are not being taken up.
 * Existing exchange mechanisms for documents have been claimed to focus on document appearance, rather than document structure, and so do not alleviate the formatting burden on the editorial process.
-* Different standards have completely different workflows, with different inputs: anyone submitting standards text to more than one standard body has to replicate a significant amount of work.
+* Different standards have completely different workflows, with different inputs: anyone submitting the same standards text to more than one standard body has to replicate a significant amount of work.
 * Within the ISO community, subcommittees are resorting to extreme measures such as always having a national body put in a negative vote in DIS or DAM ballots, in order to force a text review, and to reduce the large number of content and formatting errors that routinely occur in published standards.
 
-These problems are if anything even more acute in other standards bodies. The Chinese National Standards body's counterpart to <<isoiecdir2>>, <<gbt11>>, is rather more prescriptive than <<isoiecdir2>> about formatting; despite support of standards authoring through an exhaustive Microsoft Word template wizard, the adherence of published standards to <<gbt11>> is haphazard at best. The wizard provided by GB was a Windows-specific tool that no longer works on contemporary systems -- which highlights another vulnerability with using proprietary tools to support standards production.
+These problems are if anything even more acute in other standards bodies. The Chinese National Standards body's counterpart to <<isoiecdir2>>, <<gbt11>>, is rather more prescriptive than <<isoiecdir2>> about formatting; despite support of standards authoring through an exhaustive Microsoft Word template wizard, the adherence of published standards to <<gbt11>> is haphazard at best. The wizard provided by the Chinese National Standards body was a Windows-specific tool written in 2010 that no longer works on contemporary systems -- which highlights another vulnerability with using proprietary tools to support standards production.
 
 We have identified a need for a standards document production process that leverages a non-WYSIWYG approach to document production, such as has been used for years in instances like LaTeX, HTML, and DocBook, and more recently Markdown and Asciidoctor. We have also identified a need for the process to be based on a formal document model,  such as is seen in DocBook, HTML, and TEI, and able to deal with the particular needs of standards documents.
 
@@ -68,10 +68,10 @@ In this document, we propose Metanorma as such a standards document production p
 
 This approach has the following benefits:
 
-* The approach enables an end-to-end, author-to-publishing workflow, with well-managed artefacts along each stage, that editorial bodies can exercise appropriate control over. This becomes all the easier as each artefact until the very end is text rather than binary. 
+* The approach enables an end-to-end, author-to-publishing workflow, with well-managed artefacts along each stage, that editorial bodies can exercise appropriate control over. This becomes all the easier as each artefact until the very end is text rather than binary: that allows the document management infrastructure around computer source code (such as version control) to be used to manage standards document production. 
 * Much of the tedium and unpredictability around formatting documents to align with presentation requirements is automated, since the document model is semantic, and abstracted away from presentation. Formatting is applied only at the very end of the process. This includes not only formatting details such as margin sizes and font choices, but also autonumbering of sections and tables, cross-referencing, automated generation of references, and generating tables of contents.
 * The structural and content requirements around standards documents can be captured in the document model, and documents can therefore be subject to formal validation against the model. That means that a Metanorma-based process can provide substantial feedback to authors on the extent to which they comply with the rules expressed in specifications like <<isoiecdir2>> -- including rules around wording (e.g. where requirements can occur), as well as document structure.
-* The document model is substantially the same across standards, as is the non-WYSIWYG text input it is derived from. That means that text can be repurposed for different standards bodies with minimal effort: it is treated mostly as a swap-out of stylesheets, with only minor adjustments needed to content.
+* The document model is substantially the same across standards, as is the non-WYSIWYG text input that it is derived from. That means that text can be repurposed for different standards bodies with minimal effort: it is treated mostly as a swap-out of stylesheets, with only minor adjustments needed to content.
 
 Currently the Metanorma process is realised in the Ruby programming language, with the non-WYSIWYG text input expressed in Asciidoc, and output generated in
 HTML, Microsoft Word (.doc), and PDF (generated from HTML). Because of the modular approach taken to the toolset, other input and output formats can be supported.
@@ -87,14 +87,24 @@ Development of Metanorma started in late 2017. Metanorma is already in used by s
 
 == Scope
 
-This document provides the Metanorma reference model and serialisation for standards documents.
+This document provides the Metanorma reference model for standards documents. Serialisation of the reference model will be discussed in a separate document.
 
 The mapping of the reference model to output formats such as HTML, and the application of organisation-specific styling to those outputs, is out of scope of this document.
+
+This document discusses processes around customising the reference model for different standards, and describes customisation for ISO standards as one example profile in <<isoprofile>>. Prescribing profiles of the document model for particular standards, however, is out of scope of this document.
+
+The modelling of bibliographies and bibliographic citations is part of the reference model, but is the subject of a separate proposal, <<relaton>>, and is not discussed in detail in this document.
+
+The modelling of changes to documents is in scope of the Basic Document model described here, but is not described in this document.
 
 Markup conventions in text markup schemes (such as Asciidoc) that enable generation of the reference model are out of scope of this document.
 
 [bibliography]
 == Normative References
+
+// Surely the following boilerplate can be suppressed
+
+// All of these I'd argue are informative not normative
 
 The following documents are referred to in the text in such a way that some or
 all of their content constitutes requirements of this document. For dated
@@ -105,22 +115,29 @@ edition of the referenced document (including any amendments) applies.
 
 * [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
 
-* [[[gbt11,GB/T 1.1]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
+* [[[gbt11,CN(GB/T 1.1)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
 
-* [[[relation,ISO xxxx:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
+* [[[relaton,ISO xxxx:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
 
+* [[[rfc7749,IETF RFC 7749]]], _The "xml2rfc" Version 2 Vocabulary_
+
+* [[[rfc7991,IETF RFC 7991]]], _The "xml2rfc" Version 3 Vocabulary_
+
+* [[[asciidoctor,Asciidoctor]]], _Asciidoctor User Manual._ https://asciidoctor.org/docs/user-manual/
 
 
 == Terms and Definitions
 
-== Modelling Classes
+== Modelling
+
+=== Structure
 
 The Metanorma document model is expressed hierarchically. 
 
 * At its base is a _Basic Document_ model, which expresses the structure of generic documents.
 * The Basic Document model is specialised as a _Standards Document_ structure, conveying the structure particular to standards documents as a class.
-* The Standards Document model is specialised into models specific to particular standards. 
-* Specific standards models can form the basis in turn of other standards models. For example, the Chinese GB models are structurally modelled after ISO documents; so the GB Standard model is best expressed as a specialisation of the ISO Standard model.
+* The Standards Document model is further specialised into models specific to particular standards. 
+* Specific standards models can form the basis in turn of other standards models. For example, the Chinese National Standards model, as described in <<gbt11>>, is structurally modelled after ISO documents, and is explicitly described as a localisation of the 2004 version of <<isoiecdir2>>. So the Chinese Standards model is best expressed as a specialisation of the ISO Standards model.
 
 Specialisation of a model consists of:
 
@@ -134,15 +151,47 @@ The classes involved in the document model are of three classes:
 * Blocks (paragraph-level groupings of text)
 * Inline elements (groupings of text smaller than a paragraph, including plain strings)
 
-In the Metanorma model, the classes are in a strict hierarchical relation: documents consist of sections, which consist of blocks, which consist of inline elements. Sections can be nested within sections (e.g. clauses and subclauses); blocks can be nested within blocks (e.g. nested lists). Although the model does not currently provide for it, inline elements can also be embedded within other inline elements. However, sections are not expected to be siblings of blocks, nor blocks of inline elements. For example, a list (block) is not expected to occur next to inline text within a paragraph. For that reason, paragraphs cannot contain other block elements.
+In the Metanorma model, the classes are in a strict hierarchical relation: documents consist of sections, which consist of blocks, which consist of inline elements. Sections can be nested within sections (e.g. clauses and subclauses); blocks can be nested within blocks (e.g. nested lists). Although the model does not currently provide for it, inline elements can also be embedded within other inline elements (e.g. bold + italics). However, sections are not expected to be siblings of blocks, nor blocks of inline elements. For example, a list (block) is not expected to occur next to inline text within a paragraph. For that reason, paragraphs cannot contain other block elements, such as lists or tables.
+
+NOTE: This constraint is inherited from tools like Markdown and Asciidoctor, and is not present in XML-based schemas like HTML, TEI-C, or DocBook. It helps to simplify the document model significantly, and while it sacrifices some expressive potential, the difference is minor, particularly with regards to the rendering of paragraphs. 
 
 The Basic Document model contains the bulk of the blocks and inline elements in the Metanorma model. The Standards Model and the standard-specific models mostly deal with the organisation of sections within a standards document.
 
 The Metanorma document model depends on the <<iso690>> bibliography model for its expression of bibliographic references. The specific model instantiation and serialisation it uses is the subject of a separate proposal, <<relaton>>, and is not discussed further here.
 
+=== Influences
+
+The Metanorma document model has drawn on several existing models, with a view to reflecting the expressiveness of existing standards, but also to align with the capability of established document production tools.
+
+The standards models consulted most closely for Metanorma are those for ISO standards <<isoiecdir2>> and RFC standards (<<rfc7749>>, <<rfc7991>>). The document production tools that Metanorma consciously sought to align with are HTML 4, HTML 5, Markdown, Asciidoctor (<<Asciidoctor>>), and Microsoft Word. The modelling of blocks and inline elements in particular are closely aligned with HTML.
+
 == Basic Document Model
 
-TODO: UML diagram
+=== Document
+
+The _Basic Document_ model treats all documents as collections of _sections_ (<<basicsection>>). It also adds the following metadata as part of the document model:
+
+// Please confirm what I've assumed here for identifier
+
+`identifier`:: a globally unique identifier for the document in an agreed identifier schema. The identifier is to be used for tracking interactions with the document without depending on formal document registries; it would be exemplified by a GUID, rather than a document registry identifier such as "ISO 639", which belongs to `bibdata`.
+`bibdata`:: a bibliographic description, capturing bibliographic metadata about the document itself, including authors, title, and date of production (<<relaton>>)
+`version`:: information about the current version of the document, including an `edition` (represented in the Basic model as an ordinal numeral), the date of latest revision (`revisionDate`), and a textual description of the current `draft`.
+`integrityValue`:: an optional digital signature of the document (<<integrityValue>>). 
+
+[plantuml]
+....
+include::basicdoc_uml/BasicDocument.wsd[]
+....
+
+[[basicsection]]
+=== Section
+
+
+[[datavalues]]
+=== Data Values
+
+[[integrityvalue]]
+==== Integrity Value
 
 
 == Standards Document Model
@@ -150,17 +199,13 @@ TODO: UML diagram
 TODO: UML diagram
 
 
-== ISO Standard Document Model
+[[isoprofile]]
+[appendix]
+== ISO Standard Document Model Profile
 
 The ISO Standard document model is given here as an exemplar of the application of Metanorma modelling to a particular standard
 
 TODO: UML diagram
-
-[[AnnexA]]
-[appendix]
-== Serialisation
-
-The following is a proposed serialisation of the Metanorma document model in XML, expressed as a RelaxNG Compact grammar.
 
 TODO: Grammar
 
