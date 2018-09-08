@@ -73,7 +73,7 @@ This approach has the following benefits:
 * The structural and content requirements around standards documents can be captured in the document model, and documents can therefore be subject to formal validation against the model. That means that a Metanorma-based process can provide substantial feedback to authors on the extent to which they comply with the rules expressed in specifications like <<isoiecdir2>> -- including rules around wording (e.g. where requirements can occur), as well as document structure.
 * The document model is substantially the same across standards, as is the non-WYSIWYG text input that it is derived from. That means that text can be repurposed for different standards bodies with minimal effort: it is treated mostly as a swap-out of stylesheets, with only minor adjustments needed to content.
 
-Currently the Metanorma process is realised in the Ruby programming language, with the non-WYSIWYG text input expressed in Asciidoc, and output generated in
+Currently the Metanorma process is realised in the Ruby programming language, with the non-WYSIWYG text input expressed in Asciidoctor, and output generated in
 HTML, Microsoft Word (.doc), and PDF (generated from HTML). Because of the modular approach taken to the toolset, other input and output formats can be supported.
 
 Development of Metanorma started in late 2017. Metanorma is already in used by standards authors for several standards:
@@ -95,9 +95,9 @@ This document discusses processes around customising the reference model for dif
 
 The modelling of bibliographies and bibliographic citations is part of the reference model, but is the subject of a separate proposal, <<relaton>>, and is not discussed in detail in this document.
 
-The modelling of changes to documents is in scope of the Basic Document model described here, but is not described in this document.
+The modelling of changes to documents is in scope of the _Basic Document_ model described here, but is not described in this document.
 
-Markup conventions in text markup schemes (such as Asciidoc) that enable generation of the reference model are out of scope of this document.
+Markup conventions in text markup schemes (such as Asciidoctor) that enable generation of the reference model are out of scope of this document.
 
 [bibliography]
 == Normative References
@@ -111,19 +111,13 @@ all of their content constitutes requirements of this document. For dated
 references, only the edition cited applies. For undated references, the latest
 edition of the referenced document (including any amendments) applies.
 
-* [[[isoiecdir2,ISO/IEC DIR 2]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
-
-* [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
-
-* [[[gbt11,CN(GB/T 1.1)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
-
 * [[[relaton,ISO xxxx:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
-
-* [[[rfc7749,IETF RFC 7749]]], _The "xml2rfc" Version 2 Vocabulary_
-
-* [[[rfc7991,IETF RFC 7991]]], _The "xml2rfc" Version 3 Vocabulary_
-
-* [[[asciidoctor,Asciidoctor]]], _Asciidoctor User Manual._ https://asciidoctor.org/docs/user-manual/
+* [[[rfc3986,IETF RFC 3986]]], _Uniform Resource Identifier (URI): Generic Syntax_
+* [[[iso639,ISO 639 (all parts)]]], _Codes for the representation of names of languages_
+* [[[iso8601,ISO 8601]]], _Data elements and interchange formats – Information interchange – Representation of dates and times_
+* [[[iso10118,ISO 10118 (all parts)]]], _Information technology -- Security techniques -- Hash-functions_
+* [[[iso14888,ISO 14888 (all parts)]]], _Information technology -- Security techniques -- Digital signatures with appendix_
+* [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
 
 
 == Terms and Definitions
@@ -135,7 +129,7 @@ edition of the referenced document (including any amendments) applies.
 The Metanorma document model is expressed hierarchically. 
 
 * At its base is a _Basic Document_ model, which expresses the structure of generic documents.
-* The Basic Document model is specialised as a _Standards Document_ structure, conveying the structure particular to standards documents as a class.
+* The _Basic Document_ model is specialised as a _Standards Document_ structure, conveying the structure particular to standards documents as a class.
 * The Standards Document model is further specialised into models specific to particular standards. 
 * Specific standards models can form the basis in turn of other standards models. For example, the Chinese National Standards model, as described in <<gbt11>>, is structurally modelled after ISO documents, and is explicitly described as a localisation of the 2004 version of <<isoiecdir2>>. So the Chinese Standards model is best expressed as a specialisation of the ISO Standards model.
 
@@ -155,7 +149,7 @@ In the Metanorma model, the classes are in a strict hierarchical relation: docum
 
 NOTE: This constraint is inherited from tools like Markdown and Asciidoctor, and is not present in XML-based schemas like HTML, TEI-C, or DocBook. It helps to simplify the document model significantly, and while it sacrifices some expressive potential, the difference is minor, particularly with regards to the rendering of paragraphs. 
 
-The Basic Document model contains the bulk of the blocks and inline elements in the Metanorma model. The Standards Model and the standard-specific models mostly deal with the organisation of sections within a standards document.
+The _Basic Document_ model contains the bulk of the blocks and inline elements in the Metanorma model. The Standards Model and the standard-specific models mostly deal with the organisation of sections within a standards document.
 
 The Metanorma document model depends on the <<iso690>> bibliography model for its expression of bibliographic references. The specific model instantiation and serialisation it uses is the subject of a separate proposal, <<relaton>>, and is not discussed further here.
 
@@ -163,7 +157,7 @@ The Metanorma document model depends on the <<iso690>> bibliography model for it
 
 The Metanorma document model has drawn on several existing models, with a view to reflecting the expressiveness of existing standards, but also to align with the capability of established document production tools.
 
-The standards models consulted most closely for Metanorma are those for ISO standards <<isoiecdir2>> and RFC standards (<<rfc7749>>, <<rfc7991>>). The document production tools that Metanorma consciously sought to align with are HTML 4, HTML 5, Markdown, Asciidoctor (<<Asciidoctor>>), and Microsoft Word. The modelling of blocks and inline elements in particular are closely aligned with HTML.
+The standards models consulted most closely for Metanorma are those for ISO standards <<isoiecdir2>> and IETF standards (<<rfc7749>>, <<rfc7991>>). The document production tools that Metanorma consciously sought to align with are HTML 4, HTML 5, Markdown, Asciidoctor (<<Asciidoctor>>), and Microsoft Word. The modelling of blocks and inline elements in particular are closely aligned with HTML.
 
 == Basic Document Model
 
@@ -175,23 +169,30 @@ The _Basic Document_ model treats all documents as collections of _sections_ (<<
 // Please confirm what I've assumed here for identifier
 
 `identifier`:: a globally unique identifier for the document in an agreed identifier schema. The identifier is to be used for tracking interactions with the document without depending on formal document registries; it would be exemplified by a GUID, rather than a document registry identifier such as "ISO 639", which belongs to `bibdata`.
-`bibdata`:: a bibliographic description, capturing bibliographic metadata about the document itself, including authors, title, and date of production (<<relaton>>)
-`version`:: information about the current version of the document, including an `edition` (represented in the Basic model as an ordinal numeral), the date of latest revision (`revisionDate`), and a textual description of the current `draft`.
-`integrityValue`:: an optional digital signature of the document (<<integrityValue>>). 
+`bibdata`:: a bibliographic description, capturing bibliographic metadata about the document itself, including authors, title, and date of production.
+`version`:: information about the current version of the document, including an `edition` (represented in the _Basic Document_ model as an ordinal numeral), the date of latest revision (`revisionDate`), and a textual description of the current `draft`.
+`integrityValue`:: an optional digital signature of the document (<<contributionelementmetadata>>). 
 
 [plantuml]
 ....
 include::basicdoc_uml/BasicDocument.wsd[]
 ....
 
+The modelling of `bibdata` follows the _BibliographicItem_ class in <<relaton>>. Unlike the generic _BibliographicItem_ class, the `title` and `copyright` attributes of `bibdata` are mandatory.
+
+[plantuml]
+....
+include::basicdoc_uml/BibData.wsd[]
+....
+
 [[basicsection]]
 === Section
 
-The _Basic Document_ model is generic in its application, and accordingly does not do detailed modelling of the differences between sections; that is deferred for the _Standards Document_ model. The Basic model only recognises the following classes of section:
+The _Basic Document_ model is generic in its application, and accordingly does not do detailed modelling of the differences between sections; that is deferred for the _Standards Document_ model. The _Basic Document_ model only recognises the following classes of section:
 
 * _Basic Sections_, which are leaf nodes (do not contain any sections).
 * _Hierarchical Sections_, which can contain other sections. Hierarchical Sections are modelled as a subclass of Basic Sections, so the hierarchical arrangement of sections can be arbitrarily deep. 
-* _Content Sections_, which in the Basic model are treated as equivalent to Hierarchical Sections.
+* _Content Sections_, which in the _Basic Document_ model are treated as equivalent to Hierarchical Sections.
 * _References Sections_, which are leaf nodes, and contain zero or more bibliographical references (as modelled in <<relaton>>).
 
 All sections are modelled as having the following attributes: 
@@ -202,7 +203,7 @@ All sections are modelled as having the following attributes:
 `notes`:: any notes whose scope is the entire section, rather than a specific block. Notes are modelled as a sequence of zero or more paragraphs.
 
 
-NOTE: In the Basic Document model, a section can contain both blocks of text and subsections; in rendering, the blocks of text are presumed to come before the subsections. The ISO document model proscribes the coocurrence of text and subsections in a clause (= section) as "hanging paragraphs"; that proscription is modelled as an override of the model specific to Standards documents, for which the referencing of clauses is a paramount concern (<<standardsdoc>>).
+NOTE: In the _Basic Document_ model, a section can contain both blocks of text and subsections; in rendering, the blocks of text are presumed to come before the subsections. The ISO document model proscribes the coocurrence of text and subsections in a clause (= section) as "hanging paragraphs"; that proscription is modelled as an override of the model specific to Standards documents, for which the referencing of clauses is a paramount concern (<<standardsdoc>>).
 
 // TODO: refine reference
 
@@ -220,7 +221,7 @@ Blocks of text are all modelled as subclasses of the _Basic Block_ class, which 
 `notes`:: any notes whose scope is the block. Notes are modelled as a sequence of zero or more paragraphs.
 `contributionelementmetadata`:: attribution of the block to a specific contributor (<<contributionelementmetadata>>), to be used in change management of documents.
 
-The Basic Document model recognises the following classes of block:
+The _Basic Document_ model recognises the following classes of block:
 
 * Paragraphs (<<basicpara>>)
 * Multi-paragraph blocks: Blockquotes, Reviewer comments, Admonitions (<<basicmultipara>>)
@@ -258,7 +259,7 @@ Paragraphs have the following subclass:
 The following classes of block are modelled as containing zero or more paragraphs:
 
 * _Blockquote_, which also contains an optional bibliographic citation for the quotation (`source`), and an optional `author` of the quotation. The `author` attribute of the blockquote is redundant with the citation, since it restates  information about the author that should be recoverable from the citation itself. It is included for convenience, in case processing the citation is prohibitive for rendering tools, and is motivated by the separate inclusion of `author` as an attribute in blockquotes in Asciidoctor.
-* _Admonition_, which captures sidebars to the main text conveying particular warnings to the reader. The Admonition block includes a type of admonition; the defined types for the Basic Document model are _Warning, Note, Tip, Important, and Caution_.
+* _Admonition_, which captures sidebars to the main text conveying particular warnings to the reader. The Admonition block includes a type of admonition; the defined types for the _Basic Document_ model are _Warning, Note, Tip, Important, and Caution_.
 * [[review]]_Review_, which is intended to capture reviewer comments about some text in the document. The Review block includes the following attributes: an optional string identifying the `reviewer` who offered the comment; an optional `date` when the comment was made; a mandatory identifier for the start of the text to which the comment applies (`appliesFrom`), and an optional identifier for the end of the text to which the comment applies (`appliesTo`). 
 
 NOTE: If the `appliesTo` identifier of a Review block is absent, the comment applies only to the span of text identified by the `appliesFrom` identifier; if it is present, the comments applies to the span of text between the start of the span of text identified by `appliesFrom`, and the end of the span of text identified by `appliesTo`.
@@ -291,11 +292,11 @@ _Table cells_ contain either zero or more paragraphs with footnotes (<<basicpara
 
 Lists are modelled consistently with HTML. All lists contain zero or more _list items_, which by default consist of an identifier (`id`), and one or more paragraphs with footnotes (<<basicpara>>). This allows individual list items in a list to be cross-referenced within the document.
 
-Three classes of list are modelled. 
+Three subclasses of List are modelled. 
 
 * _Unordered lists_ are equivalent to the List base class. 
-* _Ordered lists_ are Lists with a `type` attribute, describing the kind of numeration applied to the list; the values allowed under the Basic Document model are _roman, alphabet, arabic, roman_upper, alphabet_upper_, corresponding to lowercase Roman numerals, lowercase alphabetic letters, Arabic numerals, uppercase Roman numerals, and uppercase alphabetic letters.
-* _Definition lists_ override the definition of the list item to be a pair of `item` (zero or more text elements: <<inline>>) and `definition` (zero or more paragraphs with footnotes: <<basicpara>>).
+* _Ordered lists_ are Lists with a `type` attribute, describing the kind of numeration applied to the List; the values allowed under the _Basic Document_ model are _roman, alphabet, arabic, roman_upper, alphabet_upper_, corresponding to lowercase Roman numerals, lowercase alphabetic letters, Arabic numerals, uppercase Roman numerals, and uppercase alphabetic letters.
+* _Definition lists_ override the definition of the List Item to be a pair of `item` (zero or more text elements: <<inline>>) and `definition` (zero or more paragraphs with footnotes: <<basicpara>>).
 
 
 [[basicfigure]]
@@ -310,7 +311,7 @@ Figures are wrappers for images, and may themselves contain figures (_Subfigure_
 `footnotes`:: Optional footnotes specific to the figure. (This reflects practice in <<isoiecdir2>>.)
 `figure`:: Embedded figures. (This reflects practice in <<isoiecdir2>>, and subfigures are intended to be mutually exclusive with `image`, `source`: the latter are intended for leaf node figures.)
 
-NOTE: The Basic Document model makes no provision for "Ascii art", the use of text instead of images. Models derived from the Basic Document model do permit such use of text by extending the modelling of figure.
+NOTE: The _Basic Document_ model makes no provision for "ASCII art", the use of text instead of images. Models derived from the _Basic Document_ model do permit such use of text by extending the modelling of figure.
 
 [[basicsourcecode]]
 ==== Sourcecode
@@ -359,7 +360,7 @@ Three subclasses of Basic Elements are modelled:
 * ID elements, which contain identifiers. (<<image>>)
 * Reference elements, which contain references to identifiers. (<<crossreferences>>)
 
-Footnotes <<footnote>> are a special case of Reference element, which are not included under Basic Elements because of the need to exclude them from certain classes of paragraph (<<basicpara>>).
+Footnotes (<<footnote>>) are a special case of Reference element, which are not included under Basic Elements because of the need to exclude them from certain classes of paragraph (<<basicpara>>).
 
 [[textelements]]
 ==== Text Elements
@@ -378,7 +379,7 @@ The following elements indicate formatting, and have no further attributes:
 * Strike (corresponding to HTML 4 `s`)
 * Small Caps 
 
-Text Elements also include the STEM element, representing mathematical and other formulas. This consists of a `type`, indicating which language is used to express the formula, and the content of the formula itself. By default the Basic Document model allows AsciiMath and MathML in STEM elements.
+Text Elements also include the STEM element, representing mathematical and other formulas. This consists of a `type`, indicating which language is used to express the formula, and the content of the formula itself. By default the _Basic Document_ model allows AsciiMath and MathML in STEM elements.
 
 NOTE: The _Basic Document_ model does not provide for text elements containing other text elements, for simplicity (e.g. monospace + italics, or superscript + strikethrough). Extensions to the model may choose to model such nesting of text elements.
 
@@ -400,14 +401,14 @@ include::basicdoc_uml/TextElements.wsd[]
 [[image]]
 ==== ID Elements
 
-ID Elements are inline elements that have an identifier (`id`), which permits them to be cross-referenced by Reference Elements (<<crossreferences>>). ID Elements in the _Basic Documents_ model do not contain text.
+ID Elements are inline elements that have an identifier (`id`), which permits them to be cross-referenced by Reference Elements (<<crossreferences>>). ID Elements in the _Basic Document_ model do not contain text.
 
-There are two subclasses of ID Elements in the Basic Documents model:
+There are two subclasses of ID Elements in the _Basic Document_ model:
 
-* _Bookmarks_ are intended as anchors for cross-references which do not have scope over blocks or sections. The model under Basic Documents is that anchors within a block cannot span across a number of inline elements; bookmarks are intended as point anchors. For that reason, the Review block (<<review>>) has a starting reference and an optional ending reference, which can be bookmarks as well as block or section references.
+* _Bookmarks_ are intended as anchors for cross-references which do not have scope over blocks or sections. Anchors within a block under the _Basic Document_ model cannot span across a number of inline elements; bookmarks are intended as point anchors. For that reason, the Review block (<<review>>) has a starting reference and an optional ending reference, which can be bookmarks as well as block or section references.
 * _Images_ are containers for pictorial content. They have a `source`, indicating the URI of the image file; a `type`, indicating the type of the image file; and an optional `height` and `width` attribute, which can be an integer or "auto".
 
-NOTE: The Basic Documents_ model does not encompass audio and video files, but any extensions to the model would treat them likewise as ID Elements.
+NOTE: The _Basic Document_ model does not encompass audio and video files, but any extensions to the model would treat them likewise as ID Elements.
 
 // TODO: We have not put alt text in; should we? We have not tackled accessibility in general.
 
@@ -446,15 +447,35 @@ NOTE: Endnotes are not modelled separately from footnotes in the _Basic Document
 [[datavalues]]
 === Data Values
 
+==== Basic Data values
+
+The following basic types are used in the definition of the _Basic Document_ model.
+
+* String
+* URI, as defined in <<rfc3986>>.
+* Language names, as defined in <<iso639>>.
+* Dates and times, as defined in <<iso8601>>.
+* Hash algorithms, as defined in <<iso10118>>.
+* Digital signature algorithms, as defined in <<iso14888>>.
+* Script names, as defined in <<iso15924>>.
+* Localised Strings, specifying a String with optional Language and Script attributes.
+* Formatted Strings, specifying a Localised String with a `format` attribute, in order to admit markup into Strings (whether XML-based or not).
+
+
+[plantuml]
+....
+include::basicdoc_uml/DataTypes.wsd[]
+....
+
+
 [[contributionelementmetadata]]
 ==== Contribution Element Metadata
 
-text
+In addition to the Basic Data Values, the _Basic Document_ model defines a container encoding the contribution made by a party towards a particular element in the document, with the following attributes:
 
-[[integrityvalue]]
-==== Integrity Value
-
-text
+`dateTime`:: The date and time when the contribution was made.
+`contributor`:: The party who made the contribution, as described through the `contributor` element in <<relaton>>.
+`inegrityValue`:: A digital signature of the contribution, consisting of a `hash` value and a `signature`, with an associated `publicKey`.
 
 [[standardsdoc]]
 == Standards Document Model
@@ -489,3 +510,14 @@ TODO: Grammar
 [bibliography]
 == Bibliography 
 
+* [[[isoiecdir2,ISO/IEC DIR 2]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
+
+* [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
+
+* [[[gbt11,CN(GB/T 1.1)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
+
+* [[[rfc7749,IETF RFC 7749]]], _The "xml2rfc" Version 2 Vocabulary_
+
+* [[[rfc7991,IETF RFC 7991]]], _The "xml2rfc" Version 3 Vocabulary_
+
+* [[[asciidoctor,Asciidoctor]]], _Asciidoctor User Manual._ https://asciidoctor.org/docs/user-manual/

@@ -96,7 +96,7 @@ class ContributionElementMetadata {
 
 }
 
-class IntregityValue {
+class IntegrityValue {
 
 }
 
@@ -135,9 +135,9 @@ note bottom of StringFormat: The coresponsind MIME types,\ndefaults to "text/pla
 LocalizedString <|-- FormattedString
 FormattedString <-- StringFormat
 
-ContributionElementMetadata <-- IntregityValue
-IntregityValue <|-- Hash
-IntregityValue <|-- Signature
+ContributionElementMetadata <-- IntegrityValue
+IntegrityValue <|-- Hash
+IntegrityValue <|-- Signature
 
  Hash -[hidden]- Iso10118Oid
  Signature -[hidden]- Iso14888Oid
