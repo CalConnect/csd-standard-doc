@@ -480,21 +480,66 @@ In addition to the Basic Data Values, the _Basic Document_ model defines a conta
 [[standardsdoc]]
 == Standards Document Model
 
-TODO: UML diagram
-
 [[standardsdocument]]
 === Document
 
-Text
+The _Standards Document_ model extends the _Basic Document_ modelling of the document by requiring the following specific types of section:
+
+* Zero or more optional _prefaces_ (Standard Hierarchical Sections: <<standardssection>>).
+* One or more _sections_ (Standard Hierarchical Sections).
+* Zero or more _annexes_ (Standard Hierarchical Sections).
+* Zero or more bibliographies (Standard References Sections: <<standardssection>>).
+
+[plantuml]
+....
+include::standoc_uml/StandardDoc_StandardDocument.wsd[]
+....
 
 [[standardssection]]
 === Section
 
-Text
-[[standardsblock]]
-=== Block
+The _Standards Document_ model extends the _Basic Document_ modelling of sections by specialising the Basic Section class as follows:
+
+* All sections in a _Standards Document_ model are instances of the Standard Section class, which is a subclass of Basic Section.
+* The Standard Section class indicates its status as normative or informative explicitly, through the `status` attribute. (This attribute has been added because it is overtly specified in <<isoiecdir2>>, but the normative status of individual sections in a standard is pertinent to any standards document.)
+* Sections in a standards document fall into two categories: Clause Sections, which are numbered, and form part of the main flow of the document, and Content sections (Standard Hierarchical Sections), which are optionally not numbered, and which lie outside the main flow of the document.
+* The subclauses of Clauses are themselves Clause Sections; they continue the hierarchical numbering of Clause Sections at deeper hierarchical levels. The subclauses of Content sections are Standard Sections, and need not be numbered.
+* Annexes and Clause Sections are modelled in the same way in the _Standards Document_ model. However they are expected to be numbered differently, and to be rendered as separate sequences.  
+* Standard References Sections are a subclass of Standard Section. Like the References Sections of the _Basic Document_ model (<<basicsection>>), they are leaf notes which contain zero or more bibliographical references (as modelled in <<relaton>>).
+
+Although it is different to capture in a container-based model, the _Standards Document_ model requires "hanging paragraphs" to be avoided: a Clause section in particular should contain either blocks or subsections, but not both. This is a requirement in <<isoiecdir2>>, but the need to reference text in clauses unambiguously by clause number makes the avoidance of hanging paragraphs desirable for standards documents in general. The requirement is less pressing for Content sections (which are unnumbered), and Annexes (as exemplified in <<isoiecdir2>> itself.)
+
+[plantuml]
+....
+include::standoc_uml/StandardDoc_Sections.wsd[]
+....
+
+The _Standards Document_ model models two further subclasses of Clause Sections:
+
+* Definition Sections consist of one or more Definition lists (<<basiclist>>), and are used to define symbols and abbreviations used in the remainder of the document. They can also be used as glossaries, with simple definitions, in contrast to the more elaborate definitions given in Terms Sections.
+* Terms Sections give elaborated definitions of terms used in the document; they are intended to align to the structure of terms in <<isoiecdir2>>. Term Sections consist of zero or more Terms; Terms in turn are composed of the following elements:
+
+`id`:: An optional identifier for the term, to be used in cross-references.
+`preferred`:: One or more names under which the term being defined is canonically known.
+`admitted`:: Zero or more names which are acceptable synonyms for the term being defined.
+`deprecates`:: Zero or more names which are deprecated synonyms for the term being defined.
+`domain`:: An optional semantic domain for the term being defined, in case the term is ambiguous between several semantic domains.
+`definition`:: The definition of the term applied in the current document.
+`note`:: Zero or more notes about the term.
+`example``:: Zero or more examples of how the term is to be used.
+`source`:: Zero or more bibliographical sources for the term. These include the `origin` of the term, which is its bibliographical citation (as defined in <<relaton>>); the `status` of the definition (whether _identical_ to the definition given in the origin cited, or _modified_); and, if the definition is modified, a description of the `modification` to the definition applied for this document.
+
+[plantuml]
+....
+include::standoc_uml/StandardDoc_Terms.wsd[]
+....
+
 
 Text
+[[standardsblock]]
+=== Block, Data Types
+
+There is no difference in the modelling of blocks or data types between the _Basic Document_ model and the _Standards Document_ model.
 
 
 [[isoprofile]]
