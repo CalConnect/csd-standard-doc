@@ -65,8 +65,8 @@ class IdElement{
 class Image{
     +source: Uri
     +imageType: ImageType
-    +height[0..1]: Integer
-    +width[0..1]: Integer
+    +height[0..1]: Integer | "auto"
+    +width[0..1]: Integer | "auto"
 }
 
 class Bookmark{
@@ -130,7 +130,6 @@ enum OrderedListType <<enumeration>>{
 
 '******* NOTES *******************************************************
 note right of IdElement : The `IdElement` itself acts as a reference point,\nsuch as in a SourcecodeBlock for\ncallout references (the IdElement is the location),\nand for delimiting ReviewComment start/end places.
-note left of Image : We also allow the\nvalue "auto" for\nheight and width
 'note bottom of Subfigure : Subfigures and images\nonly occur within figures
 
 '******* CLASS RELATIONS *********************************************

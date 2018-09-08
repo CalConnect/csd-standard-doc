@@ -56,7 +56,7 @@ class BasicElement {
 }
 
 class TextElement{
-    +contnet: LocalizedString[1..*]
+    +content: LocalizedString[1..*]
 }
 
 class PageBreakElement{

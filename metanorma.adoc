@@ -147,9 +147,9 @@ Specialisation of a model consists of:
 
 The classes involved in the document model are of three classes:
 
-* Sections
-* Blocks (paragraph-level groupings of text)
-* Inline elements (groupings of text smaller than a paragraph, including plain strings)
+* Sections (<<basicsection>>, <<standardssection>>)
+* Blocks (paragraph-level groupings of text) (<<basicblock>>, <<standardsblock>>)
+* Inline elements (groupings of text smaller than a paragraph, including plain strings) (<<inline>>)
 
 In the Metanorma model, the classes are in a strict hierarchical relation: documents consist of sections, which consist of blocks, which consist of inline elements. Sections can be nested within sections (e.g. clauses and subclauses); blocks can be nested within blocks (e.g. nested lists). Although the model does not currently provide for it, inline elements can also be embedded within other inline elements (e.g. bold + italics). However, sections are not expected to be siblings of blocks, nor blocks of inline elements. For example, a list (block) is not expected to occur next to inline text within a paragraph. For that reason, paragraphs cannot contain other block elements, such as lists or tables.
 
@@ -167,6 +167,7 @@ The standards models consulted most closely for Metanorma are those for ISO stan
 
 == Basic Document Model
 
+[[basicdocument]]
 === Document
 
 The _Basic Document_ model treats all documents as collections of _sections_ (<<basicsection>>). It also adds the following metadata as part of the document model:
@@ -198,7 +199,7 @@ All sections are modelled as having the following attributes:
 `title`:: an optional title of the section.
 `id`:: an optional identifier for the section, to be used for cross-references.
 `blocks`:: zero or more text blocks, containing the textual content of the section (but excluding subsections, which are only present in Hierarchical Sections).
-`notes`:: any notes (<<notes>>) whose scope is the entire section, rather than a specific block.
+`notes`:: any notes whose scope is the entire section, rather than a specific block. Notes are modelled as a sequence of zero or more paragraphs.
 
 
 NOTE: In the Basic Document model, a section can contain both blocks of text and subsections; in rendering, the blocks of text are presumed to come before the subsections. The ISO document model proscribes the coocurrence of text and subsections in a clause (= section) as "hanging paragraphs"; that proscription is modelled as an override of the model specific to Standards documents, for which the referencing of clauses is a paramount concern (<<standardsdoc>>).
@@ -216,7 +217,7 @@ include::basicdoc_uml/Sections.wsd[]
 Blocks of text are all modelled as subclasses of the _Basic Block_ class, which has the following attributes common to all blocks:
 
 `id`:: an optional identifier for the block, to be used for cross-references.
-`notes`:: any notes (<<notes>>) whose scope is the block.
+`notes`:: any notes whose scope is the block. Notes are modelled as a sequence of zero or more paragraphs.
 `contributionelementmetadata`:: attribution of the block to a specific contributor (<<contributionelementmetadata>>), to be used in change management of documents.
 
 The Basic Document model recognises the following classes of block:
@@ -242,7 +243,7 @@ include::basicdoc_uml/Blocks.wsd[]
 ==== Paragraph
 
 
-Paragraphs can contain any sequence of basic inline elements (<<inline>>), and optionally a text alignment (`alignment`). 
+Paragraphs can contain any sequence of inline elements (<<inline>>), and optionally a text alignment (`alignment`). 
 
 NOTE: Text alignment is the only concession the modelling of paragraphs makes to rendering, and is there because the application of alignment to paragraphs, while rare, is unpredictable from paragraph semantics. Other rendering attributes of paragraphs, such as spacing before and after, are considered to be semantically predictable and are relegated to document stylesheets.
 
@@ -258,9 +259,11 @@ The following classes of block are modelled as containing zero or more paragraph
 
 * _Blockquote_, which also contains an optional bibliographic citation for the quotation (`source`), and an optional `author` of the quotation. The `author` attribute of the blockquote is redundant with the citation, since it restates  information about the author that should be recoverable from the citation itself. It is included for convenience, in case processing the citation is prohibitive for rendering tools, and is motivated by the separate inclusion of `author` as an attribute in blockquotes in Asciidoctor.
 * _Admonition_, which captures sidebars to the main text conveying particular warnings to the reader. The Admonition block includes a type of admonition; the defined types for the Basic Document model are _Warning, Note, Tip, Important, and Caution_.
-* _Review_, which is intended to capture reviewer comments about some text in the document. The Review block includes the following attributes: an optional string identifying the `reviewer` who offered the comment; an optional `date` when the comment was made; a mandatory identifier for the start of the text to which the comment applies (`appliesFrom`), and an optional identifier for the end of the text to which the comment applies (`appliesTo`). 
+* [[review]]_Review_, which is intended to capture reviewer comments about some text in the document. The Review block includes the following attributes: an optional string identifying the `reviewer` who offered the comment; an optional `date` when the comment was made; a mandatory identifier for the start of the text to which the comment applies (`appliesFrom`), and an optional identifier for the end of the text to which the comment applies (`appliesTo`). 
 
 NOTE: If the `appliesTo` identifier of a Review block is absent, the comment applies only to the span of text identified by the `appliesFrom` identifier; if it is present, the comments applies to the span of text between the start of the span of text identified by `appliesFrom`, and the end of the span of text identified by `appliesTo`.
+
+NOTE: Admonition notes are modelled to be distinct from notes under sections or blocks.
 
 [[basictable]]
 ==== Table
@@ -324,7 +327,7 @@ Sourcecode blocks are wrappers for computer code or comparable text. They contai
 
 Formula blocks are wrappers for mathematical or other formulas. They contain the following elements:
 
-`stem`:: A STEM element (<<stem>>), constituting the content of the formula
+`stem`:: A STEM element (<<textelements>>), constituting the content of the formula
 `definitions`:: An optional definitions list (<<basiclist>>) defining any symbols used in the formula. (This reflects practice in <<isoiecdir2>>.)
 
 [[basicexample]]
@@ -342,32 +345,103 @@ Example blocks are wrappers for open-ended example text. They consist of a combi
 [[inline]]
 === Inline Elements
 
-text
+==== General
 
-[[crossreferences]]
-==== Cross-References
+Inline elements represent the components of text blocks. They are modelled in the _Basic Document_ model as _Basic Elements_.
 
-text
+All Basic Elements have the following attribute:
 
-[[stem]]
-==== STEM
+`contributionelementmetadata`:: attribution of the element to a specific contributor (<<contributionelementmetadata>>), to be used in change management of documents.
 
-text
+Three subclasses of Basic Elements are modelled:
+
+* Text elements, which contain text and associated formatting information, but which do not contain any associated identifiers. (<<textelements>>)
+* ID elements, which contain identifiers. (<<image>>)
+* Reference elements, which contain references to identifiers. (<<crossreferences>>)
+
+Footnotes <<footnote>> are a special case of Reference element, which are not included under Basic Elements because of the need to exclude them from certain classes of paragraph (<<basicpara>>).
+
+[[textelements]]
+==== Text Elements
+
+The modelling of text elements is substantially derived from HTML, and encompasses semantically significant formatting of text. For example, it encompasses italics and boldface (under their semantic guise of `emphasis` and `strong`); but it omits different sizes of font, as information that is typically semantically predictable, and relegated to stylesheets.
+
+All text elements contain a localised string (<<datavalues>>).
+
+The following elements indicate formatting, and have no further attributes:
+
+* Monospace (corresponding to HTML `tt`, `code`)
+* Emphasis (corresponding to HTML `em`, `i`)
+* Strong (corresponding to HTML `strong`, `b`)
+* Superscript (corresponding to HTML `sup`)
+* Subscript (corresponding to HTML `sub`)
+* Strike (corresponding to HTML 4 `s`)
+* Small Caps 
+
+Text Elements also include the STEM element, representing mathematical and other formulas. This consists of a `type`, indicating which language is used to express the formula, and the content of the formula itself. By default the Basic Document model allows AsciiMath and MathML in STEM elements.
+
+NOTE: The _Basic Document_ model does not provide for text elements containing other text elements, for simplicity (e.g. monospace + italics, or superscript + strikethrough). Extensions to the model may choose to model such nesting of text elements.
+
+
+==== Empty Elemnts
+
+The following elements are subclasses of Basic Element that contain no text, and are intended to represent semantically significant formatting elements:
+
+* Line Break (corresponding to HTML `br`)
+* Page Break
+* Horizontal Rule (corresponding to HTML `hr`)
+
+[plantuml]
+....
+include::basicdoc_uml/TextElements.wsd[]
+....
+
 
 [[image]]
-==== Image
+==== ID Elements
 
-image
+ID Elements are inline elements that have an identifier (`id`), which permits them to be cross-referenced by Reference Elements (<<crossreferences>>). ID Elements in the _Basic Documents_ model do not contain text.
 
-[[notes]]
-==== Notes
+There are two subclasses of ID Elements in the Basic Documents model:
 
-text
+* _Bookmarks_ are intended as anchors for cross-references which do not have scope over blocks or sections. The model under Basic Documents is that anchors within a block cannot span across a number of inline elements; bookmarks are intended as point anchors. For that reason, the Review block (<<review>>) has a starting reference and an optional ending reference, which can be bookmarks as well as block or section references.
+* _Images_ are containers for pictorial content. They have a `source`, indicating the URI of the image file; a `type`, indicating the type of the image file; and an optional `height` and `width` attribute, which can be an integer or "auto".
+
+NOTE: The Basic Documents_ model does not encompass audio and video files, but any extensions to the model would treat them likewise as ID Elements.
+
+// TODO: We have not put alt text in; should we? We have not tackled accessibility in general.
+
+[plantuml]
+....
+include::basicdoc_uml/TextElements.wsd[]
+....
+
+
+[[crossreferences]]
+==== Reference Elements
+
+Reference Elements are inline elements which reference other elements in the document, or other documents. All Reference Elements are modelled as containing the following attributes:
+
+`text`:: The optional, unformatted textual content of the reference element.
+`type`:: The type of Reference Element, prescribing how it is to be rendered. The _Basic Document_ model recognises four types: _inline_ (referencing another element in the same document), _external_ (referencing an external document), _footnote_ (an inline reference to be rendered as a footnote), and _callout_ (an inline reference to be rendered as a callout: <<basicsourcecode>>).
+
+The following subclasses of Reference Elements are modelled.
+
+* Reference to Link Element: An external reference, whose `target` is defined as a URI.
+* Reference to Citation Element: An external reference to a bibliographic entity, as modelled in <<relaton>> as a _citation_. In addition to the attributes of _citation_, the reference has an optional `normative` attribute (which may be used by those standards which differentiate normative and informative references), and optional `citeAs` attributes prescribing how the bibliographic citation should be rendered in the text.
+* Reference to ID Element: An internal reference, whose `target` corresponds to the identifier of a section, block or ID Element within the current document.
+
+The Reference to ID Element class in turn has the following subclasses modelled:
+
+* Callout, for which the `type` is set to _callout_, and the `text` is constrained to be a single mandatory string. The target of the callout is understood to be the location of the callout within the source code; the extent of the target is not expressed overtly.
+* Reference To ID With Paragraph Element, which associates both `text` and `content` to the cross-reference; the `content` is a sequence of one or more paragraphs (<<basicpara>>).
 
 [[footnote]]
 ==== Footnote
 
-text
+Footnotes are modelled as a subclass of Reference To ID With Paragraph Element, which constrain their `type` to be _footnote_. The `text` attribute is the footnote reference, and the `content` attribute is the footnote contents.  The target of the footnote is understood to be the location of the footnote within the text; the extent of the target is not expressed overtly.
+
+NOTE: Endnotes are not modelled separately from footnotes in the _Basic Document_ model, and the use of footnotes and endnotes as realisations of annotations are normally stylistic alternatives, which would be relegated to a stylesheet.
 
 [[datavalues]]
 === Data Values
@@ -386,6 +460,20 @@ text
 == Standards Document Model
 
 TODO: UML diagram
+
+[[standardsdocument]]
+=== Document
+
+Text
+
+[[standardssection]]
+=== Section
+
+Text
+[[standardsblock]]
+=== Block
+
+Text
 
 
 [[isoprofile]]
