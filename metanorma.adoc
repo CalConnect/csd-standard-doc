@@ -266,7 +266,7 @@ NOTE: If the `appliesTo` identifier of a Review block is absent, the comment app
 ==== Table
 
 
-Tables are modelled consistently with HTML 5. They contain the following elements:
+Tables are modelled consistently with HTML. They contain the following elements:
 
 `name`:: An optional label for the table.
 `head`:: Zero or more table rows constituting the table header.
@@ -286,37 +286,78 @@ _Table cells_ contain either zero or more paragraphs with footnotes (<<basicpara
 [[basiclist]]
 ==== List
 
+Lists are modelled consistently with HTML. All lists contain zero or more _list items_, which by default consist of an identifier (`id`), and one or more paragraphs with footnotes (<<basicpara>>). This allows individual list items in a list to be cross-referenced within the document.
 
-text
+Three classes of list are modelled. 
+
+* _Unordered lists_ are equivalent to the List base class. 
+* _Ordered lists_ are Lists with a `type` attribute, describing the kind of numeration applied to the list; the values allowed under the Basic Document model are _roman, alphabet, arabic, roman_upper, alphabet_upper_, corresponding to lowercase Roman numerals, lowercase alphabetic letters, Arabic numerals, uppercase Roman numerals, and uppercase alphabetic letters.
+* _Definition lists_ override the definition of the list item to be a pair of `item` (zero or more text elements: <<inline>>) and `definition` (zero or more paragraphs with footnotes: <<basicpara>>).
+
 
 [[basicfigure]]
 ==== Figure
 
+Figures are wrappers for images, and may themselves contain figures (_Subfigure_ class). They contain the following elements, all of which are optional:
 
-text
+`name`:: A label for the figure.
+`image`:: An image (<<image>>).
+`source`:: A URI or other reference intended to link to an externally hosted image (or equivalent).
+`definitions`:: An optional definitions list (<<basiclist>>) defining any symbols used in the figure. (This reflects practice in <<isoiecdir2>>.)
+`footnotes`:: Optional footnotes specific to the figure. (This reflects practice in <<isoiecdir2>>.)
+`figure`:: Embedded figures. (This reflects practice in <<isoiecdir2>>, and subfigures are intended to be mutually exclusive with `image`, `source`: the latter are intended for leaf node figures.)
+
+NOTE: The Basic Document model makes no provision for "Ascii art", the use of text instead of images. Models derived from the Basic Document model do permit such use of text by extending the modelling of figure.
 
 [[basicsourcecode]]
 ==== Sourcecode
 
+Sourcecode blocks are wrappers for computer code or comparable text. They contain the following elements:
 
-text
+`name`:: A label for the source code.
+`content`:: The computer code or other such text presented in the block, as a single unformatted string. (The string should be treated as preformatted text, with whitespace treated as significant.)
+`callouts`:: Zero or more cross-references (<<crossreferences>>); these are intended to be embedded within the `content` string, and link to annotations.
+`calloutAnnotations`:: These are annotations to the source code; each annotation consists of zero or more paragraphs, and is intended to be referenced by a callout within the source code.
 
 [[basicformula]]
 ==== Formula
 
+Formula blocks are wrappers for mathematical or other formulas. They contain the following elements:
 
-text
+`stem`:: A STEM element (<<stem>>), constituting the content of the formula
+`definitions`:: An optional definitions list (<<basiclist>>) defining any symbols used in the formula. (This reflects practice in <<isoiecdir2>>.)
 
 [[basicexample]]
 ==== Example
 
+Example blocks are wrappers for open-ended example text. They consist of a combination of any of the following blocks:
 
-text
+* Formula
+* List
+* Blockquote (which is how generic text is included in an example)
+* Sourcecode
+
+// TODO: I don't think we've enforced the blockquote restriction; should we, or should we just allow text elements as an alternative here?
 
 [[inline]]
 === Inline Elements
 
 text
+
+[[crossreferences]]
+==== Cross-References
+
+text
+
+[[stem]]
+==== STEM
+
+text
+
+[[image]]
+==== Image
+
+image
 
 [[notes]]
 ==== Notes
