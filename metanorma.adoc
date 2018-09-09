@@ -7,7 +7,7 @@
 :copyright-year: 2018
 :language: en
 :title-intro-en: Information and documentation
-:title-main-en: Standards reference model and serialization
+:title-main-en: Standards reference model
 :title-intro-fr: Information et documentation
 :title-main-fr: ****
 :doctype: international-standard
@@ -86,7 +86,7 @@ Development of Metanorma started in late 2017. Metanorma is already in used by s
 
 == Scope
 
-This document provides the Metanorma reference model for standards documents. Serialisation of the reference model will be discussed in a separate document.
+This document provides the Metanorma reference model for standards documents. Implementation of the reference model and serialisation formats out of scope of this document.
 
 The mapping of the reference model to output formats such as HTML, and the application of organisation-specific styling to those outputs, is out of scope of this document.
 
@@ -139,10 +139,6 @@ document, established by consensus and approved by a recognized _body_ (<<term_s
 [.source]
 <<IEV,901-02-02>>
 
-=== Standards model
-
-_document model_ (<<term_documentmodel>>) for _standards_ (<<term_standard>>)
-
 [[term_class]]
 === Class
 
@@ -150,11 +146,8 @@ structure containing a description of an entity in terms of its components
 
 === Subclass
 
-class which inherits from another class its component descriptions, and optionally adds to them its own component descriptions
+_class_ (<<term_class>>) which inherits from another class its component descriptions, and optionally adds to them its own component descriptions
 
-=== Section
-
-hierarchical subdivision of a document, consisting of one or more blocks, and/or one or more sections
 
 [[term_documentmodel]]
 === Document model
@@ -163,13 +156,31 @@ hierarchical subdivision of a document, consisting of one or more blocks, and/or
 
 formal specification of the structure of a document in terms of its components and their arrangement, expressed through _classes_ (<<term_class>>)
 
+=== Standards model
+
+_document model_ (<<term_documentmodel>>) for _standards_ (<<term_standard>>)
+
+[[term_paragraph]]
+=== Paragraph
+
+subdivision of running text, normally run on throughout, that is separated from text before and after by a change of line and stands below any chapters or sections (<<term_section>>)
+
+[.source]
+<<iso5127,clause 3.5.8.07>>
+
+[[term_block]]
 === Block
 
-paragraph-level grouping of text
+_paragraph_ (<<term_paragraph>>)-level grouping of text
 
 === Inline Element
 
-grouping of text smaller than a paragraph, including plain strings
+grouping of text that can be contained within a _paragraph_ (<<term_paragraph>>), including plain strings
+
+[[term_section]]
+=== Section
+
+hierarchical subdivision of a document, consisting of one or more _blocks_ (<<term_block>>), and/or one or more sections
 
 === Identifier
 
@@ -192,7 +203,7 @@ The Metanorma document model is expressed hierarchically.
 * At its base is a _Basic Document_ model, which expresses the structure of generic documents.
 * The _Basic Document_ model is specialised as a _Standards Document_ structure, conveying the structure particular to standards documents as a class.
 * The Standards Document model is further specialised into models specific to particular standards. 
-* Specific standards models can form the basis in turn of other standards models. For example, the Chinese National Standards model, as described in <<gbt11>>, is structurally modelled after ISO documents, and is explicitly described as a localisation of the 2004 version of <<isoiecdir2>>. So the Chinese Standards model is best expressed as a specialisation of the ISO Standards model.
+* Specific standards models can form the basis in turn of other standards models. For example, the Chinese National Standards model, as described in <<gbt11>>, is structurally modelled after ISO documents, and is explicitly described as a localisation of the 2004 version of <<isoiecdir2-2004>>. So the Chinese Standards model is best expressed as a specialisation of the ISO Standards model.
 
 Specialisation of a model consists of:
 
@@ -212,7 +223,7 @@ NOTE: This constraint is inherited from tools like Markdown and Asciidoctor, and
 
 The _Basic Document_ model contains the bulk of the blocks and inline elements in the Metanorma model. The Standards Model and the standard-specific models mostly deal with the organisation of sections within a standards document.
 
-The Metanorma document model depends on the <<iso690>> bibliography model for its expression of bibliographic references. The specific model instantiation and serialisation it uses is the subject of a separate proposal, <<relaton>>, and is not discussed further here.
+The Metanorma document model depends on the <<iso690>> bibliography model for its expression of bibliographic references. The specific bibliography model instantiation and serialisation it uses is the subject of a separate proposal, <<relaton>>, and is not discussed further here.
 
 === Influences
 
@@ -776,18 +787,24 @@ include::csd_uml/Csd_StandardDocument.wsd[]
 
 * [[[isoiecdir1,ISO/IEC DIR 1]]], _Procedures for the technical work_
 
+* [[[isoiecdir2-2004,ISO/IEC DIR 2:2004]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
+
 * [[[isoiecdir2,ISO/IEC DIR 2:2018]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
 
 * [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
 
-* [[[gbt11,CN(GB/T 1.1)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
+* [[[iso5127,ISO 5127:2017]]], _Information and documentation — Foundation and vocabulary_
+
+* [[[gbt11,CN(GB/T 1.1-2009)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
 
 * [[[rfc7749,IETF RFC 7749]]], _The "xml2rfc" Version 2 Vocabulary_
 
 * [[[rfc7991,IETF RFC 7991]]], _The "xml2rfc" Version 3 Vocabulary_
 
-* [[[asciidoctor,Asciidoctor]]], _Asciidoctor User Manual._ https://asciidoctor.org/docs/user-manual/
+* [[[asciidoctor,8]]] _Asciidoctor User Manual._ https://asciidoctor.org/docs/user-manual/
 
-* [[[ics,ics]]], _ISO International Classification for Standards (ICS)_, https://www.iso.org/publication/PUB100033.html
+* [[[ics,9]]] _ISO International Classification for Standards (ICS)_, https://www.iso.org/publication/PUB100033.html
 
-* [[[isostage,isostage]]], _International harmonized stage codes_, https://www.iso.org/stage-codes.html
+* [[[isostage,10]]] _International harmonized stage codes_, https://www.iso.org/stage-codes.html
+
+* [[[IEV,IEV]]], _IEV_

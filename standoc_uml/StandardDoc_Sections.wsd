@@ -75,14 +75,6 @@ class ClauseSection{
     +subsections: ClauseSection[0..*]
 }
 
-class TermsSection{
-    +terms: <<Term>>TermCollection
-}
-
-class DefinitionSection{
-    +definitions: <<Term>>DefinitionCollection
-}
-
 class AnnexSection{
     +subsections: ClauseSection[0..*]
 }

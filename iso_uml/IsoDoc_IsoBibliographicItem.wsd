@@ -179,21 +179,21 @@ enum IsoDocumentSubstageCodes <<enumeration>>{
 note bottom of Ics: ICS is defined by ISO here:\nhttps://www.iso.org/publication/PUB100033.html
 
 '******* CLASS RELATIONS **********************************************
-BibliographicItem <|-- IsoBibliographicItem
+IsoBibliographicItem -up-|> BibliographicItem
 
 IsoDocumentId --> IsoBibliographicItem
 IsoLocalizedTitle --> IsoBibliographicItem
 IsoBibliographicItem <-- IsoDocumentType
 IsoBibliographicItem <-- IsoDocumentStatus
-IsoBibliographicItem <-- IsoProjectgroup
 IsoBibliographicItem <-- Ics
+IsoBibliographicItem <-- IsoProjectgroup
 
 DocumentStatus <|-- IsoDocumentStatus
 
 IsoDocumentStatus <-- IsoDocumentStageCodes
 IsoDocumentStatus <-- IsoDocumentSubstageCodes
 
-Organization <|-- IsoProjectgroup
+IsoProjectgroup -down-|> Organization
 
 IsoProjectgroup <-- IsoSubgroup
 

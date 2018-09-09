@@ -106,7 +106,7 @@ enum TermSourceStatus <<enumeration>>{
 }
 
 '******* NOTES ********************************************************
-note bottom of Term: Term modelled according to ISO/IEC Directives 2,\n16.6\nParagraph/TextElement may contain a formula.
+note top of Term: Term modelled according to ISO/IEC Directives 2,\n16.6\nParagraph/TextElement may contain a formula.
 note bottom of Definition: Definition modelled according to ISO/IEC\nDirectives 2, 17.\n* Can be a symbol or abbreviation\n* A DefinitionCollection is represented as\n a single clause
 note "A TermsSection or DefinitionSection\nis a leaf node - only contain terms\nor symbols/abbreviations. The\ncontent of each solely comes from\nthe terms or symbols/abbreviations." as N2
 
