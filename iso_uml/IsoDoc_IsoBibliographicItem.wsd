@@ -181,8 +181,8 @@ note bottom of Ics: ICS is defined by ISO here:\nhttps://www.iso.org/publication
 '******* CLASS RELATIONS **********************************************
 BibliographicItem <|-- IsoBibliographicItem
 
-IsoBibliographicItem <-- IsoDocumentId
-IsoBibliographicItem <-- IsoLocalizedTitle
+IsoDocumentId --> IsoBibliographicItem
+IsoLocalizedTitle --> IsoBibliographicItem
 IsoBibliographicItem <-- IsoDocumentType
 IsoBibliographicItem <-- IsoDocumentStatus
 IsoBibliographicItem <-- IsoProjectgroup

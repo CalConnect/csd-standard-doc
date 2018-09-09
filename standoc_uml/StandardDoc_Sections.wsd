@@ -112,7 +112,4 @@ StandardSection <|-- StandardReferencesSection
 
 StandardHierarchicalSection <|-- StandardContentSection
 
-ClauseSection <|-- TermsSection
-ClauseSection <|-- DefinitionSection
-
 @enduml

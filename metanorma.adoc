@@ -119,6 +119,70 @@ edition of the referenced document (including any amendments) applies.
 
 == Terms and Definitions
 
+[[term_standardizingbody]]
+=== Standardizing body
+
+[alt]#Standards body#
+
+body that has recognized activities in standardization
+
+[.source]
+<<IEV,901-03-03>>
+
+[[term_standard]]
+=== Standard
+
+[alt]#Standards document#
+
+document, established by consensus and approved by a recognized _body_ (<<term_standardizingbody>>), that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context
+
+[.source]
+<<IEV,901-02-02>>
+
+=== Standards model
+
+_document model_ (<<term_documentmodel>>) for _standards_ (<<term_standard>>)
+
+[[term_class]]
+=== Class
+
+structure containing a description of an entity in terms of its components
+
+=== Subclass
+
+class which inherits from another class its component descriptions, and optionally adds to them its own component descriptions
+
+=== Section
+
+hierarchical subdivision of a document, consisting of one or more blocks, and/or one or more sections
+
+[[term_documentmodel]]
+=== Document model
+
+[alt]#Model#
+
+formal specification of the structure of a document in terms of its components and their arrangement, expressed through _classes_ (<<term_class>>)
+
+=== Block
+
+paragraph-level grouping of text
+
+=== Inline Element
+
+grouping of text smaller than a paragraph, including plain strings
+
+=== Identifier
+
+a character, or group of characters, used to identify or name an item of data and possibly to indicate certain properties of that item	
+
+[.source]
+<<IEV,714-21-07>>
+
+=== Term
+
+expression with a particular meaning that is part of the specialized vocabulary of a field
+
+
 == Modelling
 
 === Structure
@@ -712,7 +776,7 @@ include::csd_uml/Csd_StandardDocument.wsd[]
 
 * [[[isoiecdir1,ISO/IEC DIR 1]]], _Procedures for the technical work_
 
-* [[[isoiecdir2,ISO/IEC DIR 2]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
+* [[[isoiecdir2,ISO/IEC DIR 2:2018]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
 
 * [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
 
