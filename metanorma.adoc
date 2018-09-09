@@ -154,7 +154,7 @@ The Metanorma document model depends on the <<iso690>> bibliography model for it
 
 The Metanorma document model has drawn on several existing models, with a view to reflecting the expressiveness of existing standards, but also to align with the capability of established document production tools.
 
-The standards models consulted most closely for Metanorma are those for ISO standards <<isoiecdir2>> and IETF standards (<<rfc7749>>, <<rfc7991>>). The document production tools that Metanorma consciously sought to align with are HTML 4, HTML 5, Markdown, Asciidoctor (<<Asciidoctor>>), and Microsoft Word. The modelling of blocks and inline elements in particular are closely aligned with HTML.
+The standards models consulted most closely for Metanorma are those for ISO standards <<isoiecdir2>> and IETF standards (<<rfc7749>>, <<rfc7991>>). The document production tools that Metanorma consciously sought to align with are HTML 4, HTML 5, Markdown, Asciidoctor (<<asciidoctor>>), and Microsoft Word. The modelling of blocks and inline elements in particular are closely aligned with HTML.
 
 == Basic Document Model
 
@@ -233,12 +233,6 @@ The _Basic Document_ model recognises the following classes of block:
 * Examples (<<basicexample>>)
 
 Functionally figures, sourcecode, formulas and examples all play a similar role, as providing illustrative content that is ancillary to the main content. However each class has its own particular structure.
-
-.Basic Document model: Block
-[plantuml]
-....
-include::basicdoc_uml/Blocks.wsd[]
-....
 
 
 [[basicpara]]
