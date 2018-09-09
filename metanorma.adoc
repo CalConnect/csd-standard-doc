@@ -62,7 +62,7 @@ The process of generating standards documents is problematic, and becoming more 
 
 These problems are if anything even more acute in other standards bodies. The Chinese National Standards body's counterpart to <<isoiecdir2>>, <<gbt11>>, is rather more prescriptive than <<isoiecdir2>> about formatting; despite support of standards authoring through an exhaustive Microsoft Word template wizard, the adherence of published standards to <<gbt11>> is haphazard at best. The wizard provided by the Chinese National Standards body was a Windows-specific tool written in 2010 that no longer works on contemporary systems -- which highlights another vulnerability with using proprietary tools to support standards production.
 
-We have identified a need for a standards document production process that leverages a non-WYSIWYG approach to document production, such as has been used for years in instances like LaTeX, HTML, and DocBook, and more recently Markdown and Asciidoctor. We have also identified a need for the process to be based on a formal document model,  such as is seen in DocBook, HTML, and TEI, and able to deal with the particular needs of standards documents.
+We have identified a need for a standards document production process that leverages a non-WYSIWYG approach to document production, such as has been used for years in instances like LaTeX, HTML, and DocBook, and more recently Markdown and Asciidoctor. We have also identified a need for the process to be based on a formal document model, such as is seen in DocBook, HTML, and TEI, which can be validated against, and which is able to deal with the particular needs of standards documents.
 
 In this document, we propose Metanorma as such a standards document production process. The process centers around the Metanorma document model, which is intended to encompass the core similarities between standards bodies' versions of standards documents; particularities of different standards bodies are kept to a minimum, and expressed as local extensions. The process generates a semantic representation of the standards document expressed in the abstract document model, based on non-WYSIWYG, lightly marked-up text-based input. A further step then generates different output formats from the same document model expression, treating them as the application of styling rather than as document editing.
 
@@ -73,8 +73,7 @@ This approach has the following benefits:
 * The structural and content requirements around standards documents can be captured in the document model, and documents can therefore be subject to formal validation against the model. That means that a Metanorma-based process can provide substantial feedback to authors on the extent to which they comply with the rules expressed in specifications like <<isoiecdir2>> -- including rules around wording (e.g. where requirements can occur), as well as document structure.
 * The document model is substantially the same across standards, as is the non-WYSIWYG text input that it is derived from. That means that text can be repurposed for different standards bodies with minimal effort: it is treated mostly as a swap-out of stylesheets, with only minor adjustments needed to content.
 
-Currently the Metanorma process is realised in the Ruby programming language, with the non-WYSIWYG text input expressed in Asciidoctor, and output generated in
-HTML, Microsoft Word (.doc), and PDF (generated from HTML). Because of the modular approach taken to the toolset, other input and output formats can be supported.
+Currently the Metanorma process is realised in the Ruby programming language, with the non-WYSIWYG text input expressed in Asciidoctor, and output generated in HTML, Microsoft Word (.doc), and PDF (generated from HTML). Because of the modular approach taken to the toolset, other input and output formats can be supported.
 
 Development of Metanorma started in late 2017. Metanorma is already in used by standards authors for several standards:
 
@@ -91,7 +90,7 @@ This document provides the Metanorma reference model for standards documents. Se
 
 The mapping of the reference model to output formats such as HTML, and the application of organisation-specific styling to those outputs, is out of scope of this document.
 
-This document discusses processes around customising the reference model for different standards, and describes customisation for ISO standards as one example profile in <<isoprofile>>. Prescribing profiles of the document model for particular standards, however, is out of scope of this document.
+This document discusses processes around customising the reference model for different standards, and describes customisation for the ISO and CSD standards as example profiles in <<isoprofile>> and <<csdprofile>>. Prescribing profiles of the document model for particular standards, however, is out of scope of this document.
 
 The modelling of bibliographies and bibliographic citations is part of the reference model, but is the subject of a separate proposal, <<relaton>>, and is not discussed in detail in this document.
 
@@ -103,8 +102,6 @@ Markup conventions in text markup schemes (such as Asciidoctor) that enable gene
 == Normative References
 
 // Surely the following boilerplate can be suppressed
-
-// All of these I'd argue are informative not normative
 
 The following documents are referred to in the text in such a way that some or
 all of their content constitutes requirements of this document. For dated
@@ -173,6 +170,7 @@ The _Basic Document_ model treats all documents as collections of _sections_ (<<
 `version`:: information about the current version of the document, including an `edition` (represented in the _Basic Document_ model as an ordinal numeral), the date of latest revision (`revisionDate`), and a textual description of the current `draft`.
 `integrityValue`:: an optional digital signature of the document (<<contributionelementmetadata>>). 
 
+.Basic Document model: Document
 [plantuml]
 ....
 include::basicdoc_uml/BasicDocument.wsd[]
@@ -180,6 +178,7 @@ include::basicdoc_uml/BasicDocument.wsd[]
 
 The modelling of `bibdata` follows the _BibliographicItem_ class in <<relaton>>. Unlike the generic _BibliographicItem_ class, the `title` and `copyright` attributes of `bibdata` are mandatory.
 
+.Basic Document model: bibdata
 [plantuml]
 ....
 include::basicdoc_uml/BibData.wsd[]
@@ -203,10 +202,11 @@ All sections are modelled as having the following attributes:
 `notes`:: any notes whose scope is the entire section, rather than a specific block. Notes are modelled as a sequence of zero or more paragraphs.
 
 
-NOTE: In the _Basic Document_ model, a section can contain both blocks of text and subsections; in rendering, the blocks of text are presumed to come before the subsections. The ISO document model proscribes the coocurrence of text and subsections in a clause (= section) as "hanging paragraphs"; that proscription is modelled as an override of the model specific to Standards documents, for which the referencing of clauses is a paramount concern (<<standardsdoc>>).
+NOTE: In the _Basic Document_ model, a section can contain both blocks of text and subsections; in rendering, the blocks of text are presumed to come before the subsections. The ISO document model proscribes the coocurrence of text and subsections in a clause (= section) as "hanging paragraphs"; that proscription is modelled as an override of the model specific to Standards documents, for which the referencing of clauses is a paramount concern (<<standardssection>>).
 
 // TODO: refine reference
 
+.Basic Document model: Section
 [plantuml]
 ....
 include::basicdoc_uml/Sections.wsd[]
@@ -234,6 +234,7 @@ The _Basic Document_ model recognises the following classes of block:
 
 Functionally figures, sourcecode, formulas and examples all play a similar role, as providing illustrative content that is ancillary to the main content. However each class has its own particular structure.
 
+.Basic Document model: Block
 [plantuml]
 ....
 include::basicdoc_uml/Blocks.wsd[]
@@ -266,11 +267,17 @@ NOTE: If the `appliesTo` identifier of a Review block is absent, the comment app
 
 NOTE: Admonition notes are modelled to be distinct from notes under sections or blocks.
 
+.Basic Document model: Paragraph and Multi-paragraph Block
+[plantuml]
+....
+include::basicdoc_uml/Paragraphs.wsd[]
+....
+
 [[basictable]]
 ==== Table
 
 
-Tables are modelled consistently with HTML. They contain the following elements:
+Tables are modelled following the same principles as HTML tables. They contain the following elements:
 
 `name`:: An optional label for the table.
 `head`:: Zero or more table rows constituting the table header.
@@ -280,24 +287,34 @@ Tables are modelled consistently with HTML. They contain the following elements:
 
 _Table rows_ are defined as a sequence of zero or more header cells and data cells (corresponding to HTML `th` and `td`), both classes being instances of table cells. 
 
-_Table cells_ contain either zero or more paragraphs with footnotes (<<basicpara>>), or zero or more text elements (<<inline>>). In addition, they have the following optional rendering attributes consistent with HTML:
+_Table cells_ contain either zero or more paragraphs with footnotes (<<basicpara>>), or zero or more text elements (<<textelements>>). In addition, they have the following optional rendering attributes which are aligned with HTML:
 
 `colspan`:: Number of columns in the underlying table grid which the cell spans.
 `rowspan`:: Number of rows in the underlying table grid which the cell spans.
 `align`:: Textual alignment of the cell.
 
+.Basic Document model: Table
+[plantuml]
+....
+include::basicdoc_uml/Tables.wsd[]
+....
 
 [[basiclist]]
 ==== List
 
-Lists are modelled consistently with HTML. All lists contain zero or more _list items_, which by default consist of an identifier (`id`), and one or more paragraphs with footnotes (<<basicpara>>). This allows individual list items in a list to be cross-referenced within the document.
+Lists are modelled following the same principles as HTML lists. All lists contain zero or more _list items_, which by default consist of an identifier (`id`), and one or more paragraphs with footnotes (<<basicpara>>). This allows individual list items in a list to be cross-referenced within the document.
 
 Three subclasses of List are modelled. 
 
 * _Unordered lists_ are equivalent to the List base class. 
 * _Ordered lists_ are Lists with a `type` attribute, describing the kind of numeration applied to the List; the values allowed under the _Basic Document_ model are _roman, alphabet, arabic, roman_upper, alphabet_upper_, corresponding to lowercase Roman numerals, lowercase alphabetic letters, Arabic numerals, uppercase Roman numerals, and uppercase alphabetic letters.
-* _Definition lists_ override the definition of the List Item to be a pair of `item` (zero or more text elements: <<inline>>) and `definition` (zero or more paragraphs with footnotes: <<basicpara>>).
+* _Definition lists_ override the definition of the List Item to be a pair of `item` (zero or more text elements: <<textelements>>) and `definition` (zero or more paragraphs with footnotes: <<basicpara>>).
 
+.Basic Document model: List
+[plantuml]
+....
+include::basicdoc_uml/Lists.wsd[]
+....
 
 [[basicfigure]]
 ==== Figure
@@ -342,6 +359,14 @@ Example blocks are wrappers for open-ended example text. They consist of a combi
 * Sourcecode
 
 // TODO: I don't think we've enforced the blockquote restriction; should we, or should we just allow text elements as an alternative here?
+
+.Basic Document model: Figure, Sourcecode, Formula, Example
+[plantuml]
+....
+include::basicdoc_uml/MiscBlocks.wsd[]
+....
+
+
 
 [[inline]]
 === Inline Elements
@@ -392,6 +417,7 @@ The following elements are subclasses of Basic Element that contain no text, and
 * Page Break
 * Horizontal Rule (corresponding to HTML `hr`)
 
+.Basic Document model: Text Elements
 [plantuml]
 ....
 include::basicdoc_uml/TextElements.wsd[]
@@ -412,9 +438,10 @@ NOTE: The _Basic Document_ model does not encompass audio and video files, but a
 
 // TODO: We have not put alt text in; should we? We have not tackled accessibility in general.
 
+.Basic Document model: ID Elements
 [plantuml]
 ....
-include::basicdoc_uml/TextElements.wsd[]
+include::basicdoc_uml/IdElements.wsd[]
 ....
 
 
@@ -445,9 +472,9 @@ Footnotes are modelled as a subclass of Reference To ID With Paragraph Element, 
 NOTE: Endnotes are not modelled separately from footnotes in the _Basic Document_ model, and the use of footnotes and endnotes as realisations of annotations are normally stylistic alternatives, which would be relegated to a stylesheet.
 
 [[datavalues]]
-=== Data Values
+=== Data Types
 
-==== Basic Data values
+==== Basic Data Types
 
 The following basic types are used in the definition of the _Basic Document_ model.
 
@@ -461,7 +488,7 @@ The following basic types are used in the definition of the _Basic Document_ mod
 * Localised Strings, specifying a String with optional Language and Script attributes.
 * Formatted Strings, specifying a Localised String with a `format` attribute, in order to admit markup into Strings (whether XML-based or not).
 
-
+.Basic Document model: Data Types
 [plantuml]
 ....
 include::basicdoc_uml/DataTypes.wsd[]
@@ -488,8 +515,9 @@ The _Standards Document_ model extends the _Basic Document_ modelling of the doc
 * Zero or more optional _prefaces_ (Standard Hierarchical Sections: <<standardssection>>).
 * One or more _sections_ (Standard Hierarchical Sections).
 * Zero or more _annexes_ (Standard Hierarchical Sections).
-* Zero or more _bibliographies_ (Standard References Sections: <<standardssection>>).
+* Zero or more _bibliographies_ (Standard References Sections: <<standardsreferencessection>>).
 
+.Standards Document model: Document
 [plantuml]
 ....
 include::standoc_uml/StandardDoc_StandardDocument.wsd[]
@@ -505,14 +533,22 @@ The _Standards Document_ model extends the _Basic Document_ modelling of section
 * Sections in a standards document fall into two categories: Clause Sections, which are numbered, and form part of the main flow of the document, and Content sections (Standard Hierarchical Sections), which are optionally not numbered, and which lie outside the main flow of the document.
 * The subclauses of Clauses are themselves Clause Sections; they continue the hierarchical numbering of Clause Sections at deeper hierarchical levels. The subclauses of Content sections are Standard Sections, and need not be numbered.
 * Annexes and Clause Sections are modelled in the same way in the _Standards Document_ model. However they are expected to be numbered differently, and to be rendered as separate sequences.  
-* Standard References Sections are a subclass of Standard Section. Like the References Sections of the _Basic Document_ model (<<basicsection>>), they are leaf nodes which contain zero or more bibliographical references (as modelled in <<relaton>>).
 
 Although it is different to capture in a container-based model, the _Standards Document_ model requires "hanging paragraphs" to be avoided: a Clause section in particular should contain either blocks or subsections, but not both. This is a requirement in <<isoiecdir2>>, but the need to reference text in clauses unambiguously by clause number makes the avoidance of hanging paragraphs desirable for standards documents in general. The requirement is less pressing for Content sections (which are unnumbered), and Annexes (as exemplified in <<isoiecdir2>> itself.)
 
+.Standards Document model: Section
 [plantuml]
 ....
 include::standoc_uml/StandardDoc_Sections.wsd[]
 ....
+
+[[standardsreferencessection]]
+=== References Section
+
+Standard References Sections are a subclass of Standard Section. Like the References Sections of the _Basic Document_ model (<<basicsection>>), they are leaf nodes which contain zero or more bibliographical references (as modelled in <<relaton>>).
+
+
+=== Terms Section and Definition Section
 
 The _Standards Document_ model models two further subclasses of Clause Sections:
 
@@ -529,6 +565,7 @@ The _Standards Document_ model models two further subclasses of Clause Sections:
 `example``:: Zero or more examples of how the term is to be used.
 `source`:: Zero or more bibliographical sources for the term. These include the `origin` of the term, which is its bibliographical citation (as defined in <<relaton>>); the `status` of the definition (whether _identical_ to the definition given in the origin cited, or _modified_); and, if the definition is modified, a description of the `modification` to the definition applied for this document.
 
+.Standards Document model: Term Section and Definition Section
 [plantuml]
 ....
 include::standoc_uml/StandardDoc_Terms.wsd[]
@@ -536,10 +573,13 @@ include::standoc_uml/StandardDoc_Terms.wsd[]
 
 
 [[standardsblock]]
-=== Block, Data Types
+=== Block
 
-There is no difference in the modelling of blocks or data types between the _Basic Document_ model and the _Standards Document_ model.
+There is no difference in the modelling of blocks between the _Basic Document_ model and the _Standards Document_ model.
 
+=== Data Types
+
+There is no difference in the modelling of data types between the _Basic Document_ model and the _Standards Document_ model.
 
 [[isoprofile]]
 [appendix]
@@ -554,7 +594,7 @@ The _ISO Standard Document_ model is given here as an exemplar of the applicatio
 
 The _ISO Standard Document_ model extends the _Standards Document_ modelling of the document by requiring the following specific types of section:
 
-* A _Preface_, consisting of a _Foreword_ (a Basic Section: <<basicsection>>), and an optional _Introduction_ (a ClauseSection: <<standardssection>>, since an ISO Introduction can optionally have numbered subsections).
+* A _Preface_, consisting of a mandatory _Foreword_ (a Basic Section: <<basicsection>>), and an optional _Introduction_ (a ClauseSection: <<standardssection>>, since an ISO Introduction can optionally have numbered subsections).
 * One or more Clause Sections (<<standardssection>>).
 * Zero or more Annexes (<<standardssection>>).
 
@@ -566,6 +606,7 @@ The _ISO Standard Document_ model document also includes zero or more `termSourc
 
 The _ISO Standard Document_ model document uses ISO-specific extensions to the <<relaton>> metadata about a document (<<isobib>>).
 
+.ISO Standard Document model: Document
 [plantuml]
 ....
 include::iso_uml/IsoDoc_IsoStandardDocument.wsd[]
@@ -578,6 +619,12 @@ The _ISO Standard Document_ model extends the _Standards Document_ modelling of 
 
 * The types that an Admonition can belong to are overridden to belong to the following set prescribed in <<isoiecdir2>>: _Danger, Caution, Warning, Important, Safety Precaution_.
 
+.ISO Standard Document model: Block
+[plantuml]
+....
+include::iso_uml/IsoDoc_IsoBlocks.wsd[]
+....
+
 [[isobib]]
 === Bibliography
 
@@ -585,7 +632,7 @@ We note here the _ISO Standard Document_ overrides of the <<relaton>> bibliograp
 
 <<relaton>> is intended as a highly generic model, and custom bibliographic elements would impede the reuse of bibliographic entries between standards. However, it is useful for the metadata describing the current document (`bibdata`: <<basicdocument>>) to be enriched to provide metadata relevant to the standard class.
 
-The bibliographic modelling of ISO documents is enriched as follows:
+The bibliographic modelling of ISO documents is enriched compared to <<relaton>>  as follows:
 
 * The document identifier is refined to contain three optional parts: a project number, a part number, and a technical committee document number.
 * The document title is broken down into an optional Introductory component, a mandatory Main component, and an optional Part component.
@@ -597,13 +644,58 @@ The bibliographic modelling of ISO documents is enriched as follows:
 * The document has an optional abstract.
 * The document has an optional "All Parts" boolean attribute, indicating whether the bibliographic description applies across all Part documents under the same project number (which makes it a multi-document description).
 
+.ISO Standard Document model: Bibliography
 [plantuml]
 ....
 include::iso_uml/IsoDoc_IsoBibliographicItem.wsd[]
 ....
 
+[[csdprofile]]
+[appendix]
+== CSD Standard Document Model Profile
 
-[bibliography]
+=== General
+
+The _CSD Standard Document_ model is given here as an exemplar of the application of Metanorma modelling to a particular standard (standards published by the Calendaring and Scheduling Consortium).
+
+=== Document, Section
+
+The _CSD Standard Document_ model extends the _Standards Document_ modelling of the document by requiring the following specific types of section:
+
+* An optional _Foreword_ (a Standards Hierarchical Section: <<standardssection>>).
+* An optional _Introduction_ (a Standards Hierarchical Section: <<standardssection>>).
+* One or more Clause Sections (<<standardssection>>).
+* Zero or more Annexes (<<standardssection>>).
+
+=== Block
+
+The _CSD Standard Document_ model extends the _Standards Document_ modelling of blocks for one block definition:
+
+* The definition of Figure is altered to allow Ascii Art as an option for its content, as a string (`pre`). As with Sourcecode (<<basicsourcecode>>), the string should be treated as preformatted text, with whitespace treated as significant.
+
+=== Inline Elements
+
+The _CSD Standard Document_ model extends the _Standards Document_ modelling of inline elements by one element:
+
+* The `keyword` element is added as a subclass of Text Element (<<textelements>>). The element is used to represent code keywords, as with `code` in HTML, and should be rendered in monospace.
+
+=== Bibliography
+
+The provisos which apply to ISO bibliographic entries (<<isobib>>) also apply here.
+
+The bibliographic modelling of CSD documents is enriched compared to <<relaton>> as follows:
+
+* The document type is constrained to be one of the following: _Code, Presentation, Proposal, Standard, Report_.
+* The document status is constrained to be one of the following: _Proposal, Working Draft, Committee Draft, Final Draft, Published, Withdrawn_.
+* The editorial group responsible for the document is defined with a single components: a mandatory Technical Committee. The Technical Committee has a type of either _Technical_ or _Provisional_.
+
+.CSD Standard Document model
+[plantuml]
+....
+include::csd_uml/Csd_StandardDocument.wsd[]
+....
+
+ [bibliography]
 == Bibliography 
 
 * [[[isoiecdir1,ISO/IEC DIR 1]]], _Procedures for the technical work_
