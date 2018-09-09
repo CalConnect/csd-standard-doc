@@ -59,15 +59,6 @@ class BasicBlock {
     +contribMetadata: ContributionElementMetadata[0..*]
 }
 
-class ParagraphBlock{
-    +contents: BasicElement[0..*]
-    +alignment: TextAlignment[0..1]
-}
-
-class ParagraphWithFootnote{
-    +footnotes: ReferenceToldWithParagraphElement[0..*]
-}
-
 class TableBlock{
     +name: String[0..1]
     +head: TextTableRow[0..1]
@@ -105,11 +96,9 @@ enum TextAlignment <<enumeration>>{
 
 
 '******* CLASS RELATIONS *********************************************
-BasicBlock <|-- ParagraphBlock
 BasicBlock <|-- TableBlock
 
-ParagraphBlock <|-- ParagraphWithFootnote
-ParagraphBlock <-- TextAlignment
+TableCell <-- TextAlignment
 
 TableBlock <-- TextTableRow
 TextTableRow <-- TableCell

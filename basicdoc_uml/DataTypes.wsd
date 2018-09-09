@@ -89,29 +89,6 @@ class Iso14888Oid <<dataType>> {
 
 }
 
-class ContributionElementMetadata {
-    +dateTime: Iso8601DateTime
-    +contributor: <<Bibliography>>Contributor[0..1]
-    +integrityValue: integrityValue[0..*]
-
-}
-
-class IntegrityValue {
-
-}
-
-class Hash {
-    +algorithm: Iso10118Oid
-    +value: String
-}
-
-class Signature {
-    +algorithm: Iso14888Oid
-    +publicKey: String
-    +signature: String
-
-}
-
 enum StringFormat <<enumeration>> {
     plain
     html
@@ -128,18 +105,11 @@ enum StringFormat <<enumeration>> {
 note bottom of Iso10118Oid: Hash algorithm
 note bottom of Iso14888Oid: Signature algorithm
 note bottom of FormattedString: FormattedString\ndefaults to "plain"
-note bottom of StringFormat: The coresponsind MIME types,\ndefaults to "text/plain"\n(docbook / asciidoc / isdoc\nare not registered types yet)
+note bottom of StringFormat: The coresponding MIME types,\ndefaults to "text/plain"\n(docbook / asciidoc / isdoc\nare not registered types yet)
 
 
 '******* CLASS RELATIONS *********************************************
 LocalizedString <|-- FormattedString
 FormattedString <-- StringFormat
-
-ContributionElementMetadata <-- IntegrityValue
-IntegrityValue <|-- Hash
-IntegrityValue <|-- Signature
-
- Hash -[hidden]- Iso10118Oid
- Signature -[hidden]- Iso14888Oid
 
 @enduml

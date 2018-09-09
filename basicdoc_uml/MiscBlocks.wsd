@@ -91,44 +91,6 @@ class ExampleBlock{
     +sourcecode: SourcecodeBlock[0..*]
 }
 
-class ParagraphBlock{
-    +contents: BasicElement[0..*]
-    +alignment: TextAlignment[0..1]
-}
-
-class ParagraphWithFootnote{
-    +footnotes: ReferenceToldWithParagraphElement[0..*]
-}
-
-class List{
-    +listitem: ListItem[0..*]
-}
-
-class Listitem{
-    +id: string[0..1]
-    +content: ParagraphWithFootnote[0..*]
-}
-
-class UnorderedList{
-
-}
-
-class DefinitionList{
-    +listitem: Definition[0..*]
-}
-
-class Definition{
-    +item: TextElement[0..*]
-    +definition: ParagraphWithFootnote[0..*]
-}
-
-enum TextAlignment <<enumeration>>{
-    left
-    center
-    right
-    justified
-}
-
 '******* NOTES *******************************************************
 note bottom of QuoteBlock : QuoteBlock: author is properly derived from\nthe Citation, and is redundant here: it is for\ndisplay only
 note left of Subfigure : Subfigures and images\nonly occur\nwithin figures
@@ -140,19 +102,5 @@ FormulaBlock --|> BasicBlock
 ExampleBlock --|> BasicBlock
 
 FigureBlock <|-- Subfigure
-
-BasicBlock <|-- List
-BasicBlock <|-- ParagraphBlock
-
-List <-left- Listitem 
-List <|-- UnorderedList
-List <|-- DefinitionList
-
-DefinitionList <-- Definition
-
-ParagraphBlock <|-- ParagraphWithFootnote
-ParagraphBlock <-- TextAlignment
-
-ParagraphsBlock <|-- QuoteBlock
 
 @enduml

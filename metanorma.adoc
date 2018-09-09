@@ -247,6 +247,12 @@ Paragraphs have the following subclass:
 
 * _Paragraph With Footnote_, which can also contain footnotes (<<footnote>>). The distinction is necessary, as footnotes are not appropriate for all instances of paragraph content (e.g. sourcecode annotations) (<<basicsourcecode>>).
 
+.Basic Document model: Paragraph
+[plantuml]
+....
+include::basicdoc_uml/Paragraphs.wsd[]
+....
+
 [[basicmultipara]]
 ==== Multi-paragraph blocks
 
@@ -261,10 +267,10 @@ NOTE: If the `appliesTo` identifier of a Review block is absent, the comment app
 
 NOTE: Admonition notes are modelled to be distinct from notes under sections or blocks.
 
-.Basic Document model: Paragraph and Multi-paragraph Block
+.Basic Document model: Multi-paragraph Block
 [plantuml]
 ....
-include::basicdoc_uml/Paragraphs.wsd[]
+include::basicdoc_uml/MultiParagraphs.wsd[]
 ....
 
 [[basictable]]
@@ -322,7 +328,7 @@ Figures are wrappers for images, and may themselves contain figures (_Subfigure_
 `footnotes`:: Optional footnotes specific to the figure. (This reflects practice in <<isoiecdir2>>.)
 `figure`:: Embedded figures. (This reflects practice in <<isoiecdir2>>, and subfigures are intended to be mutually exclusive with `image`, `source`: the latter are intended for leaf node figures.)
 
-NOTE: The _Basic Document_ model makes no provision for "ASCII art", the use of text instead of images. Models derived from the _Basic Document_ model do permit such use of text by extending the modelling of figure.
+NOTE: The _Basic Document_ model makes no provision for "ASCII art", the use of text instead of images. Models derived from the _Basic Document_ model do permit such use of text by extending the modelling of figure (e.g. <<csdblock>>).
 
 [[basicsourcecode]]
 ==== Sourcecode
@@ -402,8 +408,13 @@ Text Elements also include the STEM element, representing mathematical and other
 
 NOTE: The _Basic Document_ model does not provide for text elements containing other text elements, for simplicity (e.g. monospace + italics, or superscript + strikethrough). Extensions to the model may choose to model such nesting of text elements.
 
+.Basic Document model: Text Elements
+[plantuml]
+....
+include::basicdoc_uml/TextElements.wsd[]
+....
 
-==== Empty Elemnts
+==== Empty Elements
 
 The following elements are subclasses of Basic Element that contain no text, and are intended to represent semantically significant formatting elements:
 
@@ -411,10 +422,10 @@ The following elements are subclasses of Basic Element that contain no text, and
 * Page Break
 * Horizontal Rule (corresponding to HTML `hr`)
 
-.Basic Document model: Text Elements
+.Basic Document model: Empty Elements
 [plantuml]
 ....
-include::basicdoc_uml/TextElements.wsd[]
+include::basicdoc_uml/EmptyElements.wsd[]
 ....
 
 
@@ -497,6 +508,12 @@ In addition to the Basic Data Values, the _Basic Document_ model defines a conta
 `dateTime`:: The date and time when the contribution was made.
 `contributor`:: The party who made the contribution, as described through the `contributor` element in <<relaton>>.
 `inegrityValue`:: A digital signature of the contribution, consisting of a `hash` value and a `signature`, with an associated `publicKey`.
+
+.Basic Document model: Contribution Element Metadata
+[plantuml]
+....
+include::basicdoc_uml/ContribMetadata.wsd[]
+....
 
 [[standardsdoc]]
 == Standards Document Model
@@ -661,11 +678,12 @@ The _CSD Standard Document_ model extends the _Standards Document_ modelling of 
 * One or more Clause Sections (<<standardssection>>).
 * Zero or more Annexes (<<standardssection>>).
 
+[[csdblock]]
 === Block
 
 The _CSD Standard Document_ model extends the _Standards Document_ modelling of blocks for one block definition:
 
-* The definition of Figure is altered to allow Ascii Art as an option for its content, as a string (`pre`). As with Sourcecode (<<basicsourcecode>>), the string should be treated as preformatted text, with whitespace treated as significant.
+* The definition of Figure is altered to allow Ascii art as an option for its content, as a string (`pre`). As with Sourcecode (<<basicsourcecode>>), the string should be treated as preformatted text, with whitespace treated as significant.
 
 === Inline Elements
 
@@ -689,7 +707,7 @@ The bibliographic modelling of CSD documents is enriched compared to <<relaton>>
 include::csd_uml/Csd_StandardDocument.wsd[]
 ....
 
- [bibliography]
+[bibliography]
 == Bibliography 
 
 * [[[isoiecdir1,ISO/IEC DIR 1]]], _Procedures for the technical work_

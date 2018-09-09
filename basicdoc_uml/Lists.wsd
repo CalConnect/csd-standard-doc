@@ -59,15 +59,6 @@ class BasicBlock {
     +contribMetadata: ContributionElementMetadata[0..*]
 }
 
-class ParagraphBlock{
-    +contents: BasicElement[0..*]
-    +alignment: TextAlignment[0..1]
-}
-
-class ParagraphWithFootnote{
-    +footnotes: ReferenceToldWithParagraphElement[0..*]
-}
-
 class List{
     +listitem: ListItem[0..*]
 }
@@ -94,13 +85,6 @@ class Definition{
     +definition: ParagraphWithFootnote[0..*]
 }
 
-enum TextAlignment <<enumeration>>{
-    left
-    center
-    right
-    justified
-}
-
 enum OrderedListType <<enumeration>>{
     roman
     alphabet
@@ -112,7 +96,6 @@ enum OrderedListType <<enumeration>>{
 
 '******* CLASS RELATIONS *********************************************
 BasicBlock <|-- List
-BasicBlock <|-- ParagraphBlock
 
 List <-left- Listitem 
 List <|-- UnorderedList
@@ -123,8 +106,5 @@ DefinitionList <-- Definition
 UnorderedList <|-- OrderedList
 
 OrderedList <-- OrderedListType
-
-ParagraphBlock <|-- ParagraphWithFootnote
-ParagraphBlock <-- TextAlignment
 
 @enduml

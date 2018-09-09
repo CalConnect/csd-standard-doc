@@ -1,4 +1,4 @@
-@startuml Paragraphs
+@startuml MultiParagraphs
 /'
 Diagram:        Blocks
 DateCreate:     28/07/2018
@@ -59,30 +59,44 @@ class BasicBlock {
     +contribMetadata: ContributionElementMetadata[0..*]
 }
 
-class ParagraphBlock{
-    +contents: BasicElement[0..*]
-    +alignment: TextAlignment[0..1]
-}
-
 class ParagraphsBlock{
     +contents: ParagraphWithFootnote[0..*]
 }
 
-class ParagraphWithFootnote{
-    +footnotes: ReferenceToldWithParagraphElement[0..*]
+class QuoteBlock{
+    +source: ReferenceToCitationElement[0..1]
+    +author: String | <<Bibliography>> Contributor[0..1]
 }
 
-enum TextAlignment <<enumeration>>{
-    left
-    center
-    right
-    justified
+class ReviewBlock{
+    +reviewer: String[0..1]
+    +date: DateTime[0..1]
+    +appliesFrom: IdElement
+    +appliesTo: IdElement[0..1]
 }
+
+class AdmonitionBlock{
+    +type: AdmonitionType
+}
+
+enum AdmonitionType <<enumeration>>{
+    warning
+    note
+    tip
+    important
+    caution
+}
+
+'******* NOTES *******************************************************
+note bottom of QuoteBlock : QuoteBlock: author is properly derived from\nthe Citation, and is redundant here: it is for\ndisplay only
 
 '******* CLASS RELATIONS *********************************************
-BasicBlock <|-- ParagraphBlock
+BasicBlock <|-- ParagraphsBlock
 
-ParagraphBlock <|-- ParagraphWithFootnote
-ParagraphBlock <-- TextAlignment
+ParagraphsBlock <|-- QuoteBlock
+ParagraphsBlock <|-- ReviewBlock
+ParagraphsBlock <|-- AdmonitionBlock
+
+AdmonitionBlock <-- AdmonitionType
 
 @enduml
