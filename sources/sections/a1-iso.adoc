@@ -1,0 +1,70 @@
+
+[[isoprofile]]
+[appendix]
+== ISO Standard Document Model Profile
+
+=== General
+
+The _ISO Standard Document_ model is given here as an exemplar of the application of Metanorma modelling to a particular standard.
+
+[[isodocument]]
+=== Document, Section
+
+The _ISO Standard Document_ model extends the _Standards Document_ modelling of the document by requiring the following specific types of section:
+
+* A _Preface_, consisting of a mandatory _Foreword_ (a Basic Section: <<basicsection>>), and an optional _Introduction_ (a ClauseSection: <<standardssection>>, since an ISO Introduction can optionally have numbered subsections).
+* One or more Clause Sections (<<standardssection>>).
+* Zero or more Annexes (<<standardssection>>).
+
+Annexes in the _ISO Standard Document_ can optionally contain one or more _Appendixes_, which can be thought of as annexes of the annex section.
+
+NOTE: Appendixes are not defined in <<isoiecdir2>>, but they appear in the companion standard <<isoiecdir1>>. For example, Annex SL of <<isoiecdir1>> includes Appendix 1, Appendix 2, and Appendix 3; Appendix 2 "High level structure, identical core text, common terms and core definitions" itself contains an Introduction and 10 clauses, including a Terms clause.
+
+The _ISO Standard Document_ model document also includes zero or more `termSources` elements, giving the citations for the documents that the Terms Section draws on for its definitions and repertoire of terms.
+
+The _ISO Standard Document_ model document uses ISO-specific extensions to the <<relaton>> metadata about a document (<<isobib>>).
+
+.ISO Standard Document model: Document
+[plantuml]
+....
+include::models/iso/IsoDoc_IsoStandardDocument.wsd[]
+....
+
+[[isoblock]]
+=== Block
+
+The _ISO Standard Document_ model extends the _Standards Document_ modelling of blocks for one block definition:
+
+* The types that an Admonition can belong to are overridden to belong to the following set prescribed in <<isoiecdir2>>: _Danger, Caution, Warning, Important, Safety Precaution_.
+
+.ISO Standard Document model: Block
+[plantuml]
+....
+include::models/iso/IsoDoc_IsoBlocks.wsd[]
+....
+
+[[isobib]]
+=== Bibliography
+
+We note here the _ISO Standard Document_ overrides of the <<relaton>> bibliographic model; although the contents of <<relaton>> are out of scope of this document, its customisation for a specific standard are in scope.
+
+<<relaton>> is intended as a highly generic model, and custom bibliographic elements would impede the reuse of bibliographic entries between standards. However, it is useful for the metadata describing the current document (`bibdata`: <<basicdocument>>) to be enriched to provide metadata relevant to the standard class.
+
+The bibliographic modelling of ISO documents is enriched compared to <<relaton>>  as follows:
+
+* The document identifier is refined to contain three optional parts: a project number, a part number, and a technical committee document number.
+* The document title is broken down into an optional Introductory component, a mandatory Main component, and an optional Part component.
+* The document type is constrained to be one of the following: _International Standard, Technical Specification, Technical Report, Publicly Available Specification, International Workshop Agreement, Guide_.
+* The document status is broken down into an ISO Document Stage code (<<isostage>>), an ISO Document Substage code (<<isostage>>), and an Iteration number.
+* The editorial group responsible for the document is defined with four components: a mandatory Technical Committee, an optional Subcommittee, an optional Workgroup, and an optional Secretariat. The Technical Committee, Subcommittee and Workgroup, in turn, are instances of the ISO Subgroup class, defined as having a name, an optional type, and an optional number.
+* The document has one or more International Classification for Standards classifications <<ics>>. The ICS classification is defined as a code, and an optional text explaining the code.
+* The document has zero or more source URIs.
+* The document has an optional abstract.
+* The document has an optional "All Parts" boolean attribute, indicating whether the bibliographic description applies across all Part documents under the same project number (which makes it a multi-document description).
+
+.ISO Standard Document model: Bibliography
+[plantuml]
+....
+include::models/iso/IsoDoc_IsoBibliographicItem.wsd[]
+....
+

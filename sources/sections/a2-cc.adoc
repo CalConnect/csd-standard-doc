@@ -1,0 +1,46 @@
+
+[[csdprofile]]
+[appendix]
+== CSD Standard Document Model Profile
+
+=== General
+
+The _CSD Standard Document_ model is given here as an exemplar of the application of Metanorma modelling to a particular standard (standards published by the Calendaring and Scheduling Consortium).
+
+=== Document, Section
+
+The _CSD Standard Document_ model extends the _Standards Document_ modelling of the document by requiring the following specific types of section:
+
+* An optional _Foreword_ (a Standards Hierarchical Section: <<standardssection>>).
+* An optional _Introduction_ (a Standards Hierarchical Section: <<standardssection>>).
+* One or more Clause Sections (<<standardssection>>).
+* Zero or more Annexes (<<standardssection>>).
+
+[[csdblock]]
+=== Block
+
+The _CSD Standard Document_ model extends the _Standards Document_ modelling of blocks for one block definition:
+
+* The definition of Figure is altered to allow Ascii art as an option for its content, as a string (`pre`). As with Sourcecode (<<basicsourcecode>>), the string should be treated as preformatted text, with whitespace treated as significant.
+
+=== Inline Elements
+
+The _CSD Standard Document_ model extends the _Standards Document_ modelling of inline elements by one element:
+
+* The `keyword` element is added as a subclass of Text Element (<<textelements>>). The element is used to represent code keywords, as with `code` in HTML, and should be rendered in monospace.
+
+=== Bibliography
+
+The provisos which apply to ISO bibliographic entries (<<isobib>>) also apply here.
+
+The bibliographic modelling of CSD documents is enriched compared to <<relaton>> as follows:
+
+* The document type is constrained to be one of the following: _Code, Presentation, Proposal, Standard, Report_.
+* The document status is constrained to be one of the following: _Proposal, Working Draft, Committee Draft, Final Draft, Published, Withdrawn_.
+* The editorial group responsible for the document is defined with a single components: a mandatory Technical Committee. The Technical Committee has a type of either _Technical_ or _Provisional_.
+
+.CSD Standard Document model
+[plantuml]
+....
+include::models/csd/Csd_StandardDocument.wsd[]
+....

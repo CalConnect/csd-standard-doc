@@ -1,0 +1,27 @@
+
+[bibliography]
+== Bibliography
+
+* [[[isoiecdir1,ISO/IEC DIR 1]]], _Procedures for the technical work_
+
+* [[[isoiecdir2-2004,ISO/IEC DIR 2:2004]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
+
+* [[[isoiecdir2,ISO/IEC DIR 2:2018]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
+
+* [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
+
+* [[[iso5127,ISO 5127:2017]]], _Information and documentation — Foundation and vocabulary_
+
+* [[[gbt11,CN(GB/T 1.1-2009)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
+
+* [[[RFC7749,IETF RFC 7749]]], _The "xml2rfc" Version 2 Vocabulary_
+
+* [[[RFC7991,IETF RFC 7991]]], _The "xml2rfc" Version 3 Vocabulary_
+
+* [[[asciidoctor,8]]] _Asciidoctor User Manual._ https://asciidoctor.org/docs/user-manual/
+
+* [[[ics,9]]] _ISO International Classification for Standards (ICS)_, https://www.iso.org/publication/PUB100033.html
+
+* [[[isostage,10]]] _International harmonized stage codes_, https://www.iso.org/stage-codes.html
+
+* [[[IEV,IEV]]], _IEV_

@@ -1,0 +1,112 @@
+
+== Terms and Definitions
+
+[[term-standardization-body]]
+=== standardization body
+
+[alt]#standards body#
+
+body that has recognized activities in standardization
+
+[.source]
+<<IEV,901-03-03>>
+
+[[term-standardization-document]]
+=== standardization document
+
+[alt]#standards document#
+
+document, established by consensus and approved by a recognized _standardization body_ (<<term-standardization-body>>), that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context
+
+[.source]
+<<IEV,901-02-02>>
+
+
+
+////
+model
+conceptual data model
+data model that represents an abstract view of the real world
+Note 1 to entry: A conceptual model represents the human understanding of a system.
+[SOURCE: ISO 11179-1:2004, definition 3.2.5]
+ISO 23081-2:2009(en), 3.5
+
+
+data model
+graphical and/or lexical representation of data (3.2.6), specifying their properties, structure, and inter-relationships
+ISO/IEC 11179-1:2015(en), 3.2.7
+
+conceptual data model
+data model (3.1.13.33) that represents an abstract view of the real world
+Note 1 to entry: A conceptual model represents the human understanding of a system (3.1.1.13).
+[SOURCE: ISO/IEC 11179-1:2015, definition 3.2.5]
+Note 2 to entry: See also ISO 25964-1:2011; definition 2.14.
+ISO 5127:2017(en), 3.1.13.34
+
+data model
+description of the organization of data (3.1.1.15) in a manner that reflects an information (3.1.1.16) structure
+[SOURCE: ISO 28258:2013, definition 3.9]
+ISO 5127:2017(en), 3.1.13.33
+
+////
+
+[[term-class]]
+=== class
+
+structure containing a description of an entity in terms of its components
+
+=== subclass
+
+_class_ (<<term-class>>) which inherits from another class its component descriptions, and optionally adds to them its own component descriptions
+
+[[term-document-metamodel]]
+=== document metamodel
+
+[alt]#model#
+
+formal specification of the structure of a document in terms of its components and their arrangement, expressed through _classes_ (<<term-class>>)
+
+
+[[term-document-model]]
+=== document model
+
+[alt]#model#
+
+formal specification of the structure of a document in terms of its components and their arrangement, expressed through _classes_ (<<term-class>>)
+
+=== standards model
+
+_document model_ (<<term-document-model>>) for _standards_ (<<term-standardization-document>>)
+
+[[term-paragraph]]
+=== paragraph
+
+subdivision of running text, normally run on throughout, that is separated from text before and after by a change of line and stands below any chapters or sections (<<term-section>>)
+
+[.source]
+<<iso5127,clause 3.5.8.07>>
+
+[[term-block]]
+=== block
+
+_paragraph_ (<<term-paragraph>>)-level grouping of text
+
+=== inline Element
+
+grouping of text that can be contained within a _paragraph_ (<<term-paragraph>>), including plain strings
+
+[[term-section]]
+=== section
+
+hierarchical subdivision of a document, consisting of one or more _blocks_ (<<term-block>>), and/or one or more sections
+
+=== identifier
+
+a character, or group of characters, used to identify or name an item of data and possibly to indicate certain properties of that item
+
+[.source]
+<<IEV,714-21-07>>
+
+=== term
+
+expression with a particular meaning that is part of the specialized vocabulary of a field

@@ -1,0 +1,4 @@
+
+== Data Types
+
+There is no difference in the modelling of data types between the _Basic Document_ model and the _Standards Document_ model.

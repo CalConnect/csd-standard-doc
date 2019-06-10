@@ -1,0 +1,15 @@
+[[standardsdocument]]
+== Standards Document model
+
+The _Standards Document_ model extends the _Basic Document_ modelling of the document by requiring the following specific types of section:
+
+* Zero or more optional _prefaces_ (Standard Hierarchical Sections: <<standardssection>>).
+* One or more _sections_ (Standard Hierarchical Sections).
+* Zero or more _annexes_ (Standard Hierarchical Sections).
+* Zero or more _bibliographies_ (Standard References Sections: <<standardsreferencessection>>).
+
+.Standards Document model: Document
+[plantuml]
+....
+include::models/standoc/StandardDoc_StandardDocument.wsd[]
+....

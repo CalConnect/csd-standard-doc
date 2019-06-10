@@ -1,0 +1,61 @@
+= Standardization documents -- Metanorma -- Document metamodel
+:docnumber: 36001
+:copyright-year: 2019
+:language: en
+:doctype: standard
+:edition: 1
+:status: working-draft
+:revdate: 2019-06-05
+:published-date: 2019-06-05
+:script: Latn
+:technical-committee: VCARD
+:fullname: Ronald Tse
+:surname: Tse
+:givenname: Ronald
+:fullname_2: Nick Nicholas
+:surname_2: Nicholas
+:givenname_2: Nick
+:draft:
+:toc:
+:stem:
+:xrefstyle: short
+:docfile: cc-36001.adoc
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+include::sections-cc/00-foreword.adoc[]
+
+include::sections/00-intro.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-norm-refs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-modelling.adoc[]
+
+include::sections/05-standdoc.adoc[]
+
+include::sections/06-metadata.adoc[]
+
+include::sections/07-sections.adoc[]
+
+include::sections/08-references.adoc[]
+
+include::sections/08-terms.adoc[]
+
+include::sections/09-terms.adoc[]
+
+include::sections/10-block.adoc[]
+
+include::sections/11-data-types.adoc[]
+
+include::sections/99-bibliography.adoc[]
+
+include::sections/a1-iso.adoc[]
+
+include::sections/a2-cc.adoc[]
+

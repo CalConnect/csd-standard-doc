@@ -1,0 +1,12 @@
+
+== Scope
+
+This document provides the Metanorma reference model for standards documents. Implementation of the reference model and serialisation formats out of scope of this document.
+
+The mapping of the reference model to output formats such as HTML, and the application of organisation-specific styling to those outputs, is out of scope of this document.
+
+This document discusses processes around customising the reference model for different standards, and describes customisation for the ISO and CSD standards as example profiles in <<isoprofile>> and <<csdprofile>>. Prescribing profiles of the document model for particular standards, however, is out of scope of this document.
+
+The modelling of bibliographies and bibliographic citations is part of the reference model, but is the subject of a separate proposal, <<relaton>>, and is not discussed in detail in this document.
+
+The modelling of changes to documents is in scope of the _Basic Document_ model described here, but is not described in this document.

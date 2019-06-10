@@ -1,0 +1,34 @@
+[[introduction]]
+:sectnums!:
+== Introduction
+
+The process of generating standards documents is problematic, and becoming more so with the increased work burden on standards organisations. ISO is no exception to this issue, and concerns have been raised over both the efficiency and the effectiveness of the workflows around generating standards in those bodies and elsewhere.
+
+* The rigorous and detailed directives around document structure articulated in <<isoiecdir2>> are being manually validated by the editorial teams, with mixed results.
+
+* Editing of documents substantially revolves around Microsoft Word toolsets, with all the problems that conflating document structure and presentation introduce. The editorial process has to spend significant amounts of time on formatting rather than document content, and is vulnerable to error. Opportunities to automate document presentation independently of content (as is routinely done in the HTML world with CSS) are not being taken up.
+
+* Existing exchange mechanisms for documents have been claimed to focus on document appearance, rather than document structure, and so do not alleviate the formatting burden on the editorial process.
+
+* Different standards have completely different workflows, with different inputs: anyone submitting the same standards text to more than one standard body has to replicate a significant amount of work.
+
+The Metanorma document metamodel provides data structures that enable an end-to-end standardization document production process. The process centers around the Metanorma document model, which is intended to encompass the core similarities between standards bodies' versions of standards documents; particularities of different standards bodies are kept to a minimum, and expressed as local extensions. The process generates a semantic representation of the standards document expressed in the abstract document model, based on non-WYSIWYG, lightly marked-up text-based input. A further step then generates different output formats from the same document model expression, treating them as the application of styling rather than as document editing.
+
+This approach has the following benefits:
+
+* The approach enables an end-to-end, author-to-publishing workflow, with well-managed artefacts along each stage, that editorial bodies can exercise appropriate control over. This becomes all the easier as each artefact until the very end is text rather than binary: that allows the document management infrastructure around computer source code (such as version control) to be used to manage standards document production.
+
+* Much of the tedium and unpredictability around formatting documents to align with presentation requirements is automated, since the document model is semantic, and abstracted away from presentation. Formatting is applied only at the very end of the process. This includes not only formatting details such as margin sizes and font choices, but also auto-numbering of sections and tables, cross-referencing, automated generation of references, and generating tables of contents.
+
+* The structural and content requirements around standards documents can be captured in the document model, and documents can therefore be subject to formal validation against the model. That means that a Metanorma-based process can provide substantial feedback to authors on the extent to which they comply with the rules expressed in specifications like <<isoiecdir2>> -- including rules around wording (e.g. where requirements can occur), as well as document structure.
+
+* The document model is substantially the same across standards, as is the non-WYSIWYG text input that it is derived from. That means that text can be repurposed for different standards bodies with minimal effort: it is treated mostly as a swap-out of stylesheets, with only minor adjustments needed to content.
+
+=== Influences
+
+The Metanorma document model has drawn on several existing models, with a view to reflecting the expressiveness of existing standards, but also to align with the capability of established document production tools.
+
+The standards models consulted most closely for Metanorma are those for ISO standards <<isoiecdir2>> and IETF standards (<<RFC7749>>, <<RFC7991>>).
+
+
+//* Chinese National Standards ("GB standards") (for draft submission)

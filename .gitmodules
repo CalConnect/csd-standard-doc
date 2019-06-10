@@ -1,0 +1,9 @@
+[submodule "sources/models/metanorma-model-iso"]
+	path = sources/models/metanorma-model-iso
+	url = git@github.com:riboseinc/metanorma-model-iso.git
+[submodule "sources/models/metanorma-model-standoc"]
+	path = sources/models/metanorma-model-standoc
+	url = https://github.com/metanorma/metanorma-model-standoc
+[submodule "sources/models/metanorma-model-csd"]
+	path = sources/models/metanorma-model-csd
+	url = https://github.com/metanorma/metanorma-model-csd

@@ -1,0 +1,23 @@
+
+== Terms Section and Definition Section
+
+The _Standards Document_ model models two further subclasses of Clause Sections:
+
+* _Definition Sections_ consist of one or more Definition lists (<<basiclist>>), and are used to define symbols and abbreviations used in the remainder of the document. They can also be used as glossaries, with simple definitions, in contrast to the more elaborate definitions given in Terms Sections.
+* _Terms Sections_ give elaborated definitions of terms used in the document; they are intended to align to the structure of terms in <<isoiecdir2>>. Term Sections consist of zero or more Terms; _Terms_ in turn are composed of the following elements:
+
+`id`:: An optional identifier for the term, to be used in cross-references.
+`preferred`:: One or more names under which the term being defined is canonically known.
+`admitted`:: Zero or more names which are acceptable synonyms for the term being defined.
+`deprecates`:: Zero or more names which are deprecated synonyms for the term being defined.
+`domain`:: An optional semantic domain for the term being defined, in case the term is ambiguous between several semantic domains.
+`definition`:: The definition of the term applied in the current document.
+`note`:: Zero or more notes about the term.
+`example``:: Zero or more examples of how the term is to be used.
+`source`:: Zero or more bibliographical sources for the term. These include the `origin` of the term, which is its bibliographical citation (as defined in <<relaton>>); the `status` of the definition (whether _identical_ to the definition given in the origin cited, or _modified_); and, if the definition is modified, a description of the `modification` to the definition applied for this document.
+
+.Standards Document model: Term Section and Definition Section
+[plantuml]
+....
+include::models/standoc/StandardDoc_Terms.wsd[]
+....

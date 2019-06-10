@@ -1,0 +1,12 @@
+
+[bibliography]
+== Normative References
+
+* [[[relaton,ISO xxxx:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
+* [[[RFC3986,IETF RFC 3986]]], _Uniform Resource Identifier (URI): Generic Syntax_
+* [[[iso639,ISO 639 (all parts)]]], _Codes for the representation of names of languages_
+* [[[iso8601,ISO 8601]]], _Data elements and interchange formats – Information interchange – Representation of dates and times_
+* [[[iso10118,ISO 10118 (all parts)]]], _Information technology -- Security techniques -- Hash-functions_
+* [[[iso14888,ISO 14888 (all parts)]]], _Information technology -- Security techniques -- Digital signatures with appendix_
+* [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
+

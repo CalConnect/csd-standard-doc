@@ -1,1 +1,0 @@
-Unresolved directive in <stdin> - include::basicdoc_uml/ContribMetadata.wsd[]

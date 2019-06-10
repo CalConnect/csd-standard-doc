@@ -1,0 +1,69 @@
+= Standardization documents -- Metanorma -- Document metamodel
+:docnumber: 36001
+:tc-document-number: 9999
+:edition: 1
+:ref-docnumber: 36001:2019(E)
+:copyright-year: 2019
+:language: en
+:title-intro-en: Standardization documents
+:title-main-en: Metanorma
+:title-part-en: Document metamodel
+:title-intro-fr: Documents de normalisation
+:title-main-fr: Metanorma
+:title-part-fr: Métamodèle des documents
+:doctype: international-standard
+:docstage: 10
+:docsubstage: 92
+:technical-committee-type: TC
+:technical-committee-number: 154
+:technical-committee: Processes, data elements and documents in commerce, industry and administration
+:workgroup-type: WG
+:workgroup-number: 4
+:workgroup: e-Documents
+:secretariat: SAC
+:draft:
+:toc:
+:stem:
+:xrefstyle: short
+:imagesdir: images
+:local-cache-only:
+:data-uri-image:
+:docfile: iso-36001.adoc
+:mn-document-class: iso
+:mn-output-extensions: xml,html,doc,html_alt,rxl
+
+
+include::sections-iso/00-foreword.adoc[]
+
+include::sections/00-intro.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-norm-refs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-modelling.adoc[]
+
+include::sections/05-standdoc.adoc[]
+
+include::sections/06-metadata.adoc[]
+
+include::sections/07-sections.adoc[]
+
+include::sections/08-references.adoc[]
+
+include::sections/08-terms.adoc[]
+
+include::sections/09-terms.adoc[]
+
+include::sections/10-block.adoc[]
+
+include::sections/11-data-types.adoc[]
+
+include::sections/99-bibliography.adoc[]
+
+include::sections/a1-iso.adoc[]
+
+include::sections/a2-cc.adoc[]
+
