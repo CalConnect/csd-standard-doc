@@ -1,0 +1,56 @@
+<bibdata type="international-standard">
+  <title>
+    <title-intro language="en" format="text/plain">Standardization documents</title-intro>
+    <title-main language="en" format="text/plain">Metanorma</title-main>
+    <title-part language="en" format="text/plain">Document metamodel</title-part>
+  </title>
+  <title>
+    <title-intro language="fr" format="text/plain">Documents de normalisation</title-intro>
+    <title-main language="fr" format="text/plain">Metanorma</title-main>
+    <title-part language="fr" format="text/plain">Métamodèle des documents</title-part>
+  </title>
+  <docidentifier type="iso">ISO/NWIP 36001</docidentifier>
+  <docidentifier type="iso-structured">
+    <project-number>ISO 36001</project-number>
+  </docidentifier>
+  <docnumber>36001</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>10</stage>
+    <substage>92</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <editorialgroup>
+    <technical-committee number="154" type="TC">Processes, data elements and documents in commerce, industry and administration</technical-committee>
+    <subcommittee/>
+    <workgroup number="4" type="WG">e-Documents</workgroup>
+    <secretariat>SAC</secretariat>
+  </editorialgroup>
+</bibdata>
