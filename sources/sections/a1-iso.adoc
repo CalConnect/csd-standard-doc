@@ -27,7 +27,7 @@ The _ISO Standard Document_ model document uses ISO-specific extensions to the <
 .ISO Standard Document model: Document
 [plantuml]
 ....
-include::models/iso/IsoDoc_IsoStandardDocument.wsd[]
+include::../models/metanorma-model-iso/models/IsoDoc_IsoStandardDocument.wsd[]
 ....
 
 [[isoblock]]
@@ -40,7 +40,7 @@ The _ISO Standard Document_ model extends the _Standards Document_ modelling of 
 .ISO Standard Document model: Block
 [plantuml]
 ....
-include::models/iso/IsoDoc_IsoBlocks.wsd[]
+include::../models/metanorma-model-iso/models/IsoDoc_IsoBlocks.wsd[]
 ....
 
 [[isobib]]
@@ -65,6 +65,6 @@ The bibliographic modelling of ISO documents is enriched compared to <<relaton>>
 .ISO Standard Document model: Bibliography
 [plantuml]
 ....
-include::models/iso/IsoDoc_IsoBibliographicItem.wsd[]
+include::../models/metanorma-model-iso/models/IsoDoc_IsoBibliographicItem.wsd[]
 ....
 

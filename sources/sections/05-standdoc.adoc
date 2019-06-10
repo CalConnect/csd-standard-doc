@@ -5,7 +5,7 @@ The _Standards Document_ model extends the _Basic Document_ modelling of the doc
 
 * An optional _boilerplate_ section, intended to appear at the front of the
 document, and consisting of text addressing _copyright_, _license_, _legal_, and _feedback_ concerns
-(each modelled as Standard Hierarchical Sections: <<standardssection>>). 
+(each modelled as Standard Hierarchical Sections: <<standardssection>>).
 * Zero or more optional _preface_ sections (Standard Hierarchical Sections: <<standardssection>>).
 * One or more _sections_ (Standard Hierarchical Sections).
 * Zero or more _annexes_ (Standard Hierarchical Sections).
@@ -14,5 +14,6 @@ document, and consisting of text addressing _copyright_, _license_, _legal_, and
 .Standards Document model: Document
 [plantuml]
 ....
-include::models/standoc/StandardDoc_StandardDocument.wsd[]
+include::../models/metanorma-model-standoc/models/StandardDoc_StandardDocument.wsd[]
 ....
+

@@ -25,7 +25,6 @@
 :toc:
 :stem:
 :xrefstyle: short
-:imagesdir: images
 :local-cache-only:
 :data-uri-image:
 :docfile: iso-36001.adoc
@@ -55,7 +54,7 @@ include::sections/08-references.adoc[]
 
 include::sections/08-terms.adoc[]
 
-include::sections/09-terms.adoc[]
+include::sections/09-inline.adoc[]
 
 include::sections/10-block.adoc[]
 

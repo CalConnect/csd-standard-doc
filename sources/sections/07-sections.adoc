@@ -14,5 +14,5 @@ Although it is difficult to capture in a container-based model, the _Standards D
 .Standards Document model: Section
 [plantuml]
 ....
-include::models/standoc/StandardDoc_Sections.wsd[]
+include::../models/metanorma-model-standoc/models/StandardDoc_Sections.wsd[]
 ....

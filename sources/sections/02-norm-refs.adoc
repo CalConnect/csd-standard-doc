@@ -3,7 +3,7 @@
 == Normative References
 
 * [[[relaton,ISO xxxx:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
-* [[[basicdocument:CC 36010]]] footnote:[In draft], _Lightweight document -- Document metamodel_
+* [[[basicdocument,CC 36010]]] footnote:[In draft], _Lightweight document -- Document metamodel_
 * [[[RFC3986,IETF RFC 3986]]], _Uniform Resource Identifier (URI): Generic Syntax_
 * [[[iso639,ISO 639 (all parts)]]], _Codes for the representation of names of languages_
 * [[[iso8601,ISO 8601]]], _Data elements and interchange formats – Information interchange – Representation of dates and times_

@@ -42,5 +42,5 @@ The bibliographic modelling of CSD documents is enriched compared to <<relaton>>
 .CSD Standard Document model
 [plantuml]
 ....
-include::models/csd/Csd_StandardDocument.wsd[]
+include::../models/metanorma-model-csd/models/Csd_StandardDocument.wsd[]
 ....

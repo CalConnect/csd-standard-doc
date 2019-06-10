@@ -22,5 +22,5 @@ Both types of section can include prefatory text; in the case of Definition Sect
 .Standards Document model: Term Section and Definition Section
 [plantuml]
 ....
-include::models/standoc/StandardDoc_Terms.wsd[]
+include::../models/metanorma-model-standoc/models/StandardDoc_Terms.wsd[]
 ....
