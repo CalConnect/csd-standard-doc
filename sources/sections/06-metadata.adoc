@@ -7,6 +7,22 @@ and document metadata (`bibdata`) as a root element of the document.
 
 The modelling of `bibitem` (document citations) follows the _BibliographicItem_ class in <<relaton>>, and readers are referred to that specification. The  _BibliographicItem_ class is intended to capture document citations, and to be applicable to any document type, without any further specialisation; that is because a document can cite documents of any type. The modelling of citations is not intended to vary between different Standards Developing Organizations, let alone between standards documents and other types of document.
 
-The modelling of `bibdata` (document metadata) likewise follows the _BibliographicItem_ class in <<relaton>>.  The `bibdata` class inherits from Relaton the ability to extend metadtaa with metadata specific to a document class; this information is modelled in `BibDataExtensionType`, and is contained in `bibdata/ext`. The only extension point modelled as generically applicable in Metanorma model is the document type, which is populated in the generic instance with the single value "standard". It is assumed that particular specialisations of the document model will substitute  their own enumerations of particular subclasses of document, which will be more granular.
+The modelling of `bibdata` (document metadata) likewise follows the _BibliographicItem_ class in <<relaton>>. The type of `bibdata` is expected to be `standard`.
+
+The `bibdata` class inherits from Relaton the ability to extend metadtaa with metadata specific to a document class; this information is modelled in `BibDataExtensionType`, and is contained in `bibdata/ext`. The following extension points are modelled as generically applicable for all standards under the Metanorma model:
+
+* the document type (already modelled in the Basic Document model), which is populated with free text. It is assumed that particular specialisations of the document model will substitute  their own enumerations of particular subclasses of document, which will be more granular.
+* zero or more structured identifiers. These identifiers correspond to the canonical identifiers issued by the Standards Definition Organization, but are semantically marked up for the various components of that identifier. The structure given here is meant to be applicable to all standards, but it can always be customised for a specific Standards Developing Organization. This information should all be represented elswhere  in the document metadata, but is replicated in the identifier:
+** type: type of identifier, used to differentiate different instances of structured identifier generated for different purposes
+** agency: one or more abbreviations identifying the Standards Developing Organizations involved in producing this standard, and treated as a namespace for the identifier
+** class: an optional abbreviation identifying the subclass of standard or other document
+** docnumber: a number or other identifier for the document, issued by the Standards Developing Organization
+** partnumber: an optional part number for the document; includes sub-part numbers if applicable
+** edition: an optional string giving the edition of the standard
+** version: an optional string giving the version of the standard (within the edition). Includes the document stage that a draft has reached, e.g. "FDIS" under ISO
+** supplementtype: an abbreviation for the type of supplement to a standard that this document represents, if applicable
+** supplementnumber: an abbreviation for the number or other primary identifier of supplement to a standard that this document represents, if applicable
+** year: an optional string giving the date (typically year) that this particular edition of the standard was published
+** language: an optional abbreviation identifying the language of the standard
 
 
