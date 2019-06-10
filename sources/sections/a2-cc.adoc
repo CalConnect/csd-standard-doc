@@ -40,7 +40,4 @@ The bibliographic modelling of CSD documents is enriched compared to <<relaton>>
 * The editorial group responsible for the document is defined with a single components: a mandatory Technical Committee. The Technical Committee has a type of either _Technical_ or _Provisional_.
 
 .CSD Standard Document model
-[plantuml]
-....
-include::../models/metanorma-model-csd/models/Csd_StandardDocument.wsd[]
-....
+image::models/metanorma-model-csd/images/Csd_CsdStandardDocument.png[]

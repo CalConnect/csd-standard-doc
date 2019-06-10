@@ -12,7 +12,4 @@ The _Standards Document_ model extends the _Basic Document_ modelling of section
 Although it is difficult to capture in a container-based model, the _Standards Document_ model requires "hanging paragraphs" to be avoided: a Clause section in particular should contain either blocks or subsections, but not both. This is a requirement in <<isoiecdir2>>, but the need to reference text in clauses unambiguously by clause number makes the avoidance of hanging paragraphs desirable for standards documents in general. The requirement is less pressing for Content sections (which are unnumbered), and Annexes (as exemplified in <<isoiecdir2>> itself.)
 
 .Standards Document model: Section
-[plantuml]
-....
-include::../models/metanorma-model-standoc/models/StandardDoc_Sections.wsd[]
-....
+image::models/metanorma-model-standoc/images/StandardDoc_Sections.png[]

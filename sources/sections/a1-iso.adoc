@@ -25,10 +25,7 @@ The _ISO Standard Document_ model document also includes zero or more `termSourc
 The _ISO Standard Document_ model document uses ISO-specific extensions to the <<relaton>> metadata about a document (<<isobib>>).
 
 .ISO Standard Document model: Document
-[plantuml]
-....
-include::../models/metanorma-model-iso/models/IsoDoc_IsoStandardDocument.wsd[]
-....
+image::models/metanorma-model-iso/images/IsoDoc_IsoStandardDocument.png[]
 
 [[isoblock]]
 === Block
@@ -38,10 +35,7 @@ The _ISO Standard Document_ model extends the _Standards Document_ modelling of 
 * The types that an Admonition can belong to are overridden to belong to the following set prescribed in <<isoiecdir2>>: _Danger, Caution, Warning, Important, Safety Precaution_.
 
 .ISO Standard Document model: Block
-[plantuml]
-....
-include::../models/metanorma-model-iso/models/IsoDoc_IsoBlocks.wsd[]
-....
+image::models/metanorma-model-iso/images/IsoDoc_IsoBlocks.png[]
 
 [[isobib]]
 === Bibliography
@@ -63,8 +57,5 @@ The bibliographic modelling of ISO documents is enriched compared to <<relaton>>
 * The document has an optional "All Parts" boolean attribute, indicating whether the bibliographic description applies across all Part documents under the same project number (which makes it a multi-document description).
 
 .ISO Standard Document model: Bibliography
-[plantuml]
-....
-include::../models/metanorma-model-iso/models/IsoDoc_IsoBibliographicItem.wsd[]
-....
+image::models/metanorma-model-iso/images/IsoDoc_IsoBibliographicItem.png[]
 

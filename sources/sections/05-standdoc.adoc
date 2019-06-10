@@ -12,8 +12,5 @@ document, and consisting of text addressing _copyright_, _license_, _legal_, and
 * Zero or more _bibliographies_ (Standard References Sections: <<standardsreferencessection>>).
 
 .Standards Document model: Document
-[plantuml]
-....
-include::../models/metanorma-model-standoc/models/StandardDoc_StandardDocument.wsd[]
-....
+image::models/metanorma-model-standoc/images/StandardDoc_StandardDocument.png[]
 

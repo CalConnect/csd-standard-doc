@@ -20,7 +20,4 @@ The _Standards Document_ model models two further subclasses of Clause Sections:
 Both types of section can include prefatory text; in the case of Definition Sections, each Definition list can be preceded by prefatory text. Both types of section are leaf nodes, and cannot contain subclauses of their own: nested Terms or Definition Sections are modelled as Clause Sections with subclauses, terminating in Definition and Terms clauses.
 
 .Standards Document model: Term Section and Definition Section
-[plantuml]
-....
-include::../models/metanorma-model-standoc/models/StandardDoc_Terms.wsd[]
-....
+image::models/metanorma-model-standoc/images/StandardDoc_Terms.png[]
