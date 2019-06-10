@@ -9,4 +9,5 @@ This document discusses processes around customising the reference model for dif
 
 The modelling of bibliographies and bibliographic citations is part of the reference model, but is the subject of a separate proposal, <<relaton>>, and is not discussed in detail in this document.
 
-The modelling of changes to documents is in scope of the _Basic Document_ model described here, but is not described in this document.
+The modelling of text markup at the block and inline level, and of changes to documents is part of the reference model, but is the subject of a separate proposal, <<basicdoc>>, and is not discussed in detail in this document.
+

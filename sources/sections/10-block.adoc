@@ -3,3 +3,5 @@
 == Block
 
 There is no difference in the modelling of blocks between the _Basic Document_ model and the _Standards Document_ model.
+Specialisations and profiles of the Standards Document model may specialise the modelling of blocks.
+

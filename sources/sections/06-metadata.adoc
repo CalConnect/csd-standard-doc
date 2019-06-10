@@ -1,4 +1,12 @@
 
 == Metadata and bibliographic information models
 
-TODO
+Bibliographic information appears in two places in Metanorma, following the Basic Document model:
+document citations under Standard References Sections: <<standardsreferencessection>>,
+and document metadata (`bibdata`) as a root element of the document.
+
+The modelling of `bibitem` (document citations) follows the _BibliographicItem_ class in <<relaton>>, and readers are referred to that specification. The  _BibliographicItem_ class is intended to capture document citations, and to be applicable to any document type, without any further specialisation; that is because a document can cite documents of any type. The modelling of citations is not intended to vary between different Standards Developing Organizations, let alone between standards documents and other types of document.
+
+The modelling of `bibdata` (document metadata) likewise follows the _BibliographicItem_ class in <<relaton>>.  The `bibdata` class inherits from Relaton the ability to extend metadtaa with metadata specific to a document class; this information is modelled in `BibDataExtensionType`, and is contained in `bibdata/ext`. The only extension point modelled as generically applicable in Metanorma model is the document type, which is populated in the generic instance with the single value "standard". It is assumed that particular specialisations of the document model will substitute  their own enumerations of particular subclasses of document, which will be more granular.
+
+
