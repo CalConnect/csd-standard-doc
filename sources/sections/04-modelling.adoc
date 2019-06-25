@@ -1,30 +1,88 @@
 
 == Structure
 
-The Metanorma document model is expressed hierarchically.
+The Metanorma document metamodel is expressed hierarchically.
 
-* At its base is a _Basic Document_ model (<<basicdocument>>), which expresses the structure of generic documents.
-* The _Basic Document_ model is specialised as a _Standards Document_ structure, conveying the structure particular to standards documents as a class.
-* The Standards Document model is further specialised into models specific to particular standards.
-* Specific standards models can form the basis in turn of other standards models. For example, the Chinese National Standards model, as described in <<gbt11>>, is structurally modelled after ISO documents, and is explicitly described as a localisation of the 2004 version of <<isoiecdir2-2004>>. So the Chinese Standards model is best expressed as a specialisation of the ISO Standards model.
+* At its base is a `BasicDocument` model (<<basicdocument>>),
+which expresses the structure of generic documents.
 
-Specialisation of a model consists of:
+* The `BasicDocument` model is specialized as a _Standards
+Document_ structure, conveying the structure particular to
+standardization documents as a class.
+
+* The `StandardDocument` model is further specialized into models
+specific to particular standards.
+
+* Specific standards models can form the basis in turn of other
+standards models.
+
+[example]
+The document model for the Chinese National Standard ("`GB Standard`"),
+as described in <<gbt11>>, is structurally modelled after
+ISO documents, explicitly described as a localization of the 2004 version of <<isoiecdir2-2004>>.
+Therefore, the Chinese National Standard model is best expressed
+as a specialization of the ISO Standards model.
+
+Specialization of a model consists of:
 
 * Adding classes to a base model.
-* Changing attributes of a base model class. This is not restricted to adding attributes, as is the case in typical entity subclassing; it can also include removing attributes from a class, changing their obligation and cardinality, and changing their type, including changing enumerations. Attributes can be overruled at any level; for example, standards-specific models routinely enhance the bibliographic model at the base of the hierarchy.
-* For reasons of clarity, renaming classes and attributes is avoided in specialisation.
+
+* Changing attributes of a base model class. This is not restricted
+to adding attributes, as is the case in typical entity subclassing;
+it can also include removing attributes from a class, changing
+their obligation and cardinality, and changing their type,
+including changing enumerations. Attributes can be overruled at any
+level; for example, standards-specific models routinely enhance the
+bibliographic model at the base of the hierarchy.
+
+* For reasons of clarity, renaming classes and attributes is
+avoided in specialization.
+
 
 The classes involved in the document model are of three classes:
 
 * Sections (<<basicsection>>, <<standardssection>>)
-* Blocks (paragraph-level groupings of text) (<<basicblock>>, <<standardsblock>>)
-* Inline elements (groupings of text smaller than a paragraph, including plain strings) (<<inline>>)
 
-In the Metanorma model, the classes are in a strict hierarchical relation: documents consist of sections, which consist of blocks, which consist of inline elements. Sections can be nested within sections (e.g. clauses and subclauses); blocks can be nested within blocks (e.g. nested lists). Although the model does not currently provide for it, inline elements can also be embedded within other inline elements (e.g. bold + italics). However, sections are not expected to be siblings of blocks, nor blocks of inline elements. For example, a list (block) is not expected to occur next to inline text within a paragraph. For that reason, paragraphs cannot contain other block elements, such as lists or tables.
+* Blocks (paragraph-level groupings of text) (<<basicblock>>,
+<<standardsblock>>)
 
-NOTE: This constraint is inherited from lightweight text markup, and is not present in XML-based schemas like HTML, TEI-C, or DocBook. It helps to simplify the document model significantly, and while it sacrifices some expressive potential, the difference is minor, particularly with regards to the rendering of paragraphs.
+* Inline elements (groupings of text smaller than a paragraph,
+including plain strings) (<<inline>>)
 
-The _Basic Document_ model contains the bulk of the blocks and inline elements in the Metanorma model; that model is documented separately (<<basicdocument>>), and is not discussed further here. The Standards Model and the standard-specific models mostly deal with the organisation of sections within a standards document. However, because Metanorma inherits from the Basic Document model, specialisation in Metanorma can customise Basic Document classes, as well as classes specific to Metanorma.
 
-The Metanorma document model depends on the <<iso690>> bibliography model for its expression of bibliographic references. The specific bibliography model instantiation and serialisation it uses is the subject of a separate proposal, <<relaton>>, and is not discussed further here.
+In the document metamodel, the classes are in a strict hierarchical
+relation:
 
+* Documents consist of sections, which consist of blocks,
+which consist of inline elements.
+
+* Sections can be nested within sections (e.g. clauses and subclauses)
+
+* Blocks can be nested within blocks (e.g. nested lists).
+
+//Although the model does not currently provide for it,
+* Inline elements can be embedded within other inline elements (e.g. bold + italics).
+
+However, sections are notStandards Document model
+expected to be siblings of blocks, nor blocks of inline elements.
+For example, a list (block) is not expected to occur next to inline
+text within a paragraph. For that reason, paragraphs cannot contain
+other block elements, such as lists or tables.
+
+NOTE: This constraint is inherited from lightweight text markup,
+and is not present in XML-based schemas like HTML, TEI-C, or
+DocBook. It helps to simplify the document model significantly, and
+while it sacrifices some expressive potential, the difference is
+minor, particularly with regards to the rendering of paragraphs.
+
+The `BasicDocument` model contains the bulk of the blocks and
+inline elements in the Metanorma model; that model is documented
+separately (<<basicdocument>>), and is not discussed further here.
+The Standards Model and the standard-specific models mostly deal
+with the organization of sections within a standards document.
+However, because Metanorma inherits from the `BasicDocument` model,
+specialization in Metanorma can customize Basic Document classes,
+as well as classes specific to Metanorma.
+
+The document metamodel depends on the <<relaton>> citation
+model for its expression of bibliographic references and citations.

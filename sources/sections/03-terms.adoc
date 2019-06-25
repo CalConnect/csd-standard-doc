@@ -1,27 +1,49 @@
 
-== Terms and Definitions
+== Terms and definitions
 
-[[term-standardization-body]]
-=== standardization body
+////
+=== body
 
-[alt]#standards body#
+responsible for standards and regulations: legal or administrative entity that has specific tasks and composition
+
+NOTE: Examples of bodies are organizations, authorities, companies and foundations.
+
+[.source]
+<<isoguide2,4.1>>
+////
+
+[[term-standardizing-body]]
+=== standardizing body
 
 body that has recognized activities in standardization
 
 [.source]
-<<IEV,901-03-03>>
+<<isoguide2,4.3>>
+
+
+[[term-document]]
+=== document
+
+medium with information recorded on or in it
+
+[.source]
+<<isoguide2,3.1 NOTE 2>>
+
 
 [[term-standardization-document]]
 === standardization document
 
-[alt]#standards document#
+//[alt]#standard#
 
-document, established by consensus and approved by a recognized _standardization body_ (<<term-standardization-body>>), that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context
+document that provides rules, guidelines or characteristics
+for activities or their results
 
-[.source]
-<<IEV,901-02-02>>
+NOTE: Documents such as standards, technical specifications,
+codes of practice and regulations are considered part of
+this term.
 
-
+NOTE: This terms closely corresponds to "`normative document`"
+defined in <<isoguide2,3.1>>.
 
 ////
 model
@@ -62,21 +84,19 @@ _class_ (<<term-class>>) which inherits from another class its component descrip
 [[term-document-metamodel]]
 === document metamodel
 
-[alt]#model#
-
-formal specification of the structure of a document in terms of its components and their arrangement, expressed through _classes_ (<<term-class>>)
+formal specification of the structure of a document model in terms of its components and their arrangement, expressed through _classes_ (<<term-class>>)
 
 
 [[term-document-model]]
 === document model
 
-[alt]#model#
-
 formal specification of the structure of a document in terms of its components and their arrangement, expressed through _classes_ (<<term-class>>)
+
 
 === standards model
 
-_document model_ (<<term-document-model>>) for _standards_ (<<term-standardization-document>>)
+_document model_ (<<term-document-model>>) for
+_standardization documents_ (<<term-standardization-document>>)
 
 [[term-paragraph]]
 === paragraph
@@ -91,7 +111,7 @@ subdivision of running text, normally run on throughout, that is separated from 
 
 _paragraph_ (<<term-paragraph>>)-level grouping of text
 
-=== inline Element
+=== inline element
 
 grouping of text that can be contained within a _paragraph_ (<<term-paragraph>>), including plain strings
 

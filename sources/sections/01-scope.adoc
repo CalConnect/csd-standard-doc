@@ -1,13 +1,26 @@
 
 == Scope
 
-This document provides the Metanorma reference model for standards documents. Implementation of the reference model and serialisation formats out of scope of this document.
+This document provides the Metanorma document metamodel for standardization documents and describes its alignment
+to standardization processes.
 
-The mapping of the reference model to output formats such as HTML, and the application of organisation-specific styling to those outputs, is out of scope of this document.
+The document metamodel relies on models from the following standards:
 
-This document discusses processes around customising the reference model for different standards, and describes customisation for the ISO and CSD standards as example profiles in <<isoprofile>> and <<csdprofile>>. Prescribing profiles of the document model for particular standards, however, is out of scope of this document.
+* <<relaton>>, where modelling of bibliographies and
+bibliographic citations form part of the reference model in this standard;
 
-The modelling of bibliographies and bibliographic citations is part of the reference model, but is the subject of a separate proposal, <<relaton>>, and is not discussed in detail in this document.
+* <<basicdocument>>, where modelling of textual content
+(at the block and inline level), and of changes to documents,
+form part of the reference model in this standard.
 
-The modelling of text markup at the block and inline level, and of changes to documents is part of the reference model, but is the subject of a separate proposal, <<basicdoc>>, and is not discussed in detail in this document.
+Implementation of the metamodel and serialization formats are
+out of scope of this document.
 
+The derivation and mapping of the reference model to
+representation formats is out of scope of this document.
+
+While this document provides example profiles for the ISO/IEC and
+CalConnect standards in <<isoprofile>> and <<csdprofile>>,
+prescription of profiles of the document metamodel
+for particular standardization bodies is out of scope
+of this document.

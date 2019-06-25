@@ -1,15 +1,26 @@
 [[standardsdocument]]
 == Standards Document model
 
-The _Standards Document_ model extends the _Basic Document_ modelling of the document by requiring the following specific types of section:
+The `StandardDocument` model extends the `BasicDocument`
+modelling of the document by requiring the following specific types
+of section:
 
-* An optional _boilerplate_ section, intended to appear at the front of the
-document, and consisting of text addressing _copyright_, _license_, _legal_, and _feedback_ concerns
-(each modelled as Standard Hierarchical Sections: <<standardssection>>).
-* Zero or more optional _preface_ sections (Standard Hierarchical Sections: <<standardssection>>).
+* An optional _boilerplate_ section, intended to appear at the
+front of the document. It consists of content addressing
+_copyright_, _license_, _legal_, and _feedback_ concerns
+(each modelled as Standard Hierarchical Sections:
+<<standardssection>>).
+
+* Zero or more optional _preface_ sections (Standard Hierarchical
+Sections: <<standardssection>>).
+
 * One or more _sections_ (Standard Hierarchical Sections).
+
 * Zero or more _annexes_ (Standard Hierarchical Sections).
-* Zero or more _bibliographies_ (Standard References Sections: <<standardsreferencessection>>).
+
+* Zero or more _bibliographies_ (Standard References Sections:
+<<standardsreferencessection>>).
+
 
 .Standards Document model: Document
 image::models/metanorma-model-standoc/images/StandardDoc_StandardDocument.png[]

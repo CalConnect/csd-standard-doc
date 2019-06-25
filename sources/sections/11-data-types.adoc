@@ -1,7 +1,10 @@
 
 == Data Types
 
-There is no difference in the modelling of data types between the _Basic Document_ model and the _Standards Document_ models.
-Specialisations and profiles of the Standards Document model may specialise the modelling of data types.
+There is no difference in the modelling of data types between the
+`BasicDocument` model and the `StandardDocument` models.
+
+Specializations and profiles of the `StandardDocument` model may
+specialize the modelling of data types.
 
 
