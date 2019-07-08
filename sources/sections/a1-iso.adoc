@@ -16,7 +16,7 @@ modelling of the document by requiring the following specific types
 of section:
 
 * A _Preface_, consisting of a mandatory _Foreword_ (a
-`BasicSection`: <<basicsection>>), and an optional _Introduction_
+`BasicSection`: <<basicdocument>>), and an optional _Introduction_
 (a `ClauseSection`: <<standardssection>>, since an ISO Introduction
 can optionally have numbered subsections).
 

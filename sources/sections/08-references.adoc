@@ -5,6 +5,6 @@
 Standard References Sections are a subclass of `StandardSection`.
 
 Like the References Sections of the `BasicDocument` model
-(<<basicsection>>), they are leaf nodes which contain zero or more
+(<<basicdocument>>), they are leaf nodes which contain zero or more
 bibliographical references (as modelled in <<relaton>>), along with
 any prefatory text.

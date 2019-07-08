@@ -6,11 +6,9 @@
 :copyright-year: 2019
 :language: en
 :title-intro-en: Standardization documents
-:title-main-en: Metanorma
-:title-part-en: Document metamodel
+:title-main-en: Document metamodel
 :title-intro-fr: Documents de normalisation
-:title-main-fr: Metanorma
-:title-part-fr: Métamodèle des documents
+:title-main-fr: Métamodèle des documents
 :doctype: international-standard
 :docstage: 10
 :docsubstage: 92

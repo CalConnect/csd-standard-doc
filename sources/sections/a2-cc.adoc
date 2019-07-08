@@ -31,7 +31,7 @@ modelling of blocks for one block definition:
 
 * The definition of Figure is altered to allow Ascii art as an
 option for its content, as a string (`pre`). As with Sourcecode
-(<<basicsourcecode>>), the string should be treated as pre-formatted
+(<<basicdocument>>), the string should be treated as pre-formatted
 text, with whitespace treated as significant.
 
 
@@ -41,7 +41,7 @@ The _CSD Standard Document_ model extends the `StandardDocument`
 modelling of inline elements by one element:
 
 * The `keyword` element is added as a subclass of Text Element
-(<<textelements>>). The element is used to represent code keywords,
+(<<basicdocument>>). The element is used to represent code keywords,
 as with `code` in HTML, and should be rendered in monospace.
 
 

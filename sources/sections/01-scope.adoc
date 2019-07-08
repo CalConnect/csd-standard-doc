@@ -1,17 +1,18 @@
 
 == Scope
 
-This document provides the Metanorma document metamodel for standardization documents and describes its alignment
-to standardization processes.
+This document provides a document metamodel for standardization
+documents and describes its alignment to standardization
+processes.
 
 The document metamodel relies on models from the following standards:
 
-* <<relaton>>, where modelling of bibliographies and
-bibliographic citations form part of the reference model in this standard;
-
 * <<basicdocument>>, where modelling of textual content
 (at the block and inline level), and of changes to documents,
-form part of the reference model in this standard.
+form part of the reference model in this standard;
+
+* <<relaton>>, where modelling of bibliographies and
+bibliographic citations form part of the reference model in this standard.
 
 Implementation of the metamodel and serialization formats are
 out of scope of this document.
@@ -19,8 +20,8 @@ out of scope of this document.
 The derivation and mapping of the reference model to
 representation formats is out of scope of this document.
 
-While this document provides example profiles for the ISO/IEC and
+This document provides example profiles for ISO and
 CalConnect standards in <<isoprofile>> and <<csdprofile>>,
 prescription of profiles of the document metamodel
-for particular standardization bodies is out of scope
+for particular standardization bodies is not in scope
 of this document.

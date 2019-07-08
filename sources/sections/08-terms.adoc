@@ -64,5 +64,5 @@ contain subclauses of their own: nested Terms or Definition
 Sections are modelled as Clause Sections with subclauses,
 terminating in Definition and Terms clauses.
 
-.Standards Document model: Term Section and Definition Section
+._StandardsDocument_ model: Term Section and Definition Section
 image::models/metanorma-model-standoc/images/StandardDoc_Terms.png[]

@@ -51,5 +51,5 @@ paragraphs desirable for standardization documents in general. The
 requirement is less pressing for Content sections (which are
 unnumbered), and Annexes (as exemplified in <<isoiecdir2>> itself.)
 
-.Standards Document model: Section
+._StandardsDocument_ model: Section
 image::models/metanorma-model-standoc/images/StandardDoc_Sections.png[]

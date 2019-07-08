@@ -12,9 +12,9 @@
 
 * [[[iso8601,ISO 8601]]], _Data elements and interchange formats – Information interchange – Representation of dates and times_
 
-* [[[iso10118,ISO 10118 (all parts)]]], _Information technology -- Security techniques -- Hash-functions_
+* [[[iso10118,ISO/IEC 10118 (all parts)]]], _Information technology -- Security techniques -- Hash-functions_
 
-* [[[iso14888,ISO 14888 (all parts)]]], _Information technology -- Security techniques -- Digital signatures with appendix_
+* [[[iso14888,ISO/IEC 14888 (all parts)]]], _Information technology -- Security techniques -- Digital signatures with appendix_
 
 * [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
 

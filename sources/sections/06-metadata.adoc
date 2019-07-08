@@ -43,39 +43,39 @@ a specific standardizing body. This information
 should all be represented elsewhere in the document metadata, but
 is replicated in the identifier:
 
-** type: type of identifier, used to differentiate different
+** `type`: type of identifier, used to differentiate different
 instances of structured identifier generated for different purposes
 
-** agency: one or more abbreviations identifying the Standards
+** `agency`: one or more abbreviations identifying the Standards
 Developing Organizations involved in producing this standard, and
 treated as a namespace for the identifier
 
-** class: an optional abbreviation identifying the subclass of
+** `class`: an optional abbreviation identifying the subclass of
 standard or other document
 
-** docnumber: a number or other identifier for the document, issued
+** `docnumber`: a number or other identifier for the document, issued
 by the standardizing body
 
-** partnumber: an optional part number for the document; includes
+** `partnumber`: an optional part number for the document; includes
 sub-part numbers if applicable
 
-** edition: an optional string giving the edition of the standard
+** `edition`: an optional string giving the edition of the standard
 
-** version: an optional string giving the version of the standard
+** `version`: an optional string giving the version of the standard
 (within the edition). Includes the document stage that a draft has
 reached, e.g. "FDIS" under ISO
 
-** supplementtype: an abbreviation for the type of supplement to a
+** `supplementtype`: an abbreviation for the type of supplement to a
 standard that this document represents, if applicable
 
-** supplementnumber: an abbreviation for the number or other
+** `supplementnumber`: an abbreviation for the number or other
 primary identifier of supplement to a standard that this document
 represents, if applicable
 
-** year: an optional string giving the date (typically year) that
+** `year`: an optional string giving the date (typically year) that
 this particular edition of the standard was published
 
-** language: an optional abbreviation identifying the language of
+** `language`: an optional abbreviation identifying the language of
 the standard
 
 

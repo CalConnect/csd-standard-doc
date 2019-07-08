@@ -22,6 +22,6 @@ Sections: <<standardssection>>).
 <<standardsreferencessection>>).
 
 
-.Standards Document model: Document
+._StandardsDocument_ model: Document
 image::models/metanorma-model-standoc/images/StandardDoc_StandardDocument.png[]
 

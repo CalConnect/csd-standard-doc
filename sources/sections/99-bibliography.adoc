@@ -23,3 +23,7 @@
 * [[[isostage,ISO International harmonized stage codes]]] _International harmonized stage codes_, https://www.iso.org/stage-codes.html
 
 * [[[IEV,IEV]]], _IEV_
+
+* [[[CC10001,CC/DIR 10001]]], _CalConnect Directive: Standardization and publication_
+
+* [[[CC10002,CC/DIR 10002]]], _CalConnect Directive: Standard document requirements_

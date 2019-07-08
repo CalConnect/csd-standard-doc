@@ -6,8 +6,7 @@ The Metanorma document metamodel is expressed hierarchically.
 * At its base is a `BasicDocument` model (<<basicdocument>>),
 which expresses the structure of generic documents.
 
-* The `BasicDocument` model is specialized as a _Standards
-Document_ structure, conveying the structure particular to
+* The `BasicDocument` model is specialized as a _StandardsDocument_ structure, conveying the structure particular to
 standardization documents as a class.
 
 * The `StandardDocument` model is further specialized into models
@@ -41,13 +40,13 @@ avoided in specialization.
 
 The classes involved in the document model are of three classes:
 
-* Sections (<<basicsection>>, <<standardssection>>)
+* Sections (<<basicdocument>>, <<standardssection>>)
 
-* Blocks (paragraph-level groupings of text) (<<basicblock>>,
+* Blocks (paragraph-level groupings of text) (<<basicdocument>>,
 <<standardsblock>>)
 
 * Inline elements (groupings of text smaller than a paragraph,
-including plain strings) (<<inline>>)
+including plain strings) (<<basicdocument>>)
 
 
 In the document metamodel, the classes are in a strict hierarchical
@@ -63,7 +62,7 @@ which consist of inline elements.
 //Although the model does not currently provide for it,
 * Inline elements can be embedded within other inline elements (e.g. bold + italics).
 
-However, sections are notStandards Document model
+However, sections in the _StandardsDocument_ model are not
 expected to be siblings of blocks, nor blocks of inline elements.
 For example, a list (block) is not expected to occur next to inline
 text within a paragraph. For that reason, paragraphs cannot contain
