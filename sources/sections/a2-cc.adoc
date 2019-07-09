@@ -6,7 +6,7 @@
 === General
 
 The _CSD Standard Document_ model is given here as an exemplar of
-the application of Metanorma modelling to a particular standard
+the application of _StandardDocument_ modelling to a particular standard
 (standards published by the Calendaring and Scheduling Consortium).
 
 === Document, Section

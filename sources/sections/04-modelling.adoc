@@ -1,7 +1,7 @@
 
 == Structure
 
-The Metanorma document metamodel is expressed hierarchically.
+The _StandardDocument_ document metamodel is expressed hierarchically.
 
 * At its base is a `BasicDocument` model (<<basicdocument>>),
 which expresses the structure of generic documents.
@@ -75,12 +75,12 @@ while it sacrifices some expressive potential, the difference is
 minor, particularly with regards to the rendering of paragraphs.
 
 The `BasicDocument` model contains the bulk of the blocks and
-inline elements in the Metanorma model; that model is documented
+inline elements in the _StandardDocument_ model; that model is documented
 separately (<<basicdocument>>), and is not discussed further here.
 The Standards Model and the standard-specific models mostly deal
 with the organization of sections within a standards document.
-However, because Metanorma inherits from the `BasicDocument` model,
-specialization in Metanorma can customize Basic Document classes,
+However, because _StandardDocument_ inherits from the `BasicDocument` model,
+specialization in _StandardDocument_ can customize Basic Document classes,
 as well as classes specific to Metanorma.
 
 The document metamodel depends on the <<relaton>> citation

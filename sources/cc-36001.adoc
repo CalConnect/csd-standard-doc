@@ -1,4 +1,4 @@
-= Standardization documents -- Metanorma -- Document metamodel
+= Standardization documents  -- Document metamodel
 :docnumber: 36001
 :copyright-year: 2019
 :language: en

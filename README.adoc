@@ -1,4 +1,4 @@
-= CalConnect Standard: Standardization document -- Metanorma -- Document metamodel
+= CalConnect Standard: Standardization document  -- Document metamodel
 
 This work item belongs to TC VCARD.
 
@@ -6,7 +6,7 @@ image:https://travis-ci.com/CalConnect/csd-standard-doc.svg?branch=master["Build
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/csd-standard-doc/[CC/ISO: Standardization document -- Metanorma -- Document metamodel (HTML)]
+* https://calconnect.github.io/csd-standard-doc/[CC/ISO: Standardization document  -- Document metamodel (HTML)]
 
 == Fetching the document
 

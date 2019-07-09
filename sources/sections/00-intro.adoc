@@ -54,12 +54,12 @@ requires replicating a significant amount of work.
 
 === Data-centric approach
 
-The Metanorma document metamodel aims to treat a
+The _StandardDocument_ document metamodel aims to treat a
 standardization document as a set of standardized data structures,
 used to enable an end-to-end standardization document production
 process.
 
-The process is centered around the Metanorma document model,
+The process is centered around the _StandardDocument_ document model,
 designed to focus on semantics and encompasses core similarities
 between standardization documents of different
 standardization bodies.

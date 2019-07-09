@@ -6,7 +6,7 @@
 === General
 
 The `ISOStandardDocument` model is given here as an exemplar of the
-application of Metanorma modelling to a particular standard.
+application of _StandardDocument_ modelling to a particular standard.
 
 [[isodocument]]
 === Document, Section

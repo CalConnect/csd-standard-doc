@@ -1,4 +1,4 @@
-= Standardization documents -- Metanorma -- Document metamodel
+= Standardization documents -- Document metamodel
 :docnumber: 36001
 :tc-document-number: 9999
 :edition: 1

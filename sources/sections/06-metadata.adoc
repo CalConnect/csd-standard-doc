@@ -26,7 +26,7 @@ The `bibdata` class inherits from Relaton the ability to extend
 metadtaa with metadata specific to a document class; this
 information is modelled in `BibDataExtensionType`, and is contained
 in `bibdata/ext`. The following extension points are modelled as
-generically applicable for all standards under the Metanorma model:
+generically applicable for all standards under the _StandardDocument_ model:
 
 * the document type (already modelled in the `BasicDocument` model),
 which is populated with free text. It is assumed that particular
