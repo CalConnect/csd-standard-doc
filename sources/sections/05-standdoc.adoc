@@ -1,5 +1,26 @@
 [[standardsdocument]]
-== Standards Document model
+== StandardDocument
+
+=== Purpose
+
+The `StandardDocument` model is used to represent a standardization
+document.
+
+Typically, a standardization document contains at least the
+following data elements:
+
+* Metadata information;
+* Clauses and subclauses;
+* Bibliographies;
+* Annexes if applicable.
+
+The exact component requirements of a standardization document
+can differ widely from one standardization body to the next.
+Specialization is necessary to adopt the `StandardDocument`
+model for such standardization bodies.
+
+
+=== Structure
 
 The `StandardDocument` model extends the `BasicDocument`
 modelling of the document by requiring the following specific types
@@ -8,20 +29,20 @@ of section:
 * An optional _boilerplate_ section, intended to appear at the
 front of the document. It consists of content addressing
 _copyright_, _license_, _legal_, and _feedback_ concerns
-(each modelled as Standard Hierarchical Sections:
-<<standardssection>>).
+(each as a `StandardHierarchicalSection`: <<standardssection>>).
 
-* Zero or more optional _preface_ sections (Standard Hierarchical
-Sections: <<standardssection>>).
+* Zero or more optional _preface_ sections (each as a `StandardHierarchicalSection`: <<standardssection>>).
 
-* One or more _sections_ (Standard Hierarchical Sections).
+* One or more _sections_ (each as a `StandardHierarchicalSection`).
 
-* Zero or more _annexes_ (Standard Hierarchical Sections).
+* Zero or more _annexes_ (each as a `StandardHierarchicalSection`).
 
-* Zero or more _bibliographies_ (Standard References Sections:
+* Zero or more _bibliographies_ (each as a `StandardReferencesSections`:
 <<standardsreferencessection>>).
 
 
-._StandardsDocument_ model: Document
+=== Overview
+
+._StandardDocument_ model: Document
 image::models/metanorma-model-standoc/images/StandardDoc_StandardDocument.png[]
 

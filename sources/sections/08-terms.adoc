@@ -1,20 +1,56 @@
 
 [[terms]]
-== Terms Section and Definition Section
+== Terms and definition elements
 
-The `StandardDocument` model models two further subclasses of
-Clause Sections:
+=== Purpose
 
-* _Definition Sections_ consist of one or more Definition lists
+Standardization documents are used to convey normative information;
+to achieve so it is imperative to provide a standardized set of
+terms and definitions.
+
+=== General
+
+The `StandardDocument` model provides two further subclasses of
+clause sections (`ClauseSection`):
+
+* Definition section, and
+* Term section.
+
+Both types of section can include prefatory text.
+
+
+=== Definition sections
+
+Definition sections (`DefinitionSection`) consist of one or more definition lists
 (see <<basicdocument>>), and are used to define symbols and
-abbreviations used in the remainder of the document. They can also
-be used as glossaries, with simple definitions, in contrast to the
-more elaborate definitions given in Terms Sections.
+abbreviations used in the remainder of the document.
 
-* _Terms Sections_ give elaborated definitions of terms used in the
-document; they are intended to align to the structure of terms in
-<<isoiecdir2>>. Term Sections consist of zero or more Terms;
-_Terms_ in turn are composed of the following elements:
+They can also be used as glossaries, with simple definitions,
+in contrast to the more elaborate definitions given in
+terms sections (<<termsection>>).
+
+In addition to allowing prefatory text per section, each definition list
+within each definition section can also be preceded by prefatory text.
+
+
+[[termsection]]
+=== Term sections
+
+Term sections (`TermsSection`) give elaborated definitions of terms used in
+a standardization document.
+
+A `StandardDocument` can contain one or more ``TermSection``s.
+Term sections consist of zero or more Terms.
+
+NOTE: The `TermsSection` definition fully aligns with the structure
+and requirements of the "Terms and definition" section given in
+<<isoiecdir2>>.
+
+
+[[term]]
+=== Term
+
+A term (`Term`) is composed of the following elements:
 
 `id`:: An optional identifier for the term, to be used in
 cross-references.
@@ -56,13 +92,21 @@ origin cited, or `modified`); and, if the definition is modified, a
 description of the `modification` to the definition applied for
 this document.
 
+NOTE: The `Term` definition fully aligns with the structure
+and requirements of terms in <<isoiecdir2>>.
 
-Both types of section can include prefatory text; in the case of
-Definition Sections, each Definition list can be preceded by
-prefatory text. Both types of section are leaf nodes, and cannot
-contain subclauses of their own: nested Terms or Definition
-Sections are modelled as Clause Sections with subclauses,
-terminating in Definition and Terms clauses.
 
-._StandardsDocument_ model: Term Section and Definition Section
+=== Nested sections
+
+Both definition and term sections are leaf nodes, and cannot
+contain subclauses of their own.
+
+Nested definition and term sections should be modelled as
+``ClauseSection``s with subclauses, terminating in
+definition and term sections.
+
+
+=== Overview
+
+._StandardDocument_ model: Term Section and Definition Section
 image::models/metanorma-model-standoc/images/StandardDoc_Terms.png[]

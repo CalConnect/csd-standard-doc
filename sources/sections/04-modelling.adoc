@@ -1,53 +1,97 @@
 
-== Structure
+[[structure]]
+== Architecture
 
-The _StandardDocument_ document metamodel is expressed hierarchically.
+=== General
 
-* At its base is a `BasicDocument` model (<<basicdocument>>),
-which expresses the structure of generic documents.
+The _StandardDocument_ document metamodel is a semantically
+oriented data model that depends on an underlying document model
+for implementation.
 
-* The `BasicDocument` model is specialized as a _StandardsDocument_ structure, conveying the structure particular to
-standardization documents as a class.
+_StandardDocument_ is closely aligned with the `BasicDocument`
+model (<<basicdocument>>), but it can be implemented on top of any
+document model that is compatible with the `BasicDocument` model
+or satisfies the requirements described in this document.
 
-* The `StandardDocument` model is further specialized into models
-specific to particular standards.
 
-* Specific standards models can form the basis in turn of other
+=== Dependent data models
+
+The implementation of the document metamodel relies on the
+availability of the following data models:
+
+* A document data model that supports modelling of textual content
+at the block and inline levels, as well as modifications to the
+document itself.
+
+* Data models for representing bibliographic information and citations
+for a document.
+
+In this document, the  _BasicDocument_ document model from
+<<basicdocument>> is used as an exemplary document model,
+the _BibliographicItem_ and its related data models from
+<<relaton>> are used for representing bibliographic and
+citation models.
+
+
+=== Structure
+
+The _StandardDocument_ document metamodel is expressed hierarchically
+in the following structure:
+
+* Document representation: the underlying document model,
+described as `BasicDocument` in this document, is
+used to express the structure of generic documents
+(with specific requirements detailed in the `BasicDocument`
+model from <<basicdocument>>);
+
+* Standardization document structure: the _StandardDocument_ model
+is specialized from `BasicDocument`, conveying the structure particular
+to standardization documents as a class.
+
+* Specific types of standardization documents: the `StandardDocument`
+model is further specialized into models specific to particular standards.
+Specific standards models can form the basis in turn of other
 standards models.
 
-[example]
-The document model for the Chinese National Standard ("`GB Standard`"),
-as described in <<gbt11>>, is structurally modelled after
-ISO documents, explicitly described as a localization of the 2004 version of <<isoiecdir2-2004>>.
-Therefore, the Chinese National Standard model is best expressed
-as a specialization of the ISO Standards model.
 
-Specialization of a model consists of:
+=== Underlying document model
 
-* Adding classes to a base model.
+The underlying document model must provide the following classes of
+document element data models:
 
-* Changing attributes of a base model class. This is not restricted
-to adding attributes, as is the case in typical entity subclassing;
-it can also include removing attributes from a class, changing
-their obligation and cardinality, and changing their type,
-including changing enumerations. Attributes can be overruled at any
-level; for example, standards-specific models routinely enhance the
-bibliographic model at the base of the hierarchy.
+* Sections. A grouping of elements that can be shown under the
+  table of contents (see the `Section` models in <<basicdocument>>)
 
-* For reasons of clarity, renaming classes and attributes is
-avoided in specialization.
+* Blocks. A grouping of paragraphs or paragraph-levels of text
+(see `Block` models in <<basicdocument>>)
+
+* Inline elements. Groupings of text smaller than a paragraph,
+including plain strings. (see `InlineElement` and related models in
+<<basicdocument>>)
 
 
-The classes involved in the document model are of three classes:
+=== Bibliographic and citation models
 
-* Sections (<<basicdocument>>, <<standardssection>>)
+Standardization documents often contain references to and citations
+of external information resources, as well as bibliography sections.
 
-* Blocks (paragraph-level groupings of text) (<<basicdocument>>,
-<<standardsblock>>)
+The _StandardDocument_ model depends on data models that can fully
+represent:
 
-* Inline elements (groupings of text smaller than a paragraph,
-including plain strings) (<<basicdocument>>)
+* metadata of referenced information resources;
+* presentation of a referenced information resource; and
+* locality of a citation.
 
+For example, if a standardization document needs to adhere to the
+citation guidelines of <<iso690>>, data models that facilitate these
+rules such as <<relaton>> should be used.
+
+The `BibliographicItem`, `Citation` and related models from <<relaton>> are
+used in the reference metamodel for its expression of bibliographic
+references and citations.
+
+
+=== Hierarchical containment
 
 In the document metamodel, the classes are in a strict hierarchical
 relation:
@@ -55,33 +99,54 @@ relation:
 * Documents consist of sections, which consist of blocks,
 which consist of inline elements.
 
-* Sections can be nested within sections (e.g. clauses and subclauses)
+* Sections can be nested within sections (e.g. clauses and subclauses).
 
 * Blocks can be nested within blocks (e.g. nested lists).
 
 //Although the model does not currently provide for it,
-* Inline elements can be embedded within other inline elements (e.g. bold + italics).
+* Inline elements can be embedded within other inline elements (e.g. bold with italics).
 
-However, sections in the _StandardsDocument_ model are not
-expected to be siblings of blocks, nor blocks of inline elements.
-For example, a list (block) is not expected to occur next to inline
+Sections in the _StandardDocument_ model are not expected to be
+siblings of blocks, nor blocks of inline elements.
+
+[example]
+A list (block) is not expected to occur next to inline
 text within a paragraph. For that reason, paragraphs cannot contain
 other block elements, such as lists or tables.
 
-NOTE: This constraint is inherited from lightweight text markup,
+NOTE: This constraint is adopted from <<basicdocument>>,
 and is not present in XML-based schemas like HTML, TEI-C, or
-DocBook. It helps to simplify the document model significantly, and
-while it sacrifices some expressive potential, the difference is
-minor, particularly with regards to the rendering of paragraphs.
+DocBook. It confers the advantage of having a significantly streamlined
+document model. While this limits some expressive potential,
+the difference is minor and semantically desired, particularly
+with regards to the unambiguous rendering of paragraphs.
 
-The `BasicDocument` model contains the bulk of the blocks and
-inline elements in the _StandardDocument_ model; that model is documented
-separately (<<basicdocument>>), and is not discussed further here.
-The Standards Model and the standard-specific models mostly deal
-with the organization of sections within a standards document.
-However, because _StandardDocument_ inherits from the `BasicDocument` model,
-specialization in _StandardDocument_ can customize Basic Document classes,
-as well as classes specific to Metanorma.
 
-The document metamodel depends on the <<relaton>> citation
-model for its expression of bibliographic references and citations.
+=== Document model specialization
+
+_StandardDocument_ can be specialized in the following ways:
+
+* specializing classes from the `BasicDocument` models;
+* specializing classes from the `StandardDocument` models;
+* adding new classes;
+* changing attributes of a class.
+
+The specialization method is not restricted
+to adding attributes, as is the case in typical entity subclassing;
+it can also include removing attributes from a class, changing
+their obligation and cardinality, and changing their type,
+including changing enumerations. Attributes can be overruled at any
+level; for example, standards-specific models routinely enhance the
+bibliographic model at the base of the hierarchy.
+
+For reasons of clarity, however, renaming classes and attributes should
+be avoided in specialization.
+
+[example]
+The document model for the Chinese National Standard ("`GB Standard`"),
+as described in <<gbt11>>, is structurally modelled after
+ISO documents, explicitly described as a localization of <<isoiecdir2-2004>>.
+Therefore, the Chinese National Standard model is best expressed
+as a specialization of the ISO Standards model.
+
+

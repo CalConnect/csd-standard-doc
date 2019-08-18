@@ -2,7 +2,7 @@
 [[standardsblock]]
 == Block
 
-There is no difference in the modelling of blocks between the
+`StandardDocument`'s block elements adhere to the block element
 `BasicDocument` model and the `StandardDocument` model.
 
 Specializations and profiles of the `StandardDocument` model may

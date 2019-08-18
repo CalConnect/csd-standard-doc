@@ -1,10 +1,48 @@
 
 [[standardsreferencessection]]
-== References Section
+== Citation and reference elements
 
-Standard References Sections are a subclass of `StandardSection`.
+=== Purpose
 
-Like the References Sections of the `BasicDocument` model
+Standardization documents often cite other documents within,
+and as a result they usually contain a bibliography section
+indicating its data sources.
+
+=== References section
+
+The `StandardReferencesSection` class within _StandardDocument_
+is used to represent a bibliography section.
+It is used to collate references within the document, where
+there could be one or more of such sections within a document.
+
+For example, some standardization documents differentiate
+normative or informative references, some split references into
+sections organized by concept relevance.
+
+The `StandardReferencesSection` class is a specialized class of
+`StandardSection` (<<standardssection>>).
+
+Similar to the `ReferencesSection` of the `BasicDocument` model
 (<<basicdocument>>), they are leaf nodes which contain zero or more
 bibliographical references (as modelled in <<relaton>>), along with
 any prefatory text.
+
+
+=== Reference item
+
+Each reference item is represented using the _BibliographicItem_
+class defined in <<relaton>>.
+
+It is not necessary to specialize reference items amongst
+documents from different standardization bodies as a document
+can cite documents of any type.
+
+
+=== Citation
+
+Each citation is represented by the _Citation_ class defined in
+<<relaton>>.
+
+It is not necessary to specialize citations since it is simply
+a document data element reference linked to a reference item.
+

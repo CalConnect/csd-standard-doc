@@ -1,55 +1,108 @@
-[[standardssection]]
-== Section models
 
-The `StandardDocument` model extends the `BasicDocument`
-modelling of sections by specialising the `BasicSection` class as
+[[standardssection]]
+== Section elements
+
+=== Purpose
+
+A section represents a clause in a standardization document.
+Specifically, a section represents a logically coherent group of
+paragraphs and blocks that is meant to be shown in the table
+of contents.
+
+=== Structure
+
+The `StandardDocument` model is a specialization of the
+`BasicSection` class of the `BasicDocument` model by as
 follows:
 
 * All sections in a `StandardDocument` model are instances of the
 `StandardSection` class, which is a subclass of `BasicSection`.
 
 * The `StandardSection` class indicates its status as normative or
-informative explicitly, through the `status` attribute. (This
-attribute has been added because it is overtly specified in
-<<isoiecdir2>>, but the normative status of individual sections in
-a standard is pertinent to any standards document.)
+informative explicitly, through the `status` attribute.
+The normative status of individual sections in a standardization
+document is pertinent.
+====
+The necessity of indicating normative or informative `status`
+is specified in <<isoiecdir2>> for ISO deliverables.
+====
 
-* Sections in a standards document fall into two categories: Clause
-Sections, which are numbered, and form part of the main flow of the
-document, and Content sections (Standard Hierarchical Sections),
-which are optionally not numbered, and which lie outside the main
-flow of the document.
+There are two major types of sections, namely, clause sections and
+content sections.
 
-* Four Content sections are defined with distinct names, as they
-recur in standardization documents and have distinct semantics:
-Abstract, Foreword, Introduction, and Acknowledgments.
-Specializations of the model may define other such sections.
+=== Clause sections
 
-* Clause Sections are by default hierarchical (but see <<terms>>).
+Clause sections (`ClauseSection`) are numbered, and form part of the
+main flow of the document.
+
+Clause sections are by default hierarchical (as an exception, see <<terms>>).
 The subclauses of Clauses are themselves Clause Sections; they
 continue the hierarchical numbering of Clause Sections at deeper
-hierarchical levels. The subclauses of Content sections are
-``StandardSection``s, and need not be numbered.
+hierarchical levels.
 
-* Both Content Sections and Clause Sections can have a type, which
-allows them to be semantically classified into recurring
-categories, which may be processed and rendered differently.
-Indicative values include: executive-summary, errata, methods,
-requirements, tests, reagents, tests.
+=== Content sections
 
-* Annexes and Clause Sections are modelled in the same way in the
-`StandardDocument` model. However they are expected to be
-numbered differently, and to be rendered as separate sequences.
+Content sections (`StandardHierarchicalSection`) are optionally
+not numbered, and lie outside the main flow of the document.
 
-Although it is difficult to capture in a container-based model, the
-`StandardDocument` model requires "hanging paragraphs" to be
-avoided: a Clause section in particular should contain either
-blocks or subsections, but not both. This is a requirement in
-<<isoiecdir2>>, but the need to reference text in clauses
-unambiguously by clause number makes the avoidance of hanging
-paragraphs desirable for standardization documents in general. The
-requirement is less pressing for Content sections (which are
-unnumbered), and Annexes (as exemplified in <<isoiecdir2>> itself.)
+In `StandardDocument`, there are four distinctly named
+content sections. These content sections are designated sections
+as they recur in standardization documents and have distinct semantics:
 
-._StandardsDocument_ model: Section
+* Abstract,
+* Foreword,
+* Introduction, and
+* Acknowledgments.
+
+Specializations of the model may define other such sections.
+
+The subclauses of Content sections are ``StandardSection``s,
+and need not be numbered.
+
+=== Annex sections
+
+Annexes are implemented as ``ClauseSection``s in the
+`StandardDocument` metamodel.
+
+They are, however, expected to be numbered differently, and to be
+rendered as separate sequences from clause sections.
+
+=== Category label
+
+Both section types can have a category label, which allows them
+to be semantically classified into recurring categories, which
+may be processed and rendered differently.
+Indicative values include:
+
+* `executive-summary`,
+* `errata`,
+* `methods`,
+* `requirements`,
+* `tests`,
+* `reagents`, and
+* `tests`.
+
+
+
+=== Restrictions on hanging elements
+
+Generally, in standardization documents there is a strong need
+to reference text in clauses unambiguously by clause number,
+which makes hanging paragraphs undesirable.
+
+Therefore, the `StandardDocument` model requires "hanging paragraphs"
+to be avoided. In particular, its sections should
+contain either blocks or subsections, but not both.
+
+NOTE: The avoidance of "hanging paragraphs" is also a requirement in
+<<isoiecdir2>>.
+
+While this behavior is less pressing for Content sections (which are
+unnumbered), and Annexes (as exemplified in <<isoiecdir2>>), it is
+nonetheless not recommended.
+
+
+=== Overview
+
+._StandardDocument_ model: Section
 image::models/metanorma-model-standoc/images/StandardDoc_Sections.png[]

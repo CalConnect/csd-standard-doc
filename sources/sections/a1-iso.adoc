@@ -1,15 +1,22 @@
 
 [[isoprofile]]
 [appendix]
-== ISO Standard Document Model Profile
+== Profile: ISO standardization deliverables
 
 === General
 
-The `ISOStandardDocument` model is given here as an exemplar of the
-application of _StandardDocument_ modelling to a particular standard.
+This profile provides the specialization of the
+_StandardDocument_ document metamodel for ISO standardization deliverables
+described in <<isoiecdir2>>.
+
+The `ISOStandardDocument` model fully covers all ISO
+standardization deliverables, including International Standards,
+Guides, Technical Reports, Technical Specifications,
+International Workshop Agreements, Amendments and Corrigenda.
+
 
 [[isodocument]]
-=== Document, Section
+=== Document and section specialization
 
 The `ISOStandardDocument` model extends the `StandardDocument`
 modelling of the document by requiring the following specific types
@@ -47,56 +54,72 @@ extensions to the <<relaton>> metadata about a document
 .ISO Standard Document model: Document
 image::models/metanorma-model-iso/images/IsoDoc_IsoStandardDocument.png[]
 
+
 [[isoblock]]
-=== Block
+=== Block specialization
 
 The `ISOStandardDocument` model extends the `StandardDocument`
 modelling of blocks for one block definition:
 
 * The types that an Admonition can belong to are overridden to
-belong to the following set prescribed in <<isoiecdir2>>: _Danger,
-Caution, Warning, Important, Safety Precaution_.
+belong to the following set prescribed in <<isoiecdir2>>:
+** `Danger`,
+** `Caution`,
+** `Warning`,
+** `Important`,
+** `Safety Precaution`.
 
 .ISO Standard Document model: Block
 image::models/metanorma-model-iso/images/IsoDoc_IsoBlocks.png[]
 
 [[isobib]]
-=== Bibliography
+=== Document metadata specialization
 
-We note here the `ISOStandardDocument` overrides of the <<relaton>>
-bibliographic model; although the contents of <<relaton>> are out
-of scope of this document, its customization for a specific
-standard are in scope.
+The `IsoBibliographicItem` model customizes parts
+of `BibliographicItem` to fully cover representations
+of ISO standardization deliverables' metadata.
 
-<<relaton>> is intended as a highly generic model, and custom
-bibliographic elements would impede the reuse of bibliographic
-entries between standards. However, it is useful for the metadata
-describing the current document (`bibdata`: <<basicdocument>>) to
-be enriched to provide metadata relevant to the standard class.
+While `BibliographicItem` is intended as a highly generic model,
+however, it is useful for the metadata describing the current document
+to be enriched to provide metadata relevant to the standard class.
 
-The bibliographic modelling of ISO documents is enriched compared
-to <<relaton>>  as follows:
+`IsoBibliographicItem` is enriched compared to `BibliographicItem`
+as follows:
 
 * The document identifier is refined to contain three optional
-parts: a project number, a part number, and a technical committee
-document number.
+parts:
+** a project number,
+** a part number, and
+** a technical committee document number.
 
-* The document title is broken down into an optional Introductory
-component, a mandatory Main component, and an optional Part
-component.
+* The document title is broken down into:
+
+** an optional Introductory component,
+** a mandatory Main component, and
+** an optional Part component.
 
 * The document type is constrained to be one of the following:
-_International Standard, Technical Specification, Technical Report,
-Publicly Available Specification, International Workshop Agreement,
-Guide_.
+** International Standard,
+** Technical Specification,
+** Technical Report,
+** Publicly Available Specification,
+** International Workshop Agreement, and
+** Guide.
 
-* The document status is broken down into an ISO Document Stage
-code (<<isostage>>), an ISO Document Substage code (<<isostage>>),
-and an Iteration number.
+* The document status is broken down into:
+
+** an ISO Document Stage code (<<isostage>>),
+** an ISO Document Substage code (<<isostage>>), and
+** an Iteration number.
 
 * The editorial group responsible for the document is defined with
-four components: a mandatory Technical Committee, an optional
-Subcommittee, an optional Workgroup, and an optional Secretariat.
+four components:
+--
+** a mandatory Technical Committee,
+** an optional Subcommittee,
+** an optional Workgroup, and
+** an optional Secretariat.
+--
 The Technical Committee, Subcommittee and Workgroup, in turn, are
 instances of the ISO Subgroup class, defined as having a name, an
 optional type, and an optional number.

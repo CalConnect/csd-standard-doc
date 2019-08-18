@@ -12,6 +12,12 @@
 
 * [[[iso5127,ISO 5127:2017]]], _Information and documentation -- Foundation and vocabulary_
 
+// Later, change CC 6900 and 36010 into ISO standards
+
+* [[[relaton,CC 6900]]] footnote:[In draft], _CalConnect Standard 6900: Information and documentation -- Bibliographic reference model and serialization_
+
+* [[[basicdocument,CC 36010]]] footnote:[In draft], _CalConnect Standard 36010: Lightweight document -- Document metamodel_
+
 * [[[gbt11,CN(GB/T 1.1-2009)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
 
 * [[[RFC7749,IETF RFC 7749]]], _The "xml2rfc" Version 2 Vocabulary_
@@ -22,8 +28,10 @@
 
 * [[[isostage,ISO International harmonized stage codes]]] _International harmonized stage codes_, https://www.iso.org/stage-codes.html
 
-* [[[IEV,IEV]]], _IEV_
-
 * [[[CC10001,CC/DIR 10001]]], _CalConnect Directive: Standardization and publication_
 
 * [[[CC10002,CC/DIR 10002]]], _CalConnect Directive: Standard document requirements_
+
+* [[[OGC-05-020r26,OGC 05-020r26]]], _Open Geospatial Consortium: Technical Committee Policies and Procedures_, version 26.0.
+
+//* [[[IEV,IEV]]], _IEV_

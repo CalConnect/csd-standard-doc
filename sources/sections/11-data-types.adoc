@@ -1,10 +1,8 @@
 
-== Data Types
+== Data types
 
-There is no difference in the modelling of data types between the
-`BasicDocument` model and the `StandardDocument` models.
+Data types in `StandardDocument` models are are fully inherited
+from those of the `BasicDocument` model.
 
 Specializations and profiles of the `StandardDocument` model may
-specialize the modelling of data types.
-
-
+specialize and extend the modelling of data types.

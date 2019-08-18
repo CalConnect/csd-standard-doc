@@ -43,10 +43,10 @@ content, and is vulnerable to error.
 focus on document appearance, rather than document structure, and
 so do not alleviate the formatting burden on the editorial process.
 
-* standardization bodies often demand vastly different
+* Standardization bodies often demand vastly different
 workflows that take different inputs. Submitting identical
 content or cross-publishing to more than one
-standardization organization
+standardization body
 requires replicating a significant amount of work.
 
 //Opportunities to automate
@@ -140,8 +140,8 @@ of the following standardization bodies:
 * ITU (TTP, ATP)
 * CalConnect (<<CC10001>>, <<CC10002>>)
 * IETF (<<RFC7749>>, <<RFC7991>>)
-* OGC (OGC 05-020r26)
-* NIST (...)
+* OGC (<<OGC-05-020r26>>)
+* NIST Special Publications
 * China standards (national, local, industry, social group) (<<gbt11>>)
 
 In many cases, the document model also enables alignment
