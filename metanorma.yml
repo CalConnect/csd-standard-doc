@@ -4,5 +4,5 @@ metanorma:
     email: "travis-ci@metanorma.org"
 relaton:
   collection:
-    name: Standardization document -- Metanorma -- Document metamodel
+    name: Standardization documents -- Document metamodel
     organization: CalConnect/ISO
