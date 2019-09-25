@@ -1,0 +1,32 @@
+
+# Converstion from IsoDoc_IsoBlocks.wsd
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 26/09/2019
+
+title: IsoDoc - Iso Blocks
+classes:
+  AdmonitionBlock:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: BasicDocument
+
+  # Use IsoAdmonitionBlock instead of AdmonitionBlock in IsoStandardDocument
+  IsoAdmonitionBlock:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: IsoAdmonitionType
+    relations:
+      - target: AdmonitionBlock
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+
+      

@@ -1,0 +1,24 @@
+# This enumerator is implemented in a separate file but it is used in IsoDoc_IsoBibliographicItem.yml
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 25/09/2019
+
+name: IsoDocumentSubstageCodes
+modelType: enum
+type: enumeration
+values:
+  00:
+    definition: 
+  20:
+    definition: 
+  60:
+    definition: 
+  90:
+    definition: 
+  92:
+    definition: 
+  93:
+    definition: 
+  98:
+    definition: 
+  99:
+    definition: 

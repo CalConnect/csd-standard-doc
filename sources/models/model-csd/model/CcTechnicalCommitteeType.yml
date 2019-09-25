@@ -1,0 +1,12 @@
+# This enumerator is implemented in a separate file but it is used in Csd_CsdStandardDocument.yml
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 25/09/2019
+
+name: CcTechnicalCommitteeType
+modelType: enum
+type: enumeration
+values:
+  technical:
+    definition: 
+  provisional:
+    definition: 

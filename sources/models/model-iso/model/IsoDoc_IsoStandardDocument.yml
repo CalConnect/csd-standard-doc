@@ -1,0 +1,96 @@
+
+# Converstion from IsoDoc_IsoStandardDocument.wsd
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 26/09/2019
+
+# 'termSource' points to other ISO Documents where 
+# this document inherit their 
+# Terms and Definition / Symbols / Abbreviations
+title: IsoDoc - Iso Standard Document
+classes:
+  StandardDocument:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: StandardDocument
+  IsoStandardDocument:
+    definition: |
+
+    attributes:
+      bibdata:
+        definition: 
+        type: IsoBibliographicItem
+      prefix:
+        definition: 
+        type: IsoPreface
+      sections:
+        definition: 
+        type: ClauseSection
+        cardinality:
+          min: 1
+          max: "*"
+      annex:
+        definition: 
+        type: AnnexSection
+        cardinality:
+          min: 0
+          max: "*"
+      termSources:
+        definition: 
+        type: Citation
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: StandardDocument
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  IsoPreface:
+    definition: |
+
+    attributes:
+      foreword:
+        definition: 
+        type: BasicSection
+      introduction:
+        definition: 
+        type: ClauseSection
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: IsoStandardDocument
+        relationship:
+          target:
+            type: direct
+        direction: up
+  AnnexSection:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: StandardDocument
+  IsoAnnexSection:
+    definition: |
+
+    attributes:
+      appendix:
+        definition: 
+        type: ClauseSection
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: AnnexSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+
+      

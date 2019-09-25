@@ -1,0 +1,7 @@
+name: IsoDoc_IsoBlocks
+title: IsoDoc - Iso Blocks rule class
+caption: IsoDoc - Iso Blocks rule class data model
+directive: isodoc-iso-blocks
+imports:
+  AdmonitionBlock:
+  IsoAdmonitionBlock:

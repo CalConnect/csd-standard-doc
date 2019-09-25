@@ -1,0 +1,24 @@
+# This enumerator is implemented in a separate file but it is used in Csd_CsdStandardDocument.yml
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 25/09/2019
+
+name: CcDocumentType
+modelType: enum
+type: enumeration
+values:
+  directive:
+    definition: 
+  standard:
+    definition: 
+  guide:
+    definition: 
+  specification:
+    definition: 
+  amendment:
+    definition: 
+  technical_corrigendum:
+    definition: 
+  report:
+    definition: 
+  administrative:
+    definition: 

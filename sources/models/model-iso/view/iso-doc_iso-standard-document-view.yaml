@@ -1,0 +1,10 @@
+name: IsoDoc_IsoStandardDocument
+title: IsoDoc - Iso Standard Document rule class
+caption: IsoDoc - Iso Standard Document rule class data model
+directive: iso-doc_iso-standard-document
+imports:
+  StandardDocument:
+  IsoStandardDocument:
+  IsoPreface:
+  AnnexSection:
+  IsoAnnexSection:

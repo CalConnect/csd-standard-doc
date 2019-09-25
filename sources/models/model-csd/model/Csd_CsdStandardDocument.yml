@@ -1,0 +1,190 @@
+
+# Converstion from Csd_CsdStandardDocument.wsd
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 25/09/2019
+
+title: Csd_Csd Standard Document
+classes:
+  StandardDocument:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: StandardDocument
+      
+  CcStandardDocument:
+    definition: |
+      
+    attributes:
+      bibdata:
+        definition: 
+        type: CcBibliographicItem
+      foreword:
+        definition: 
+        type: HierarchicalSection
+        cardinality:
+          min: 0
+          max: 1
+      introduction:
+        definition: 
+        type: HierarchicalSection
+        cardinality:
+          min: 0
+          max: 1
+      sections:
+        definition: 
+        type: ClauseSection
+        cardinality:
+          min: 1
+          max: "*"
+      annex:
+        definition: 
+        type: AnnexSection
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: StandardDocument
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  BibliographicItem: 
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: StandardDocument
+  CcBibliographicItem:
+    definition: |
+
+    attributes:
+      committee:
+        definition: 
+        type: CcTechnicalCommittee
+        cardinality:
+          min: 1
+          max: "*"
+      type:
+        definition: 
+        type: CcDocumentType
+      title:
+        definition: 
+        type: FormattedString
+    relations:
+      - target: BibliographicItem
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+      - target: CcStandardDocument
+        relationship:
+          target:
+            type: direct
+        direction: up
+  CcTechnicalCommittee:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: CcTechnicalCommitteeType
+      name:
+        definition: 
+        type: String
+    relations:
+      - target: CcBibliographicItem
+        relationship:
+          target:
+            type: direct
+        direction: up
+  DocumentStatus:
+    definition: |
+
+    attributes:
+      status:
+        definition: 
+        type: CcStatusType
+    relations:
+      - target: CcBibliographicItem
+        relationship:
+          target:
+            type: direct
+        direction: up
+  TextElement:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: BasicDoc
+  Keyword:
+    definition: |
+
+    relations:
+      - target: TextElement
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  IdElement:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: BasicDoc
+  Figure:
+    definition: |
+
+    attributes:
+      source:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+      name:
+        definition: 
+        type: LocalizedString
+        cardinality:
+          min: 0
+          max: 1
+      note:
+        definition: 
+        type: ParagraphWithFootnote
+        cardinality:
+          min: 0
+          max: "*"
+      figure:
+        definition: 
+        type: Figure
+        cardinality:
+          min: 0
+          max: "*"
+      definitions:
+        definition: 
+        type: DefinitionList
+        cardinality:
+          min: 0
+          max: 1
+      pre:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+      content:
+        definition: 
+        type: TextElement
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: IdElement
+        relationship:
+          target:
+            type: inheritance
+        direction: up

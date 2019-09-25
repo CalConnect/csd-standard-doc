@@ -1,0 +1,18 @@
+# This enumerator is implemented in a separate file but it is used in IsoDoc_IsoBlocks.yml
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 26/09/2019
+
+name: IsoAdmonitionType
+modelType: enum
+type: enumeration
+values:
+  danger:
+    definition: 
+  caution:
+    definition: 
+  warning:
+    definition: 
+  important:
+    definition: 
+  safty_precautions:
+    definition: 

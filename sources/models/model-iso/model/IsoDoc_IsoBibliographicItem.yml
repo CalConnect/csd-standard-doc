@@ -1,0 +1,243 @@
+
+# Converstion from IsoDoc_IsoBibliographicItem.wsd
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 25/09/2019
+
+title: IsoDoc - Iso Bibliographic Item
+classes:
+  BibliographicItem:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: Bibliography
+      
+  IsoBibliographicItem:
+    definition: |
+      
+    attributes:
+      docIdentifier:
+        definition: 
+        type: IsoDocumentId
+      title:
+        definition: 
+        type: IsoLocalizedTitle
+      type:
+        definition: 
+        type: IsoDocumentType
+      status:
+        definition: 
+        type: IsoDocumentStatus
+      workgroup:
+        definition: 
+        type: IsoProjectGroup
+      ics:
+        definition: 
+        type: Ics
+        cardinality:
+          min: 1
+          max: "*"
+      source:
+        definition: 
+        type: TypeUri
+        cardinality:
+          min: 0
+          max: "*"
+      abstract:
+        definition: 
+        type: FormattedString
+        cardinality:
+          min: 0
+          max: "*"
+      allParts:
+        definition: 
+        type: boolean
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: BibliographicItem
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  IsoDocumentId: 
+    definition: |
+
+    attributes:
+      tcDocumentNumber:
+        definition: 
+        type: Integer
+        cardinality:
+          min: 0
+          max: 1
+      projectNumber:
+        definition: 
+        type: Integer
+        cardinality:
+          min: 0
+          max: 1
+      partNumber:
+        definition: 
+        type: Integer
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: IsoBibliographicItem
+        relationship:
+          target:
+            type: direct
+        direction: right
+  IsoLocalizedTitle:
+    definition: |
+
+    attributes:
+      titleIntro:
+        definition: 
+        type: FormattedString
+        cardinality:
+          min: 1
+          max: "*"
+      titleMain:
+        definition: 
+        type: FormattedString
+        cardinality:
+          min: 1
+          max: "*"
+      titlePart:
+        definition: 
+        type: FormattedString
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: IsoBibliographicItem
+        relationship:
+          target:
+            type: direct
+        direction: up
+  IsoDocumentStatus:
+    definition: |
+
+    attributes:
+      stage:
+        definition: 
+        type: IsoDocumentStageCodes
+      substage:
+        definition: 
+        type: IsoDocumentSubstageCodes
+      iteration:
+        definition: 
+        type: Integer
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: DocumentStatus
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+      - target: IsoBibliographicItem
+        relationship:
+          target:
+            type: direct
+        direction: up
+  DocumentStatus:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: Bibliography
+
+  IsoProjectGroup:
+    definition: |
+
+    attributes:
+      technicalCommittee:
+        definition: 
+        type: IsoSubGroup
+      subcommittee:
+        definition: 
+        type: IsoSubGroup
+        cardinality:
+          min: 0
+          max: 1
+      workgroup:
+        definition: 
+        type: IsoSubGroup
+        cardinality:
+          min: 0
+          max: 1
+      secretariat:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: Organization
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+      - target: IsoBibliographicItem
+        relationship:
+          target:
+            type: direct
+        direction: up
+  Organization:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: Bibliography        
+  IsoSubGroup:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+      number:
+        definition: 
+        type: Integer
+        cardinality:
+          min: 0
+          max: 1
+      name:
+        definition: 
+        type: String
+    relations:
+      - target: IsoProjectGroup
+        relationship:
+          target:
+            type: direct
+        direction: up
+  # ICS is defined by ISO here: https://www.iso.org/publication/PUB100033.html
+  Ics:
+    definition: |
+
+    attributes:
+      code:
+        definition: 
+        type: String
+      text:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: IsoBibliographicItem
+        relationship:
+          target:
+            type: direct
+        direction: up

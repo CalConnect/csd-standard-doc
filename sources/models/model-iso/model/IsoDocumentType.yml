@@ -1,0 +1,20 @@
+# This enumerator is implemented in a separate file but it is used in IsoDoc_IsoBibliographicItem.yml
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 25/09/2019
+
+name: IsoDocumentType
+modelType: enum
+type: enumeration
+values:
+  internationalStandard:
+    definition: 
+  technicalSpecification:
+    definition: 
+  technicalReport:
+    definition: 
+  publiclyAvailableSpecification:
+    definition: 
+  internationalWorkshopAgreement:
+    definition: 
+  guide:
+    definition: 

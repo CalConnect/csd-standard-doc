@@ -1,0 +1,21 @@
+# This enumerator is implemented in a separate file but it is used in Csd_CsdStandardDocument.yml
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 25/09/2019
+
+# LocalizedString used instead if bibliographic item is not a CSD document
+name: CcStatusType
+modelType: enum
+type: enumeration
+values:
+  proposal:
+    definition: 
+  working_draft:
+    definition: 
+  committee_draft:
+    definition: 
+  final_draft:
+    definition: 
+  published:
+    definition: 
+  withdrawn:
+    definition: 
