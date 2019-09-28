@@ -1,0 +1,203 @@
+
+# Converstion from StandardDoc_Sections.wsd
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 28/09/2019
+
+
+# StandardHierarchicalSection, StandardContentSection and StandardReferencesSection differ from those of BasicDocument with having an extra 'obligation' attribute
+title: Standard Doc Sections
+classes:
+  BasicSection:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: BasicDocument
+  HierarchicalSection:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: BasicDocument
+  StandardSection:
+    definition: |
+
+    attributes:
+      status:
+        definition: 
+        type: NormativeType
+    relations:
+      - target: BasicSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  # Non-clause sections are modeled as StandardContentSections. Example: Introduction, Foreword.
+  StandardHierarchicalSection:
+    definition: |
+
+    attributes:
+      subsections:
+        definition: 
+        type: StandardSection
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: StandardSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  StandardContentSection:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: StandardHierarchicalSection
+        relationship:
+          target:
+            type: inheritance
+        direction: right
+  Abstract:
+    definition: |
+
+    relations:
+      - target: StandardContentSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  Foreword:
+    definition: |
+
+    relations:
+      - target: StandardContentSection
+        relationship:
+          target:
+            type: inheritance
+        direction: right
+
+  Introduction:
+    definition: |
+
+    relations:
+      - target: StandardContentSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  Acknowledgements:
+    definition: |
+
+    relations:
+      - target: StandardContentSection
+        relationship:
+          target:
+            type: inheritance
+        direction: left
+  ClauseSection:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: StandardSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  # Subclauses are mutually exclusive with text content
+  ClauseHierarchicalSection:
+    definition: |
+
+    attributes:
+      subsections:
+        definition: 
+        type: ClauseHierarchicalSection
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: ClauseSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  # A TermsSection or DefinitionSection is a leaf node - only contain terms or symbols/abbreviations. 
+  # The content of each solely comes from the terms or symbols/abbreviations.
+  TermsSection:
+    definition: |
+
+    attributes:
+      terms:
+        definition: 
+        type: TermCollection
+    relations:
+      - target: ClauseSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  DefinitionSection:
+    definition: |
+
+    attributes:
+      definitions:
+        definition: 
+        type: DefinitionCollection
+    relations:
+      - target: ClauseSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  # Annex and its children clauses permit hanging paragraphs(as is 'blocks').
+  AnnexSection:
+    definition: |
+
+    attributes:
+      subsections:
+        definition: 
+        type: ClauseSection
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: StandardSection
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+  # A referencesSection is also a leaf node.
+  StandardReferencesSection:
+    definition: |
+
+    attributes:
+      references:
+        definition: 
+        type: BibliographicItem
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: StandardSection
+        relationship:
+          target:
+            type: inheritance
+        direction: left

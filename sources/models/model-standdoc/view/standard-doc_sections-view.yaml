@@ -1,0 +1,20 @@
+name: StandardDoc_Sections
+title: Standard Doc Sections rule class
+caption: Standard Doc Sections rule class data model
+directive: standard-doc-sections
+imports:
+  BasicSection:
+  HierarchicalSection:
+  StandardSection:
+  StandardHierarchicalSection:
+  StandardContentSection:
+  Abstract:
+  Foreword:
+  Introduction:
+  Acknowledgements:
+  ClauseSection:
+  ClauseHierarchicalSection:
+  TermsSection:
+  DefinitionSection:
+  AnnexSection:
+  StandardReferencesSection:

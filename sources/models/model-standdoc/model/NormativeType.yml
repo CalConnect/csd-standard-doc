@@ -1,0 +1,12 @@
+# This enumerator is implemented in a separate file but it is used in StandardDoc_Sections.yml
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 28/09/2019
+
+name: NormativeType
+modelType: enum
+type: enumeration
+values:
+  normative:
+    definition: 
+  informative:
+    definition: 

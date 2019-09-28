@@ -1,0 +1,11 @@
+name: StandardDoc_Terms
+title: Standard Doc Terms rule class
+caption: Standard Doc Terms rule class data model
+directive: standard-doc-terms
+imports:
+  TermCollection:
+  Term:
+  RelatedTerm:
+  TermSource:
+  DefinitionCollection:
+  Definition:

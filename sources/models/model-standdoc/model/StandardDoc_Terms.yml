@@ -1,0 +1,171 @@
+
+# Converstion from StandardDoc_Terms.wsd
+# Created by: Vasil Buraliev (vasil.buraliev@vbu.mk)
+# Create date: 28/09/2019
+
+# Term modelled according to ISO/IEC Directives 2, 16.6
+# 
+# * Multiple preferred terms
+# * Single definition
+# * Multiple notes
+# * Multiple admitted terms
+# * Multiple deprecated terms
+# * Multiple examples
+# * Single domain
+# * Multiple sources
+#
+# Paragraph/TextElement may contain a formula.
+title: Standard Doc Terms
+classes:
+  TermCollection:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: Term
+  Term:
+    definition: |
+
+    attributes:
+      id:
+        definition: 
+        type: String
+        cardinality:
+          min: 0
+          max: 1
+      preferred:
+        definition: 
+        type: LocalizedString
+        cardinality:
+          min: 1
+          max: "*"
+      admitted:
+        definition: 
+        type: LocalizedString
+        cardinality:
+          min: 0
+          max: "*"
+      related:
+        definition: 
+        type: RelatedTerm
+        cardinality:
+          min: 0
+          max: "*"
+      deprecates:
+        definition: 
+        type: LocalizedString
+        cardinality:
+          min: 0
+          max: "*"
+      domain:
+        definition: 
+        type: LocalizedString
+        cardinality:
+          min: 0
+          max: 1
+      grammar:
+        definition: 
+        type: LocalizedString
+        cardinality:
+          min: 0
+          max: "*"
+      definition:
+        definition: 
+        type: Definition
+        cardinality:
+          min: 1
+          max: "*"
+      note:
+        definition: 
+        type: ParagraphBlock
+        cardinality:
+          min: 0
+          max: "*"
+      example:
+        definition: 
+        type: ParagraphBlock
+        cardinality:
+          min: 0
+          max: "*"
+      source:
+        definition: 
+        type: TermSource
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: TermCollection
+        relationship:
+          target:
+            type: direct
+        direction: up
+  RelatedTerm:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: RelatedTermType
+      content:
+        definition: 
+        type: LocalizedString
+    relations:
+      - target: Term
+        relationship:
+          target:
+            type: direct
+        direction: up
+  TermSource:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: Term
+      status:
+        definition: 
+        type: TermOriginStatus
+      origin:
+        definition: 
+        type: Citation
+      modification:
+        definition: 
+        type: ParagraphBlock
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: Term
+        relationship:
+          target:
+            type: direct
+        direction: up
+  DefinitionCollection:
+    definition: |
+
+    attributes:
+      definitions:
+        definition: 
+        type: Definition
+        cardinality:
+          min: 0
+          max: "*"
+
+  # Definition modelled according to ISO/IEC Directives 2, 17.
+  # 
+  # * Can be a synbol or abbreviation
+  # * A DefinitionCollection is represented as a single clause
+  Definition:
+    definition: |
+
+    attributes:
+      type:
+        definition: 
+        type: BasicDocument
+    relations:
+      - target: DefinitionCollection
+        relationship:
+          target:
+            type: direct
+        direction: up
