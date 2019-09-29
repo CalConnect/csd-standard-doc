@@ -1,6 +1,6 @@
-name: StandardDoc_Sections
-title: Standard Doc Sections rule class
-caption: Standard Doc Sections rule class data model
+name: Sections
+title: Section classes
+caption: Section class data models
 directive: standard-doc-sections
 imports:
   BasicSection:

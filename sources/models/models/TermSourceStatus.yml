@@ -1,0 +1,8 @@
+name: TermSourceStatus
+modelType: enum
+type: enumeration
+values:
+  identical:
+    definition:
+  modified:
+    definition:

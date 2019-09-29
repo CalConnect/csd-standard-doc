@@ -1,0 +1,6 @@
+name: StructuredIdentifier
+title: Structured identifier class
+caption: Structured identifier class data model
+directive: structured-identifier
+imports:
+  StructuredIdentifierType:

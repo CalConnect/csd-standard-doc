@@ -1,0 +1,24 @@
+# StandardHierarchicalSection, StandardContentSection and
+# StandardReferencesSection differ from those of BasicDocument
+# with having an extra 'obligation' attribute
+
+name: StandardContentSection
+modelType: class
+definition: |
+  The display template is used for displaying an
+  interchange address instance belonging to an interchange
+  address class. Generally, one address class is represented
+  by just one display template.
+attributes:
+  type:
+    definition:
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+relations:
+  - target: StandardHierarchicalSection
+    relationship:
+      target:
+        type: inheritance
+    direction: right

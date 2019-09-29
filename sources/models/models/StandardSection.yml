@@ -1,0 +1,17 @@
+name: StandardSection
+modelType: class
+definition: |
+  The display template is used for displaying an
+  interchange address instance belonging to an interchange
+  address class. Generally, one address class is represented
+  by just one display template.
+attributes:
+  status:
+    definition:
+    type: NormativeType
+relations:
+  - target: BasicSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up

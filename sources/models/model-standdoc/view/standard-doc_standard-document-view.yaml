@@ -1,8 +1,0 @@
-name: StandardDoc_StandardDocument
-title: Standard Doc Standard Document rule class
-caption: Standard Doc Standard Document rule class data model
-directive: standard-doc-standard-document
-imports:
-  BasicDocument:
-  StandardDocument:
-  BoilerplateType:

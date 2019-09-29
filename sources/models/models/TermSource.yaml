@@ -1,0 +1,26 @@
+name: TermSource
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition:
+    type: Term
+  status:
+    definition:
+    type: TermOriginStatus
+  origin:
+    definition:
+    type: Citation
+  modification:
+    definition:
+    type: ParagraphBlock
+    cardinality:
+      min: 0
+      max: 1
+relations:
+  - target: Term
+    relationship:
+      target:
+        type: direct
+    direction: up

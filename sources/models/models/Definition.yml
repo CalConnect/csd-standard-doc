@@ -1,0 +1,19 @@
+# Definition modelled according to ISO/IEC Directives 2, 17.
+#
+# * Can be a synbol or abbreviation
+# * A DefinitionCollection is represented as a single clause
+name: Definition
+modelType: class
+
+definition: |
+
+attributes:
+  type:
+    definition:
+    type: BasicDocument
+relations:
+  - target: DefinitionCollection
+    relationship:
+      target:
+        type: direct
+    direction: up

@@ -1,0 +1,9 @@
+name: References
+title: References classes
+caption: Reference data models
+directive: references
+imports:
+  StandardReferencesSection:
+  BibliographicItem:
+  Citation:
+

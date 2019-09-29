@@ -1,0 +1,11 @@
+
+name: Foreword
+modelType: class
+definition: |
+
+relations:
+  - target: StandardContentSection
+    relationship:
+      target:
+        type: inheritance
+    direction: right

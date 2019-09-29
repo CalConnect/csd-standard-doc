@@ -1,0 +1,11 @@
+name: Introduction
+modelType: class
+definition: |
+
+relations:
+  - target: StandardContentSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+

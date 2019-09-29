@@ -104,5 +104,5 @@ nonetheless not recommended.
 
 === Overview
 
-._StandardDocument_ model: Section
+.StandardDocument model: Section
 image::models/metanorma-model-standoc/images/StandardDoc_Sections.png[]

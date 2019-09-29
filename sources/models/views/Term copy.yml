@@ -1,6 +1,6 @@
-name: StandardDoc_Terms
-title: Standard Doc Terms rule class
-caption: Standard Doc Terms rule class data model
+name: Terms
+title: Term classes
+caption: Term class data models
 directive: standard-doc-terms
 imports:
   TermCollection:

@@ -1,0 +1,18 @@
+name: ClauseSection
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition:
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+relations:
+  - target: StandardSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+

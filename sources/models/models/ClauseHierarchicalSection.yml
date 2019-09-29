@@ -1,0 +1,19 @@
+# Subclauses are mutually exclusive with text content
+name: ClauseHierarchicalSection
+modelType: class
+definition: |
+
+attributes:
+  subsections:
+    definition:
+    type: ClauseHierarchicalSection
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: ClauseSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+

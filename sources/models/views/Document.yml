@@ -1,0 +1,8 @@
+name: Document
+title: Standard document class
+caption: Standard document class data model
+directive: standard-document
+imports:
+  BasicDocument:
+  StandardDocument:
+  BoilerplateType:

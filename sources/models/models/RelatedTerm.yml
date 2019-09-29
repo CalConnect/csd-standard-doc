@@ -1,0 +1,17 @@
+name: RelatedTerm
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition:
+    type: RelatedTermType
+  content:
+    definition:
+    type: LocalizedString
+relations:
+  - target: Term
+    relationship:
+      target:
+        type: direct
+    direction: up

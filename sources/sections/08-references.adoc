@@ -10,22 +10,10 @@ indicating its data sources.
 
 === References section
 
-The `StandardReferencesSection` class within _StandardDocument_
-is used to represent a bibliography section.
-It is used to collate references within the document, where
-there could be one or more of such sections within a document.
-
-For example, some standardization documents differentiate
-normative or informative references, some split references into
-sections organized by concept relevance.
-
-The `StandardReferencesSection` class is a specialized class of
-`StandardSection` (<<standardssection>>).
-
-Similar to the `ReferencesSection` of the `BasicDocument` model
-(<<basicdocument>>), they are leaf nodes which contain zero or more
-bibliographical references (as modelled in <<relaton>>), along with
-any prefatory text.
+[datamodel]
+....
+include::../models/views/References.yml[]
+....
 
 
 === Reference item

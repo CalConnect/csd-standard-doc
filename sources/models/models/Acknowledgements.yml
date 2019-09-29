@@ -1,0 +1,10 @@
+name: Acknowledgements
+modelType: class
+definition: |
+
+relations:
+  - target: StandardContentSection
+    relationship:
+      target:
+        type: inheritance
+    direction: left

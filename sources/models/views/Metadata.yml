@@ -1,0 +1,10 @@
+name: Metadata
+title: Metadata classes
+caption: Metadata class data models
+directive: metadata
+imports:
+  BibDataExtensionType:
+  BibData:
+  StandardBibData:
+  StandardBibDataExtensionType:
+  StructuredIdentifierType:

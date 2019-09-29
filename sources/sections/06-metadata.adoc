@@ -39,55 +39,20 @@ document, which will be more granular;
 
 * zero or more structured identifiers (<<structured-identifiers>>).
 
+[datamodel]
+....
+include::../models/views/Metadata.yml[]
+....
+
+
 
 [[structured-identifiers]]
-=== Structured identifiers
+== Structured identifier
 
-Standardization bodies often utilize structured, canonical identifiers
-according to a schema.
-
-Various components of this identifier is meant to be semantically marked up.
-
-The structure given here is meant to be applicable across standardization
-bodies, but it can always be customized for a specific standardizing body.
-
-This information should all be represented elsewhere in the document metadata,
-but is replicated in the identifier:
-
-* `type`: type of identifier, used to differentiate different
-instances of structured identifier generated for different purposes
-
-* `agency`: one or more abbreviations identifying the standardization body
-involved in producing this standard, and
-treated as a namespace for the identifier
-
-* `class`: an optional abbreviation identifying the subclass of
-standard or other document
-
-* `docnumber`: a number or other identifier for the document, issued
-by the standardizing body
-
-* `partnumber`: an optional part number for the document; includes
-sub-part numbers if applicable
-
-* `edition`: an optional string giving the edition of the standard
-
-* `version`: an optional string giving the version of the standard
-(within the edition). Includes the document stage that a draft has
-reached, e.g. "FDIS" under ISO
-
-* `supplementtype`: an abbreviation for the type of supplement to a
-standard that this document represents, if applicable
-
-* `supplementnumber`: an abbreviation for the number or other
-primary identifier of supplement to a standard that this document
-represents, if applicable
-
-* `year`: an optional string giving the date (typically year) that
-this particular edition of the standard was published
-
-* `language`: an optional abbreviation identifying the language of
-the standard.
+[datamodel]
+....
+include::../models/views/StructuredIdentifier.yml[]
+....
 
 
 

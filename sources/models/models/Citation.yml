@@ -1,0 +1,7 @@
+name: Citation
+modelType: class
+definition: |
+  Citation is defined in <<relaton>> as as a data model
+  of <<iso690>> citations.
+
+attributes:

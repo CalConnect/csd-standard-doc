@@ -21,79 +21,28 @@ Both types of section can include prefatory text.
 
 === Definition sections
 
-Definition sections (`DefinitionSection`) consist of one or more definition lists
-(see <<basicdocument>>), and are used to define symbols and
-abbreviations used in the remainder of the document.
-
-They can also be used as glossaries, with simple definitions,
-in contrast to the more elaborate definitions given in
-terms sections (<<termsection>>).
-
-In addition to allowing prefatory text per section, each definition list
-within each definition section can also be preceded by prefatory text.
+[datamodel]
+....
+include::../models/views/DefinitionSection.yml[]
+....
 
 
 [[termsection]]
 === Term sections
 
-Term sections (`TermsSection`) give elaborated definitions of terms used in
-a standardization document.
-
-A `StandardDocument` can contain one or more ``TermSection``s.
-Term sections consist of zero or more Terms.
-
-NOTE: The `TermsSection` definition fully aligns with the structure
-and requirements of the "Terms and definition" section given in
-<<isoiecdir2>>.
+[datamodel]
+....
+include::../models/views/TermSection.yml[]
+....
 
 
 [[term]]
 === Term
 
-A term (`Term`) is composed of the following elements:
-
-`id`:: An optional identifier for the term, to be used in
-cross-references.
-
-`preferred`:: One or more names under which the term being defined
-is canonically known.
-
-`admitted`:: Zero or more names which are acceptable synonyms for
-the term being defined.
-
-`related`:: Zero or more names which are related to the term being
-defined. Each has a type, indicating how the term is related;
-permitted values are compare (for "see also" references to terms),
-contrast (for terms that illuminate the term definition as what it
-is not), see (if this is a deprecated term, to reference the
-preferred term)
-
-`deprecates`:: Zero or more names which are deprecated synonyms for
-the term being defined.
-
-`domain`:: An optional semantic domain for the term being defined,
-in case the term is ambiguous between several semantic domains.
-
-`grammar`:: Zero or more abbreviations giving grammatical
-information about the term (e.g. part of speech, gender)
-
-`definition`:: The definition of the term applied in the current
-document.
-
-`note`:: Zero or more notes about the term.
-
-`example``:: Zero or more examples of how the term is to be used.
-
-`source`:: Zero or more bibliographical sources for the term. These
-include the `origin` of the term, which is its bibliographical
-citation (as defined in <<relaton>>); the `status` of the
-definition (whether `identical` to the definition given in the
-origin cited, or `modified`); and, if the definition is modified, a
-description of the `modification` to the definition applied for
-this document.
-
-NOTE: The `Term` definition fully aligns with the structure
-and requirements of terms in <<isoiecdir2>>.
+[datamodel]
+....
+include::../models/views/Term.yml[]
+....
 
 
 === Nested sections

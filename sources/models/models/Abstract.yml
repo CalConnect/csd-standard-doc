@@ -1,0 +1,10 @@
+name: Abstract
+modelType: class
+definition: |
+
+relations:
+  - target: StandardContentSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up

@@ -1,0 +1,19 @@
+# Annex and its children clauses permit hanging paragraphs(as is 'blocks').
+name: AnnexSection
+modelType: class
+definition: |
+
+attributes:
+  subsections:
+    definition:
+    type: ClauseSection
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: StandardSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+

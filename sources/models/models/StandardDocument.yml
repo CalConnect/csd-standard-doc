@@ -1,0 +1,72 @@
+name: StandardDocument
+modelType: class
+definition: |
+  The `StandardDocument` model is used to represent a standardization
+  document.
+
+  Typically, a standardization document contains at least the
+  following data elements:
+
+  * Metadata information;
+  * Clauses and subclauses;
+  * Bibliographies;
+  * Annexes if applicable.
+
+  The exact component requirements of a standardization document
+  can differ widely from one standardization body to the next.
+  Specialization is necessary to adopt the `StandardDocument`
+  model for such standardization bodies.
+
+  The `StandardDocument` model extends the `BasicDocument`
+  modelling of the document by requiring specific types
+  of sections.
+attributes:
+  bibdata:
+    definition:
+    type: StandardBibData
+  boilerplate:
+    definition: |
+      An optional _boilerplate_ section, intended to appear at the
+      front of the document. It consists of content addressing
+      _copyright_, _license_, _legal_, and _feedback_ concerns
+    (each as a `StandardHierarchicalSection`: <<standardssection>>).
+    type: BoilerplateType
+    cardinality:
+      min: 0
+      max: 1
+  preface:
+    definition: |
+      Zero or more optional _preface_ sections (each as a
+      `StandardHierarchicalSection`, <<standardssection>>)
+    type: StandardHierarchicalSection
+    cardinality:
+      min: 0
+      max: "*"
+  sections:
+    definition: |
+      One or more _sections_ (each as a `StandardHierarchicalSection`)
+    type: StandardHierarchicalSection
+    cardinality:
+      min: 1
+      max: "*"
+  annex:
+    definition: |
+      Zero or more _annexes_ (each as a `StandardHierarchicalSection`)
+    type: StandardHierarchicalSection
+    cardinality:
+      min: 0
+      max: "*"
+  bibliography:
+    definition: |
+      Zero or more _bibliographies_ (each as a `StandardReferencesSections`,
+      <<standardsreferencessection>>)
+    type: StandardReferencesSection
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: BasicDocument
+    relationship:
+      target:
+        type: inheritance
+    direction: up

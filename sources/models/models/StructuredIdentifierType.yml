@@ -1,0 +1,110 @@
+name: StructuredIdentifierType
+modelType: class
+definition: |
+  Standardization bodies often utilize structured, canonical identifiers
+  according to a schema.
+
+  Various components of this identifier is meant to be semantically marked up.
+
+  The structure given here is meant to be applicable across standardization
+  bodies, but it can always be customized for a specific standardizing body.
+
+  This information should all be represented elsewhere in the document metadata,
+  but is replicated in the identifier.
+
+attributes:
+  type:
+    definition: |
+      type of identifier, used to differentiate different
+      instances of structured identifier generated for different purposes
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  agency:
+    definition: |
+      one or more abbreviations identifying the standardization body
+      involved in producing this standard, and
+      treated as a namespace for the identifier
+    type: String
+    cardinality:
+      min: 1
+      max: "*"
+  class:
+    definition: |
+      an optional abbreviation identifying the subclass of
+      standard or other document
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  docnumber:
+    definition: |
+      a number or other identifier for the document, issued
+      by the standardizing body
+    type: String
+  partnumber:
+    definition: |
+      an optional part number for the document; includes
+      sub-part numbers if applicable
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  edition:
+    definition: |
+      an optional string giving the edition of the standard
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  version:
+    definition: |
+      an optional string giving the version of the standard
+      (within the edition). Includes the document stage that a draft has
+      reached, e.g. "FDIS" under ISO
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  supplementtype:
+    definition: |
+      an abbreviation for the type of supplement to a
+      standard that this document represents, if applicable
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  supplementnumber:
+    definition: |
+      an abbreviation for the number or other
+      primary identifier of supplement to a standard that this document
+      represents, if applicable
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  year:
+    definition: |
+      an optional string giving the date (typically year) that
+      this particular edition of the standard was published
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+  language:
+    definition: |
+      an optional abbreviation identifying the language of
+      the standard
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+relations:
+  - target: StandardBibDataExtensionType
+    relationship:
+      target:
+        type: direct
+    direction: up
+
+

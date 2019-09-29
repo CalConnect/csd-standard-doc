@@ -1,0 +1,8 @@
+name: TermCollection
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition:
+    type: Term

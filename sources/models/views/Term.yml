@@ -1,0 +1,10 @@
+name: Terms
+title: Term classes
+caption: Term class data models
+directive: standard-doc-terms
+imports:
+  TermCollection:
+  Term:
+  RelatedTerm:
+  RelatedTermType:
+  TermSource:

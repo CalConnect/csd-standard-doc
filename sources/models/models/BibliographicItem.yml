@@ -1,0 +1,7 @@
+name: BibliographicItem
+modelType: class
+definition: |
+  BibliographicItem is defined in <<relaton>> as as a data model
+  of <<iso690>> bibliographic items.
+
+attributes:

@@ -1,0 +1,25 @@
+# A TermsSection or DefinitionSection is a leaf node - only contain terms or symbols/abbreviations.
+# The content of each solely comes from the terms or symbols/abbreviations.
+name: TermsSection
+modelType: class
+definition: |
+  Term sections (`TermsSection`) give elaborated definitions of terms used in
+  a standardization document.
+
+  A `StandardDocument` can contain one or more ``TermSection``s.
+  Term sections consist of zero or more Terms.
+
+  NOTE: The `TermsSection` definition fully aligns with the structure
+  and requirements of the "Terms and definition" section given in
+  <<isoiecdir2>>.
+
+attributes:
+  terms:
+    definition:
+    type: TermCollection
+relations:
+  - target: ClauseSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up
