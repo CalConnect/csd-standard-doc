@@ -2,7 +2,7 @@
 
 This work item belongs to TC VCARD.
 
-image:https://travis-ci.com/CalConnect/csd-standard-doc.svg?branch=master["Build Status", link="https://travis-ci.com/calconnect/csd-standard-doc"]
+image:https://github.com/CalConnect/csd-standard-doc/workflows/publish/badge.svg["Build Status", link="https://github.com/CalConnect/csd-standard-doc/actions?workflow=publish"]
 
 This document is available in its rendered forms here:
 
