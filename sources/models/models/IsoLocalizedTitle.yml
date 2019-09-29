@@ -1,0 +1,29 @@
+name: IsoLocalizedTitle
+modelType: class
+definition: |
+
+attributes:
+  titleIntro:
+    definition: 
+    type: FormattedString
+    cardinality:
+      min: 1
+      max: "*"
+  titleMain:
+    definition: 
+    type: FormattedString
+    cardinality:
+      min: 1
+      max: "*"
+  titlePart:
+    definition: 
+    type: FormattedString
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: IsoBibliographicItem
+    relationship:
+      target:
+        type: direct
+    direction: up

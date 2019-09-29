@@ -1,0 +1,17 @@
+name: CcTechnicalCommittee
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition: 
+    type: CcTechnicalCommitteeType
+  name:
+    definition: 
+    type: String
+relations:
+  - target: CcBibliographicItem
+    relationship:
+      target:
+        type: direct
+    direction: up

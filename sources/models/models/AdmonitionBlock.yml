@@ -1,0 +1,8 @@
+name: AdmonitionBlock
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition: 
+    type: BasicDocument

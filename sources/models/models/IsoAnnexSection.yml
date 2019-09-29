@@ -1,0 +1,17 @@
+name: IsoAnnexSection
+modelType: class
+definition: |
+
+attributes:
+  appendix:
+    definition: 
+    type: ClauseSection
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: AnnexSection
+    relationship:
+      target:
+        type: inheritance
+    direction: up

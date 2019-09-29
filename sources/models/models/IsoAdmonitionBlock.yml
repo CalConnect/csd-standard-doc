@@ -1,0 +1,15 @@
+# Use IsoAdmonitionBlock instead of AdmonitionBlock in IsoStandardDocument
+name: IsoAdmonitionBlock
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition: 
+    type: IsoAdmonitionType
+relations:
+  - target: AdmonitionBlock
+    relationship:
+      target:
+        type: inheritance
+    direction: up

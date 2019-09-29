@@ -1,0 +1,50 @@
+name: IsoBibliographicItem
+modelType: class
+definition: |
+  
+attributes:
+  docIdentifier:
+    definition: 
+    type: IsoDocumentId
+  title:
+    definition: 
+    type: IsoLocalizedTitle
+  type:
+    definition: 
+    type: IsoDocumentType
+  status:
+    definition: 
+    type: IsoDocumentStatus
+  workgroup:
+    definition: 
+    type: IsoProjectGroup
+  ics:
+    definition: 
+    type: Ics
+    cardinality:
+      min: 1
+      max: "*"
+  source:
+    definition: 
+    type: TypeUri
+    cardinality:
+      min: 0
+      max: "*"
+  abstract:
+    definition: 
+    type: FormattedString
+    cardinality:
+      min: 0
+      max: "*"
+  allParts:
+    definition: 
+    type: boolean
+    cardinality:
+      min: 0
+      max: 1
+relations:
+  - target: BibliographicItem
+    relationship:
+      target:
+        type: inheritance
+    direction: up

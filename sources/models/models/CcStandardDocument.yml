@@ -1,0 +1,38 @@
+name: CcStandardDocument
+modelType: class
+definition: |
+  
+attributes:
+  bibdata:
+    definition: 
+    type: CcBibliographicItem
+  foreword:
+    definition: 
+    type: HierarchicalSection
+    cardinality:
+      min: 0
+      max: 1
+  introduction:
+    definition: 
+    type: HierarchicalSection
+    cardinality:
+      min: 0
+      max: 1
+  sections:
+    definition: 
+    type: ClauseSection
+    cardinality:
+      min: 1
+      max: "*"
+  annex:
+    definition: 
+    type: AnnexSection
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: StandardDocument
+    relationship:
+      target:
+        type: inheritance
+    direction: up

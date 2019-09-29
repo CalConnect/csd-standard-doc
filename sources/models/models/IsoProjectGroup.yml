@@ -1,0 +1,37 @@
+name: IsoProjectGroup
+modelType: class
+definition: |
+
+attributes:
+  technicalCommittee:
+    definition: 
+    type: IsoSubGroup
+  subcommittee:
+    definition: 
+    type: IsoSubGroup
+    cardinality:
+      min: 0
+      max: 1
+  workgroup:
+    definition: 
+    type: IsoSubGroup
+    cardinality:
+      min: 0
+      max: 1
+  secretariat:
+    definition: 
+    type: String
+    cardinality:
+      min: 0
+      max: 1
+relations:
+  - target: Organization
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+  - target: IsoBibliographicItem
+    relationship:
+      target:
+        type: direct
+    direction: up

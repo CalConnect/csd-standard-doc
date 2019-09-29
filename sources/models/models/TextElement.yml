@@ -1,0 +1,17 @@
+name: TextElement
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition: 
+    type: BasicDoc
+Keyword:
+definition: |
+
+relations:
+  - target: TextElement
+    relationship:
+      target:
+        type: inheritance
+    direction: up

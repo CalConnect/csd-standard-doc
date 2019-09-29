@@ -1,0 +1,8 @@
+name: Organization
+modelType: class
+definition: |
+
+attributes:
+  type:
+    definition: 
+    type: Bibliography  

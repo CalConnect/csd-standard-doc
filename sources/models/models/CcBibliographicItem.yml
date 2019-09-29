@@ -1,0 +1,28 @@
+name: CcBibliographicItem
+modelType: class
+definition: |
+
+attributes:
+  committee:
+    definition: 
+    type: CcTechnicalCommittee
+    cardinality:
+      min: 1
+      max: "*"
+  type:
+    definition: 
+    type: CcDocumentType
+  title:
+    definition: 
+    type: FormattedString
+relations:
+  - target: BibliographicItem
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+  - target: CcStandardDocument
+    relationship:
+      target:
+        type: direct
+    direction: up

@@ -1,0 +1,28 @@
+name: IsoDocumentStatus
+modelType: class
+definition: |
+
+attributes:
+  stage:
+    definition: 
+    type: IsoDocumentStageCodes
+  substage:
+    definition: 
+    type: IsoDocumentSubstageCodes
+  iteration:
+    definition: 
+    type: Integer
+    cardinality:
+      min: 0
+      max: 1
+relations:
+  - target: DocumentStatus
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+  - target: IsoBibliographicItem
+    relationship:
+      target:
+        type: direct
+    direction: up
