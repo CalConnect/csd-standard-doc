@@ -1,6 +1,6 @@
 = Standardization documents  -- Document metamodel
-:docnumber: 36001
-:copyright-year: 2019
+:docnumber: 36100
+:copyright-year: 2020
 :language: en
 :doctype: standard
 :edition: 1
@@ -16,10 +16,7 @@
 :surname_2: Nicholas
 :givenname_2: Nick
 :draft:
-:toc:
-:stem:
-:xrefstyle: short
-:docfile: cc-36001.adoc
+:docfile: cc-36100.adoc
 :mn-document-class: csd
 :mn-output-extensions: xml,html,rxl
 :local-cache-only:

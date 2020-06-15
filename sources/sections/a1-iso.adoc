@@ -141,3 +141,32 @@ multi-document description).
 .ISO Standard Document model: Bibliography
 image::models/metanorma-model-iso/images/IsoDoc_IsoBibliographicItem.png[]
 
+
+//[datamodel_attributes_table,./models/uml/IsoAdmonitionBlock.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoAdmonitionType.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoAnnexSection.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoBibliographicItem.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoDocumentId.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoDocumentStageCodes.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoDocumentStatus.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoDocumentSubstageCodes.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoDocumentType.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoLocalizedTitle.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoPreface.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoProjectGroup.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoStandardDocument.yml]
+
+//[datamodel_attributes_table,./models/uml/IsoSubGroup.yml]
+

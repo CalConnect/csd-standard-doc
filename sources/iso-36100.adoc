@@ -1,17 +1,16 @@
 = Standardization documents -- Document metamodel
-:docnumber: 36001
+:docnumber: 36100
 :tc-document-number: 9999
 :edition: 1
-:ref-docnumber: 36001:2019(E)
-:copyright-year: 2019
+:copyright-year: 2020
 :language: en
 :title-intro-en: Standardization documents
 :title-main-en: Document metamodel
 :title-intro-fr: Documents de normalisation
 :title-main-fr: Métamodèle des documents
 :doctype: international-standard
-:docstage: 10
-:docsubstage: 92
+:docstage: 30
+:docsubstage: 00
 :technical-committee-type: TC
 :technical-committee-number: 154
 :technical-committee: Processes, data elements and documents in commerce, industry and administration
@@ -19,13 +18,9 @@
 :workgroup-number: 4
 :workgroup: e-Documents
 :secretariat: SAC
-:draft:
-:toc:
-:stem:
-:xrefstyle: short
 :local-cache-only:
 :data-uri-image:
-:docfile: iso-36001.adoc
+:docfile: iso-36100.adoc
 :mn-document-class: iso
 :mn-output-extensions: xml,html,doc,html_alt,rxl
 

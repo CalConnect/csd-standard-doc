@@ -1,7 +1,6 @@
 name: TermSource
 modelType: class
-definition: |
-
+definition:
 attributes:
   type:
     definition:

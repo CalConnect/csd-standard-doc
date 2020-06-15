@@ -1,14 +1,13 @@
-# ICS is defined by ISO here: https://www.iso.org/publication/PUB100033.html
 name: Ics
 modelType: class
 definition: |
-
+  ICS is defined by ISO here -- https://www.iso.org/publication/PUB100033.html
 attributes:
   code:
-    definition: 
+    definition:
     type: String
   text:
-    definition: 
+    definition:
     type: String
     cardinality:
       min: 0

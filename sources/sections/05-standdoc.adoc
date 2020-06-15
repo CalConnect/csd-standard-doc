@@ -1,7 +1,11 @@
 [[standardsdocument]]
 == StandardDocument
 
-[datamodel]
-....
-include::../models/views/Document.yml[]
-....
+//[datamodel_diagram,./models/views/Document.yml]
+
+//[datamodel_attributes_table,./models/models/BasicDocument.yml]
+
+//[datamodel_attributes_table,./models/models/StandardDocument.yml]
+
+//[datamodel_attributes_table,./models/models/BoilerplateType.yml]
+

@@ -1,8 +1,7 @@
-# Subclauses are mutually exclusive with text content
 name: ClauseHierarchicalSection
 modelType: class
 definition: |
-
+  Subclauses are mutually exclusive with text content
 attributes:
   subsections:
     definition:

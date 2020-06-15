@@ -1,12 +1,10 @@
-# Definition modelled according to ISO/IEC Directives 2, 17.
-#
-# * Can be a synbol or abbreviation
-# * A DefinitionCollection is represented as a single clause
 name: Definition
 modelType: class
-
 definition: |
-
+  Definition modelled according to ISO/IEC Directives 2, 17.
+  
+  * Can be a synbol or abbreviation
+  * A DefinitionCollection is represented as a single clause
 attributes:
   type:
     definition:

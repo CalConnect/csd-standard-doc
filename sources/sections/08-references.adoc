@@ -10,10 +10,15 @@ indicating its data sources.
 
 === References section
 
-[datamodel]
-....
-include::../models/views/References.yml[]
-....
+
+//[datamodel_diagram,./models/views/References.yml]
+
+//[datamodel_attributes_table,./models/models/StandardReferencesSection.yml]
+
+//[datamodel_attributes_table,./models/models/BibliographicItem.yml]
+
+//[datamodel_attributes_table,./models/models/Citation.yml]
+
 
 
 === Reference item

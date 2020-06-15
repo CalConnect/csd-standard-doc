@@ -39,20 +39,24 @@ document, which will be more granular;
 
 * zero or more structured identifiers (<<structured-identifiers>>).
 
-[datamodel]
-....
-include::../models/views/Metadata.yml[]
-....
+//[datamodel_diagram,./models/views/Metadata.yml]
+
+//[datamodel_attributes_table,./models/models/BibDataExtensionType.yml]
+
+//[datamodel_attributes_table,./models/models/BibData.yml]
+
+//[datamodel_attributes_table,./models/models/StandardBibData.yml]
+
+//[datamodel_attributes_table,./models/models/StandardBibDataExtensionType.yml]
 
 
 
 [[structured-identifiers]]
 == Structured identifier
 
-[datamodel]
-....
-include::../models/views/StructuredIdentifier.yml[]
-....
+//[datamodel_diagram,./models/views/StructuredIdentifier.yml]
+
+//[datamodel_attributes_table,./models/models/StructuredIdentifierType.yml]
 
 
 
