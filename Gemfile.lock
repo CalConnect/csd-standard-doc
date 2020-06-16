@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/metanorma/metanorma-standoc.git
+  revision: acc53c6dec1185d22d5bd87ea4307790c8b3471d
+  branch: feature/yaml2text-error-handling
+  specs:
+    metanorma-standoc (1.4.0)
+      asciidoctor (~> 2.0.0)
+      concurrent-ruby
+      iev (~> 0.2.1)
+      isodoc (~> 1.0.20)
+      mathml2asciimath
+      mimemagic
+      relaton (~> 1.1.0)
+      relaton-iev (~> 1.0.0)
+      ruby-jing
+      sterile (~> 1.0.14)
+      unicode2latex (~> 0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -162,18 +180,6 @@ GEM
       isodoc (~> 1.0.20)
       metanorma-standoc (~> 1.4.0)
       ruby-jing
-    metanorma-standoc (1.4.0)
-      asciidoctor (~> 2.0.0)
-      concurrent-ruby
-      iev (~> 0.2.1)
-      isodoc (~> 1.0.20)
-      mathml2asciimath
-      mimemagic
-      relaton (~> 1.1.0)
-      relaton-iev (~> 1.0.0)
-      ruby-jing
-      sterile (~> 1.0.14)
-      unicode2latex (~> 0.0.1)
     metanorma-un (0.3.10)
       htmlentities (~> 4.3.4)
       iso-639
@@ -288,6 +294,7 @@ PLATFORMS
 
 DEPENDENCIES
   metanorma-cli
+  metanorma-standoc!
 
 BUNDLED WITH
    2.1.4

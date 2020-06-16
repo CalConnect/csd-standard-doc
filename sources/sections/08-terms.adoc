@@ -22,24 +22,24 @@ Both types of section can include prefatory text.
 === Definition sections
 
 
-//[datamodel]
+[datamodel]
 //....
 //include::../models/views/DefinitionSection.yml[]
 //....
-//[datamodel_diagram,./models/views/References.yml]
+[datamodel_diagram,./models/views/References.yml]
 
-//[datamodel_attributes_table,./models/models/StandardReferencesSection.yml]
+[datamodel_attributes_table,./models/models/StandardReferencesSection.yml]
 
-//[datamodel_attributes_table,./models/models/BibliographicItem.yml]
+[datamodel_attributes_table,./models/models/BibliographicItem.yml]
 
-//[datamodel_attributes_table,./models/models/Citation.yml]
+[datamodel_attributes_table,./models/models/Citation.yml]
 
 
 
 [[termsection]]
 === Term sections
 
-//[datamodel]
+[datamodel]
 //....
 //include::../models/views/TermSection.yml[]
 //....
@@ -48,17 +48,17 @@ Both types of section can include prefatory text.
 [[term]]
 === Term
 
-//[datamodel_diagram,./models/views/Term.yml]
+[datamodel_diagram,./models/views/Term.yml]
 
-//[datamodel_attributes_table,./models/models/TermCollection.yml]
+[datamodel_attributes_table,./models/models/TermCollection.yml]
 
-//[datamodel_attributes_table,./models/models/Term.yml]
+[datamodel_attributes_table,./models/models/Term.yml]
 
-//[datamodel_attributes_table,./models/models/RelatedTerm.yml]
+[datamodel_attributes_table,./models/models/RelatedTerm.yml]
 
-//[datamodel_attributes_table,./models/models/RelatedTermType.yml]
+[datamodel_attributes_table,./models/models/RelatedTermType.yml]
 
-//[datamodel_attributes_table,./models/models/TermSource.yml]
+[datamodel_attributes_table,./models/models/TermSource.yml]
 
 
 
