@@ -2,10 +2,18 @@
 name: IsoAdmonitionBlock
 modelType: class
 definition: |
+  The types that an Admonition can belong to are overridden to
+  belong to the following set prescribed in <<isoiecdir2>>:
+
+  * Danger,
+  * Caution,
+  * Warning,
+  * Important,
+  * Safety Precaution.
 
 attributes:
   type:
-    definition: 
+    definition: The type of admonition.
     type: IsoAdmonitionType
 relations:
   - target: AdmonitionBlock

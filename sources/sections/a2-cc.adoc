@@ -1,6 +1,6 @@
 
 [[csdprofile]]
-[appendix]
+[appendix,obligation="informative"]
 == Profile: CalConnect standardization deliverables
 
 === General
@@ -81,9 +81,7 @@ to `BibliographicItem` as follows:
 a single components: a mandatory Technical Committee. The Technical
 Committee has a type of either `Technical` or `Provisional`.
 
-.CalConnect Standard Document model
-image::models/metanorma-model-csd/images/Csd_CsdStandardDocument.png[]
-
+[datamodel_diagram,./models/views/CcStandardDocument.yml]
 
 [datamodel_attributes_table,./models/models/cc/CcBibliographicItem.yml]
 

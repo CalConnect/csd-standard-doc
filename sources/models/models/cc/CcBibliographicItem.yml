@@ -21,8 +21,8 @@ relations:
       target:
         type: inheritance
     direction: up
-  - target: CcStandardDocument
-    relationship:
-      target:
-        type: direct
-    direction: up
+  # - target: CcStandardDocument
+  #   relationship:
+  #     target:
+  #       type: direct
+  #   direction: up

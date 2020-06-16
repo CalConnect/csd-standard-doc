@@ -1,0 +1,83 @@
+
+[appendix,obligation="informative"]
+== Concept and concept collection models
+
+=== General
+
+This annex provides an informative reference model for management
+of concepts and concept collections, compliant with
+ISO 10241-1 and ISO 704.
+
+=== Concept
+
+[datamodel_diagram,./models/concept-model/datamodel/views/Concepts.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/Concept.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/GlossaristDefinition.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/NonVerbRep.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConcept.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConceptType.yml]
+
+
+=== Concept sources
+
+[datamodel_diagram,./models/concept-model/datamodel/views/ConceptSource.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptSource.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptSourceStatus.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptSourceType.yml]
+
+
+=== Designation
+
+[datamodel_diagram,./models/concept-model/datamodel/views/Designations.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/Designation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/NormativeStatus.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ExpressionDesignation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/GrammarInfo.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/SymbolDesignation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/PrefixDesignation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/SuffixDesignation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/AbbreviationDesignation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/AbbreviationType.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/LetterSymbolDesignation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/GraphicalSymbolDesignation.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/DesignationGender.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/GrammarGender.yml]
+
+
+
+=== Managed concepts and collection
+
+[datamodel_diagram,./models/concept-model/datamodel/views/ManagedConcepts.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ManagedConcept.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptStatus.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/LocalizedConcept.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptDate.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptDateType.yml]
+
+[datamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConceptType.yml]

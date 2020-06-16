@@ -10,8 +10,8 @@ attributes:
     definition: 
     type: String
 relations:
-  - target: CcBibliographicItem
-    relationship:
-      target:
-        type: direct
-    direction: up
+  # - target: CcBibliographicItem
+  #   relationship:
+  #     target:
+  #       type: direct
+  #   direction: up

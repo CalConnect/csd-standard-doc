@@ -1,6 +1,6 @@
 
 [[isoprofile]]
-[appendix]
+[appendix,obligation="informative"]
 == Profile: ISO standardization deliverables
 
 === General
@@ -9,7 +9,7 @@ This profile provides the specialization of the
 _StandardDocument_ document metamodel for ISO standardization deliverables
 described in <<isoiecdir2>>.
 
-The `ISOStandardDocument` model fully covers all ISO
+The `IsoStandardDocument` model fully covers all ISO
 standardization deliverables, including International Standards,
 Guides, Technical Reports, Technical Specifications,
 International Workshop Agreements, Amendments and Corrigenda.
@@ -18,7 +18,7 @@ International Workshop Agreements, Amendments and Corrigenda.
 [[isodocument]]
 === Document and section specialization
 
-The `ISOStandardDocument` model extends the `StandardDocument`
+The `IsoStandardDocument` model extends the `StandardDocument`
 modelling of the document by requiring the following specific types
 of section:
 
@@ -31,7 +31,7 @@ can optionally have numbered subsections).
 
 * Zero or more Annexes (<<standardssection>>).
 
-Annexes in the `ISOStandardDocument` can optionally contain one or
+Annexes in the `IsoStandardDocument` can optionally contain one or
 more _Appendixes_, which can be thought of as annexes of the annex
 section.
 
@@ -42,35 +42,37 @@ Appendix 2 "High level structure, identical core text, common terms
 and core definitions" itself contains an Introduction and 10
 clauses, including a Terms clause.
 
-The `ISOStandardDocument` model document also includes zero or more
+The `IsoStandardDocument` model document also includes zero or more
 `termSources` elements, giving the citations for the documents that
 the Terms Section draws on for its definitions and repertoire of
 terms.
 
-The `ISOStandardDocument` model document uses ISO-specific
+The `IsoStandardDocument` model document uses ISO-specific
 extensions to the <<relaton>> metadata about a document
 (<<isobib>>).
 
-.ISO Standard Document model: Document
-image::models/metanorma-model-iso/images/IsoDoc_IsoStandardDocument.png[]
+
+[datamodel_diagram,./models/views/IsoStandardDocument.yml]
+
+[datamodel_attributes_table,./models/models/iso/IsoStandardDocument.yml]
+
+[datamodel_attributes_table,./models/models/iso/IsoAnnexSection.yml]
+
+[datamodel_attributes_table,./models/models/iso/IsoPreface.yml]
 
 
 [[isoblock]]
 === Block specialization
 
-The `ISOStandardDocument` model extends the `StandardDocument`
-modelling of blocks for one block definition:
+The `IsoStandardDocument` model extends the `StandardDocument`
+modelling of blocks for one block definition.
 
-* The types that an Admonition can belong to are overridden to
-belong to the following set prescribed in <<isoiecdir2>>:
-** `Danger`,
-** `Caution`,
-** `Warning`,
-** `Important`,
-** `Safety Precaution`.
+[datamodel_diagram,./models/views/IsoBlocks.yml]
 
-.ISO Standard Document model: Block
-image::models/metanorma-model-iso/images/IsoDoc_IsoBlocks.png[]
+[datamodel_attributes_table,./models/models/iso/IsoAdmonitionBlock.yml]
+
+[datamodel_attributes_table,./models/models/iso/IsoAdmonitionType.yml]
+
 
 [[isobib]]
 === Document metadata specialization
@@ -138,35 +140,23 @@ Part documents under the same project number (which makes it a
 multi-document description).
 
 
-.ISO Standard Document model: Bibliography
-image::models/metanorma-model-iso/images/IsoDoc_IsoBibliographicItem.png[]
-
-
-[datamodel_attributes_table,./models/models/iso/IsoAdmonitionBlock.yml]
-
-[datamodel_attributes_table,./models/models/iso/IsoAdmonitionType.yml]
-
-[datamodel_attributes_table,./models/models/iso/IsoAnnexSection.yml]
+[datamodel_diagram,./models/views/IsoBibliographicItem.yml]
 
 [datamodel_attributes_table,./models/models/iso/IsoBibliographicItem.yml]
 
 [datamodel_attributes_table,./models/models/iso/IsoDocumentId.yml]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentStageCodes.yml]
+[datamodel_attributes_table,./models/models/iso/IsoDocumentType.yml]
 
 [datamodel_attributes_table,./models/models/iso/IsoDocumentStatus.yml]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentSubstageCodes.yml]
+[datamodel_attributes_table,./models/models/iso/IsoDocumentStageCodes.yml]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentType.yml]
+[datamodel_attributes_table,./models/models/iso/IsoDocumentSubstageCodes.yml]
 
 [datamodel_attributes_table,./models/models/iso/IsoLocalizedTitle.yml]
 
-[datamodel_attributes_table,./models/models/iso/IsoPreface.yml]
-
 [datamodel_attributes_table,./models/models/iso/IsoProjectGroup.yml]
-
-[datamodel_attributes_table,./models/models/iso/IsoStandardDocument.yml]
 
 [datamodel_attributes_table,./models/models/iso/IsoSubGroup.yml]
 

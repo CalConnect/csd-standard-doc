@@ -1,0 +1,34 @@
+name: CcStandardDocument
+title: CalConnect Standard document class
+caption: CalConnect Standard document class data model
+directive: cc-standard-document
+imports:
+  StandardDocument:
+  BibliographicItem:
+  DocumentStatus:
+  cc/CcStandardDocument:
+  cc/CcBibliographicItem:
+  cc/CcTechnicalCommittee:
+  cc/CcStatusType:
+  cc/CcDocumentType:
+  cc/CcTechnicalCommitteeType:
+
+  TextElement:
+  # Keyword:
+  IdElement:
+  Figure:
+
+#
+# '******* CLASS RELATIONS **********************************************
+# StandardDocument <|-- CcStandardDocument
+# BibliographicItem <|-- CcBibliographicItem
+# CcStandardDocument <-- CcBibliographicItem
+#
+# CcBibliographicItem <-- CcTechnicalCommittee
+# CcBibliographicItem <-- CcDocumentType
+# CcBibliographicItem <-- DocumentStatus
+#
+# CcTechnicalCommittee <-- CcTechnicalCommitteeType
+# DocumentStatus <-- CcStatusType
+#
+# IdElement <|-- Figure

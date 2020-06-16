@@ -1,0 +1,10 @@
+name: IsoStandardDocument
+title: ISO Standard Document
+caption: ISO Standard Document
+directive: iso-standard-document
+imports:
+  StandardDocument:
+  iso/IsoStandardDocument:
+  iso/IsoPreface:
+  AnnexSection:
+  iso/IsoAnnexSection:

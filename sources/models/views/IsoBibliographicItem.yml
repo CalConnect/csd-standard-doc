@@ -1,0 +1,18 @@
+name: IsoBibliographicItem
+title: ISO Standard Document Bibliographic Item
+caption: ISO Standard Document Bibliographic Item
+directive: iso-bibliographic-item
+imports:
+  BibliographicItem:
+  iso/IsoBibliographicItem:
+  iso/IsoDocumentId:
+  iso/IsoLocalizedTitle:
+  iso/IsoDocumentStageCodes:
+  iso/IsoDocumentSubstageCodes:
+  iso/IsoDocumentStatus:
+  iso/IsoDocumentType:
+  DocumentStatus:
+  Organization:
+  iso/IsoProjectGroup:
+  iso/IsoSubGroup:
+  Ics:

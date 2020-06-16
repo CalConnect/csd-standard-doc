@@ -7,12 +7,12 @@ modelType: enum
 type: enumeration
 values:
   danger:
-    definition: 
+    definition: Danger
   caution:
-    definition: 
+    definition: Caution
   warning:
-    definition: 
+    definition: Warning
   important:
-    definition: 
-  safty_precautions:
-    definition: 
+    definition: Important
+  safety_precautions:
+    definition: Safety precaution

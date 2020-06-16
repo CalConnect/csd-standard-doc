@@ -1,0 +1,8 @@
+name: IsoBlocks
+title: ISO Standard Document blocks
+caption: ISO Standard Document blocks
+directive: iso-blocks
+imports:
+  AdmonitionBlock:
+  iso/IsoAdmonitionBlock:
+  iso/IsoAdmonitionType:

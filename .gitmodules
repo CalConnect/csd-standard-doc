@@ -7,3 +7,6 @@
 [submodule "sources/models/metanorma-model-csd"]
 	path = sources/models/metanorma-model-csd
 	url = https://github.com/metanorma/metanorma-model-csd
+[submodule "sources/models/concept-model"]
+	path = sources/models/concept-model
+	url = https://github.com/glossarist/concept-model
