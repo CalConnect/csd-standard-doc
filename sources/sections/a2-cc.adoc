@@ -85,14 +85,14 @@ Committee has a type of either `Technical` or `Provisional`.
 image::models/metanorma-model-csd/images/Csd_CsdStandardDocument.png[]
 
 
-[datamodel_attributes_table,./models/uml/CcBibliographicItem.yml]
+[datamodel_attributes_table,./models/models/cc/CcBibliographicItem.yml]
 
-[datamodel_attributes_table,./models/uml/CcDocumentType.yml]
+[datamodel_attributes_table,./models/models/cc/CcDocumentType.yml]
 
-[datamodel_attributes_table,./models/uml/CcStandardDocument.yml]
+[datamodel_attributes_table,./models/models/cc/CcStandardDocument.yml]
 
-[datamodel_attributes_table,./models/uml/CcStatusType.yml]
+[datamodel_attributes_table,./models/models/cc/CcStatusType.yml]
 
-[datamodel_attributes_table,./models/uml/CcTechnicalCommittee.yml]
+[datamodel_attributes_table,./models/models/cc/CcTechnicalCommittee.yml]
 
-[datamodel_attributes_table,./models/uml/CcTechnicalCommitteeType.yml]
+[datamodel_attributes_table,./models/models/cc/CcTechnicalCommitteeType.yml]

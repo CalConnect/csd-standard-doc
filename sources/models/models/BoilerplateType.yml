@@ -1,7 +1,6 @@
 name: BoilerplateType
 modelType: class
-definition: |
-
+definition:
 attributes:
   copyright:
     definition:

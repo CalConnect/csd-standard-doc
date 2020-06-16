@@ -1,8 +1,9 @@
 name: Definition
 modelType: class
 definition: |
-  Definition modelled according to ISO/IEC Directives 2, 17.
-  
+  "`Definition`" is modelled according to ISO/IEC Directives 2, Clause 17
+  and ISO 10241-1.
+
   * Can be a synbol or abbreviation
   * A DefinitionCollection is represented as a single clause
 attributes:

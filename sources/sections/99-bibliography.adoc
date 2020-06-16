@@ -18,8 +18,6 @@
 
 * [[[basicdocument,CC 36010]]] footnote:[In draft], _CalConnect Standard 36010: Lightweight document -- Document metamodel_
 
-//* [[[gbt11,CN(GB/T 1.1-2009)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)
-
 * [[[RFC7749,IETF RFC 7749]]], _The "xml2rfc" Version 2 Vocabulary_
 
 * [[[RFC7991,IETF RFC 7991]]], _The "xml2rfc" Version 3 Vocabulary_
@@ -34,4 +32,6 @@
 
 * [[[OGC-05-020r26,OGC 05-020r26]]], _Open Geospatial Consortium: Technical Committee Policies and Procedures_, version 26.0.
 
-//* [[[IEV,IEV]]], _IEV_
+* [[[IEV,IEV]]], _IEV_
+
+* [[[gbt11,CN(GB/T 1.1-2009)]]], 标准化工作导则 第1部分：标准的结构和编写 (_Directives for standardization. Part 1: The structure and drafting of standards_)

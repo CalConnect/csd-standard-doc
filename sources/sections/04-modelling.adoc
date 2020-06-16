@@ -19,7 +19,7 @@ or satisfies the requirements described in this document.
 The implementation of the document metamodel relies on the
 availability of the following data models:
 
-* A document data model that supports modelling of textual content
+* A document data model that supports modeling of textual content
 at the block and inline levels, as well as modifications to the
 document itself.
 

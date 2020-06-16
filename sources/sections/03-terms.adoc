@@ -12,7 +12,6 @@ NOTE: Examples of bodies are organizations, authorities, companies and foundatio
 <<isoguide2,4.1>>
 ////
 
-[[term-standardizing-body]]
 === standardizing body
 
 body that has recognized activities in standardization
@@ -72,53 +71,49 @@ ISO 5127:2017(en), 3.1.13.33
 
 ////
 
-[[term-class]]
 === class
 
 structure containing a description of an entity in terms of its components
 
 === subclass
 
-_class_ (<<term-class>>) which inherits from another class its component descriptions, and optionally adds to them its own component descriptions
+term:[class] which inherits from another class its component descriptions, and optionally adds to them its own component descriptions
 
-[[term-document-metamodel]]
 === document metamodel
 
-formal specification of the structure of a document model in terms of its components and their arrangement, expressed through _classes_ (<<term-class>>)
+formal specification of the structure of a document model in terms of its components and their arrangement, expressed through term:[class,classes]
 
 
-[[term-document-model]]
 === document model
 
-formal specification of the structure of a document in terms of its components and their arrangement, expressed through _classes_ (<<term-class>>)
+formal specification of the structure of a document in terms of its components and their arrangement, expressed through term:[class,classes]
 
 
 === standards model
 
-_document model_ (<<term-document-model>>) for
-_standardization documents_ (<<term-standardization-document>>)
+term:[document model] for
+term:[standardization document,standardization documents]
 
-[[term-paragraph]]
+
 === paragraph
 
-subdivision of running text, normally run on throughout, that is separated from text before and after by a change of line and stands below any chapters or sections (<<term-section>>)
+subdivision of running text, normally run on throughout, that is separated from text before and after by a change of line and stands below any chapters or term:[section,sections]
 
 [.source]
 <<iso5127,clause 3.5.8.07>>
 
-[[term-block]]
 === block
 
-_paragraph_ (<<term-paragraph>>)-level grouping of text
+grouping of text at the term:[paragraph] level
 
 === inline element
 
-grouping of text that can be contained within a _paragraph_ (<<term-paragraph>>), including plain strings
+grouping of text that can be contained within a term:[paragraph], including plain strings
 
-[[term-section]]
+
 === section
 
-hierarchical subdivision of a document, consisting of one or more _blocks_ (<<term-block>>), and/or one or more sections
+hierarchical subdivision of a document, consisting of one or more term:[block,blocks], and/or one or more sections
 
 === identifier
 
