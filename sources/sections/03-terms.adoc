@@ -81,23 +81,23 @@ term:[class] which inherits from another class its component descriptions, and o
 
 === document metamodel
 
-formal specification of the structure of a document model in terms of its components and their arrangement, expressed through term:[class,classes]
+formal specification of the structure of a document model in terms of its components and their arrangement, expressed through term:[classes,class]
 
 
 === document model
 
-formal specification of the structure of a document in terms of its components and their arrangement, expressed through term:[class,classes]
+formal specification of the structure of a document in terms of its components and their arrangement, expressed through term:[classes,class]
 
 
 === standards model
 
 term:[document model] for
-term:[standardization document,standardization documents]
+term:[standardization documents,standardization document]
 
 
 === paragraph
 
-subdivision of running text, normally run on throughout, that is separated from text before and after by a change of line and stands below any chapters or term:[section,sections]
+subdivision of running text, normally run on throughout, that is separated from text before and after by a change of line and stands below any chapters or term:[sections,section]
 
 [.source]
 <<iso5127,clause 3.5.8.07>>
@@ -113,7 +113,7 @@ grouping of text that can be contained within a term:[paragraph], including plai
 
 === section
 
-hierarchical subdivision of a document, consisting of one or more term:[block,blocks], and/or one or more sections
+hierarchical subdivision of a document, consisting of one or more term:[blocks,block], and/or one or more sections
 
 === identifier
 

@@ -37,7 +37,15 @@ it is assumed that particular specializations of the document metamodel
 will substitute their own enumerations of particular subclasses of
 document, which will be more granular;
 
+* zero or more editorial committees responsible for producing the document
+(e.g. technical committees or subcommittees);
+
+* zero or more classifications of the document following the International
+Classification for Standards (ICS) code (<<ics>>);
+
 * zero or more structured identifiers (<<structured-identifiers>>).
+
+Other extension points may be added specific to the standardization body.
 
 [datamodel_diagram,./models/views/Metadata.yml]
 

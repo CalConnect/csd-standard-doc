@@ -3,25 +3,35 @@ modelType: class
 definition:
 attributes:
   copyright:
-    definition:
+    definition: |
+      Preset templated text provided by the standardization body,
+      describing the copyright status of the document.
     type: HierarchicalSection
     cardinality:
       min: 0
       max: 1
   license:
-    definition:
+    definition: |
+      Preset templated text provided by the standardization body,
+      providing the licensing terms for the document content.
     type: HierarchicalSection
     cardinality:
       min: 0
       max: 1
   legal:
-    definition:
+    definition: |
+      Preset templated text provided by the standardization body,
+      providing the legal constraints and considerations around use of 
+      document.
     type: HierarchicalSection
     cardinality:
       min: 0
       max: 1
   feedback:
-    definition:
+    definition: |
+      Preset templated text provided by the standardization body,
+      providing information on where feedback on the document may be
+      addressed to.
     type: HierarchicalSection
     cardinality:
       min: 0

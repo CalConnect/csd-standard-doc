@@ -22,7 +22,9 @@ definition: |
   of sections.
 attributes:
   bibdata:
-    definition:
+    definition: |
+      Bibliographic description of the document itself, expressed in the Relaton
+      model.
     type: StandardBibData
   boilerplate:
     definition: |
