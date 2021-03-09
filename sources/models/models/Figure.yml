@@ -4,8 +4,8 @@ definition: |
   Block containing an image or similar illustrative material.
 
 attributes:
-  source: URL where image may be sourced.
-    definition: 
+  source: 
+    definition: URL where image may be sourced.
     type: String
     cardinality:
       min: 0
@@ -16,32 +16,32 @@ attributes:
     cardinality:
       min: 0
       max: 1
-  note: Note associated with image.
-    definition: 
+  note: 
+    definition:  Note associated with image.
     type: ParagraphWithFootnote
     cardinality:
       min: 0
       max: "*"
-  figure: Subfigures recursively contained within the figure.
-    definition: 
+  figure: 
+    definition: Subfigures recursively contained within the figure.
     type: Figure
     cardinality:
       min: 0
       max: "*"
-  definitions: Set of terms used in the image, and their definitions.
-    definition: 
+  definitions: 
+    definition: Set of terms used in the image, and their definitions.
     type: DefinitionList
     cardinality:
       min: 0
       max: 1
-  pre: Preformatted text, used as an image
-    definition: 
+  pre: 
+    definition: Preformatted text, used as an image.
     type: String
     cardinality:
       min: 0
       max: 1
-  image: Image
-    definition: 
+  image: 
+    definition: Image
     type: Image
     cardinality:
       min: 0
