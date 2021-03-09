@@ -3,6 +3,7 @@ modelType: enum
 type: enumeration
 values:
   identical:
-    definition:
+    definition: The term definition in this document is identical to that given in the original document.
   modified:
-    definition:
+    definition: The term definition in this document has been modified from that given in the original document.
+

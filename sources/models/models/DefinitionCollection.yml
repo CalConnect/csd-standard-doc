@@ -1,6 +1,7 @@
 name: DefinitionCollection
 modelType: class
 definition: |
+  Collection of definitions, constituting the core content of a DefinitionSection.
 
 attributes:
   definitions:

@@ -1,7 +1,7 @@
 name: Abstract
 modelType: class
 definition: |
-
+  Abstract of the document
 relations:
   - target: StandardContentSection
     relationship:

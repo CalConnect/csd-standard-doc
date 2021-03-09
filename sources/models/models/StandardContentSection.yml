@@ -5,10 +5,11 @@
 name: StandardContentSection
 modelType: class
 definition: |
+  An unnumbered clause, outside the main body of text of a StandardDocument.
 
 attributes:
   type:
-    definition:
+    definition: The type of content provided in the section, used as a semantic classification.
     type: String
     cardinality:
       min: 0

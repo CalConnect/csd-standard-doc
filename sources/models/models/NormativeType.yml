@@ -3,6 +3,6 @@ modelType: enum
 type: enumeration
 values:
   normative:
-    definition:
+    definition: The content in this section has normative effect.
   informative:
-    definition:
+    definition: The content in this section has informative effect.

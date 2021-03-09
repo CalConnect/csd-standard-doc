@@ -1,6 +1,7 @@
 name: ClauseSection
 modelType: class
 definition: |
+  A numbered clause constituting part of the main body of a StandardDocument.
 
 attributes:
   type:

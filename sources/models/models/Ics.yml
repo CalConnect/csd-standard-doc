@@ -1,7 +1,7 @@
 name: Ics
 modelType: class
 definition: |
-  ICS is defined by ISO here -- https://www.iso.org/publication/PUB100033.html
+  International Classification of Standards. ICS is defined by ISO here -- https://www.iso.org/publication/PUB100033.html
 attributes:
   code:
     definition:

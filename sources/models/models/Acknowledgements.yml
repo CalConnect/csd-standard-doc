@@ -1,7 +1,7 @@
 name: Acknowledgements
 modelType: class
 definition: |
-
+  Acknowledgements for the document
 relations:
   - target: StandardContentSection
     relationship:

@@ -1,6 +1,7 @@
 name: Keyword
 modelType: class
 definition: |
+  Text element providing a keyword, highlighted semantically.
 
 relations:
   - target: TextElement

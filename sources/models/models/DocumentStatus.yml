@@ -1,6 +1,7 @@
 name: DocumentStatus
 modelType: class
 definition: |
+  The maturity or publication status of a document.
 
 attributes:
   type:

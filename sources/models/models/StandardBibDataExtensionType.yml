@@ -1,6 +1,7 @@
 name: StandardBibDataExtensionType
 modelType: class
 definition: |
+  The extension point of the bibliographic description of a StandardDocument.
 
 
 attributes:

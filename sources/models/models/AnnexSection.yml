@@ -2,6 +2,7 @@
 name: AnnexSection
 modelType: class
 definition: |
+  Section of document constituting an annex or appendix.
 
 attributes:
   subsections:

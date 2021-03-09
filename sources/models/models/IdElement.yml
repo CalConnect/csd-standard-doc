@@ -1,6 +1,7 @@
 name: IdElement
 modelType: class
 definition: |
+  Block element with an identifier, used as an anchor for cross-references.
 
 attributes:
   type:

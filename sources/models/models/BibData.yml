@@ -1,6 +1,7 @@
 name: BibData
 modelType: class
 definition: |
+  Bibliographic description of document, expressed through <<relaton>>.
 
 
 attributes:

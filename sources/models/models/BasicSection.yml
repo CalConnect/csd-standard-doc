@@ -1,5 +1,6 @@
 name: BasicSection
 modelType: class
 definition: |
+  Section of BasicDocument
 
 attributes:

@@ -1,6 +1,8 @@
 name: Organization
 modelType: class
 definition: |
+  Representation of an organization, acting as a contributor to a document, or associated with a
+  contributor to a document.
 
 attributes:
   type:
