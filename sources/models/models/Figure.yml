@@ -1,50 +1,51 @@
 name: Figure
 modelType: class
 definition: |
+  Block containing an image or similar illustrative material.
 
 attributes:
-  source:
+  source: URL where image may be sourced.
     definition: 
     type: String
     cardinality:
       min: 0
       max: 1
   name:
-    definition: 
+    definition: Caption of image.
     type: LocalizedString
     cardinality:
       min: 0
       max: 1
-  note:
+  note: Note associated with image.
     definition: 
     type: ParagraphWithFootnote
     cardinality:
       min: 0
       max: "*"
-  figure:
+  figure: Subfigures recursively contained within the figure.
     definition: 
     type: Figure
     cardinality:
       min: 0
       max: "*"
-  definitions:
+  definitions: Set of terms used in the image, and their definitions.
     definition: 
     type: DefinitionList
     cardinality:
       min: 0
       max: 1
-  pre:
+  pre: Preformatted text, used as an image
     definition: 
     type: String
     cardinality:
       min: 0
       max: 1
-  content:
+  image: Image
     definition: 
-    type: TextElement
+    type: Image
     cardinality:
       min: 0
-      max: "*"
+      max: 1
 relations:
   - target: IdElement
     relationship:

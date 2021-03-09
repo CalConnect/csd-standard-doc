@@ -1,18 +1,18 @@
 name: TermSource
 modelType: class
-definition:
+definition: The bibliographic source where a term is defined in the sense applicable in this StandardDocument.
 attributes:
-  type:
-    definition:
-    type: Term
+  #type:
+  #  definition:
+  #  type: Term
   status:
-    definition:
+    definition: The status of the term as it is used in this document, relative to its definition in the original document.
     type: TermOriginStatus
   origin:
-    definition:
+    definition: The original document and location where the term definition has been obtained from.
     type: Citation
   modification:
-    definition:
+    definition: Any changes that the definition of the term has undergone relative to the original document, in order to be applicable in this StandardDocument.
     type: ParagraphBlock
     cardinality:
       min: 0

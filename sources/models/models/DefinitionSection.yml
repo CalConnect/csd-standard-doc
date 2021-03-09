@@ -3,7 +3,7 @@
 name: DefinitionSection
 modelType: class
 definition: |
-  Definition sections (`DefinitionSection`) consist of one or more definition lists
+  Definition sections (`DefinitionSection`) consist of one or more definition lists (`DefinitionCollection`)
   (see <<basicdocument>>), and are used to define symbols and
   abbreviations used in the remainder of the document.
 

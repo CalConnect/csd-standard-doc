@@ -2,6 +2,7 @@
 name: Foreword
 modelType: class
 definition: |
+  Foreword of document.
 
 relations:
   - target: StandardContentSection

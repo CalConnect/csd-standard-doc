@@ -1,10 +1,11 @@
 name: StandardSection
 modelType: class
 definition: |
+  A section of a StandardDocument.
 
 attributes:
   status:
-    definition:
+    definition: The normative status of the content of this section.
     type: NormativeType
 relations:
   - target: BasicSection

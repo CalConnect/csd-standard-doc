@@ -1,5 +1,6 @@
 name: BasicDocument
 modelType: class
 definition: |
+  Basic Document class, applicable to documents generically; StandardDocument is a subclass of BasicDocument.
 
 attributes:

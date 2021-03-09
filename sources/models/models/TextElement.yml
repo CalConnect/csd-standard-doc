@@ -1,6 +1,7 @@
 name: TextElement
 modelType: class
 definition: |
+  A unit of text, constituting part of a block.
 
 attributes:
   type:

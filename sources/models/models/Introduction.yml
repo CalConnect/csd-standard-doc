@@ -1,6 +1,7 @@
 name: Introduction
 modelType: class
 definition: |
+  Introduction of document.
 
 relations:
   - target: StandardContentSection

@@ -1,6 +1,7 @@
 name: RelatedTerm
 modelType: class
 definition: |
+  Term related to the current term.
 
 attributes:
   type:

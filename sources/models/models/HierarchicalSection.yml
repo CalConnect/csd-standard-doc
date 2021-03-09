@@ -1,5 +1,6 @@
 name: HierarchicalSection
 modelType: class
 definition: |
+  Section of text hierarchically containing other sections texts.
 
 attributes:

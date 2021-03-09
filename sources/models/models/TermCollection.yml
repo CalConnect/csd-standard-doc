@@ -1,6 +1,7 @@
 name: TermCollection
 modelType: class
 definition: |
+  A collection of terms, constituting the main body of a Terms Section.
 
 attributes:
   type:

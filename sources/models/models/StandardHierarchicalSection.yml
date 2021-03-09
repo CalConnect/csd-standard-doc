@@ -5,6 +5,7 @@
 name: StandardHierarchicalSection
 modelType: class
 definition: |
+  A hierarchical section containing other sections, within a StandardDocument.
 
 
 attributes:
