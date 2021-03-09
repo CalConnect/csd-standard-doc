@@ -57,9 +57,7 @@ requires replicating a significant amount of work.
 The _StandardDocument_ document metamodel aims to treat a
 standardization document as a set of standardized data structures,
 used to enable an end-to-end standardization document production
-process.
-
-The process is centered around the _StandardDocument_ document model,
+process.  This process is 
 designed to focus on semantics and encompasses core similarities
 between standardization documents of different
 standardization bodies.
@@ -142,7 +140,9 @@ of the following standardization bodies:
 * IETF (<<RFC7749>>, <<RFC7991>>)
 * OGC (<<OGC-05-020r26>>)
 * NIST Special Publications
-* China standards (national, local, industry, social group) (<<gbt11>>)
+* BIPM
+* IHO
+// * China standards (national, local, industry, social group) (<<gbt11>>)
 
 In many cases, the document model also enables alignment
 with capabilities of existing document production tools.

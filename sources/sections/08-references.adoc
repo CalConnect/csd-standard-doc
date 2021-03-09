@@ -5,8 +5,9 @@
 === Purpose
 
 Standardization documents often cite other documents within,
-and as a result they usually contain a bibliography section
-indicating its data sources.
+and as a result they usually contain one or more bibliography sections
+indicating its data sources. Bibliography sections may be differentiated
+as being normative or informative.
 
 === References section
 
