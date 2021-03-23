@@ -126,7 +126,20 @@ unnumbered), and Annexes (as exemplified in <<isoiecdir2>>), it is
 nonetheless not recommended.
 
 
-=== Overview
 
-.StandardDocument model: Section
-image::models/metanorma-model-standoc/images/StandardDoc_Sections.png[]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardHierarchicalSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,AnnexSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseHierarchicalSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardContentSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,NormativeType]
+

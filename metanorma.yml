@@ -1,8 +1,10 @@
 ---
 metanorma:
-  deploy:
-    email: "travis-ci@metanorma.org"
-relaton:
+  source:
+    files:
+      - sources/iso-36100.adoc
+      # - sources/as21-dggs/iso-19170-1-is-en-sections.adoc
+
   collection:
-    name: Standardization documents
     organization: CalConnect/ISO
+    name: Standardization documents

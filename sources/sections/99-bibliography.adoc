@@ -4,9 +4,7 @@
 
 * [[[isoiecdir1,ISO/IEC DIR 1]]], _Procedures for the technical work_
 
-* [[[isoiecdir2-2004,xISO/IEC DIR 2:2004]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
-
-* [[[isoiecdir2,xISO/IEC DIR 2:2018]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
+* [[[isoiecdir2,ISO/IEC DIR 2 ISO]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
 
 * [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
 

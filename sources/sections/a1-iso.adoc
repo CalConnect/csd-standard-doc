@@ -52,13 +52,19 @@ extensions to the <<relaton>> metadata about a document
 (<<isobib>>).
 
 
-[datamodel_diagram,./models/views/IsoStandardDocument.yml]
+//[xdatamodel_diagram,./models/views/IsoStandardDocument.yml]
 
-[datamodel_attributes_table,./models/models/iso/IsoStandardDocument.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoStandardDocument]
 
-[datamodel_attributes_table,./models/models/iso/IsoAnnexSection.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAmendmentDocument]
 
-[datamodel_attributes_table,./models/models/iso/IsoPreface.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoSections]
+
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoPreface]
+
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAnnexSection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAmendmentClause]
 
 
 [[isoblock]]
@@ -67,11 +73,15 @@ extensions to the <<relaton>> metadata about a document
 The _IsoStandardDocument_ model extends the _StandardDocument_
 modelling of blocks for one block definition.
 
-[datamodel_diagram,./models/views/IsoBlocks.yml]
+//[xdatamodel_diagram,./models/views/IsoBlocks.yml]
 
-[datamodel_attributes_table,./models/models/iso/IsoAdmonitionBlock.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoAdmonitionBlock]
 
-[datamodel_attributes_table,./models/models/iso/IsoAdmonitionType.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoAdmonitionType]
+
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoTermCollection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoTerm]
 
 
 [[isobib]]
@@ -136,23 +146,28 @@ Part documents under the same project number (which makes it a
 multi-document description).
 
 
-[datamodel_diagram,./models/views/IsoBibliographicItem.yml]
+//[xdatamodel_diagram,./models/views/IsoBibliographicItem.yml]
 
-[datamodel_attributes_table,./models/models/iso/IsoBibliographicItem.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoBibliographicItem]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentId.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentId]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentType.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoLocalizedTitle]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentStatus.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentStatus]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentStageCodes.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoProjectGroup]
 
-[datamodel_attributes_table,./models/models/iso/IsoDocumentSubstageCodes.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoSubGroup]
 
-[datamodel_attributes_table,./models/models/iso/IsoLocalizedTitle.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentType]
 
-[datamodel_attributes_table,./models/models/iso/IsoProjectGroup.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IecDocumentCategory]
 
-[datamodel_attributes_table,./models/models/iso/IsoSubGroup.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentStageCodes]
+
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentSubstageCodes]
+
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoBibDataExtensionType]
+
 

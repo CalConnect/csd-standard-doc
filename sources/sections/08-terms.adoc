@@ -19,39 +19,43 @@ clause sections (`ClauseSection`):
 Both types of section can include prefatory text.
 
 
-=== Definition sections
+//=== Definition sections
 
-
-//[datamodel]
+//[xdatamodel]
 //....
 //include::../models/views/DefinitionSection.yml[]
 //....
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,DefinitionSection]
+
+//=== Definition
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,DefinitionCollection]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Definition]
 
 
 //[[termsection]]
 //=== Term sections
 
-//[datamodel]
-//....
-//include::../models/views/TermSection.yml[]
-//....
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,TermsSection]
 
+//[[term]]
+//=== Term
 
-[[term]]
-=== Term
+//[xdatamodel_diagram,./models/views/Term.yml]
 
-[datamodel_diagram,./models/views/Term.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermCollection]
 
-[datamodel_attributes_table,./models/models/TermCollection.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Term]
 
-[datamodel_attributes_table,./models/models/Term.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTerm]
 
-[datamodel_attributes_table,./models/models/RelatedTerm.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTermType]
 
-[datamodel_attributes_table,./models/models/RelatedTermType.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSource]
 
-[datamodel_attributes_table,./models/models/TermSource.yml]
-
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSourceStatus]
 
 
 
@@ -65,7 +69,3 @@ Nested definition and term sections should be modelled as
 definition and term sections.
 
 
-=== Overview
-
-._StandardDocument_ model: Term Section and Definition Section
-image::models/metanorma-model-standoc/images/StandardDoc_Terms.png[]

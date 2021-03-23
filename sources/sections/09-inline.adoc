@@ -8,5 +8,19 @@ models from _BasicDocument_.
 Specializations and profiles of the _StandardDocument_ model may
 specialize the modelling of inline elements.
 
+//=== Text elements
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToTermbase]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandocReferenceToIdElement]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml,XrefCaseType]
 
 
+//=== Lists
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardUnorderedList]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,UnorderedCheckableListItem]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinitionList]

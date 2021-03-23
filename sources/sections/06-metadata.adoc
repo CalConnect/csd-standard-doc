@@ -43,46 +43,32 @@ document, which will be more granular;
 * zero or more classifications of the document following the International
 Classification for Standards (ICS) code (<<ics>>);
 
-* zero or more structured identifiers (<<structured-identifiers>>).
+* zero or more structured identifiers.
+// (<<structured-identifiers>>).
 
 Other extension points may be added specific to the standardization body.
 
 ////
-[datamodel_diagram,./models/views/Metadata.yml]
-
-[datamodel_attributes_table,./models/models/BibData.yml]
-
-[datamodel_attributes_table,./models/models/BibDataExtensionType.yml]
-
-[datamodel_attributes_table,./models/models/StandardBibData.yml]
-
-[datamodel_attributes_table,./models/models/StandardBibDataExtensionType.yml]
-////
-
-[lutaml_diagram]
+[xlutaml_diagram]
 ....
 include::../models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml[]
 ....
+////
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/basic_document/metadata/BibData.lutaml, BibData]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibData]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/basic_document/metadata/BibDataExtensionType.lutaml, BibDataExtensionType]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibDataExtensionType]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StandardBibData.lutaml, StandardBibData]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StandardBibData]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StandardBibDataExtensionType.lutaml, StandardBibDataExtensionType]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StandardBibDataExtensionType]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StructuredIdentifierType.lutaml, StructuredIdentifierType]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StructuredIdentifierType]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/EditorialGroupType.lutaml, EditorialGroupType]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, EditorialGroupType]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/TechnicalCommitteeType.lutaml, TechnicalCommitteeType]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, TechnicalCommitteeType]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/IcsType.lutaml, IcsType]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, IcsType]
 
-[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StandardBibDataExtensionType.lutaml, StandardBibDataExtensionType]
-
-
-
-
-
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StandardBibDataExtensionType]

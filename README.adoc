@@ -46,7 +46,7 @@ make clean all
 
 The following outputs will be built:
 
-* CSD XML (https://github.com/calconnect/metanorma-model-csd) (`[filename].xml`)
+* CalConnect XML (https://github.com/calconnect/metanorma-model-cc) (`[filename].xml`)
 * HTML (`[filename].html`)
 * PDF (`[filename].pdf`)
 * Word DOC (`[filename].doc`)

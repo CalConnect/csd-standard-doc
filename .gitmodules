@@ -5,8 +5,16 @@
 	path = sources/models/metanorma-model-standoc
 	url = https://github.com/metanorma/metanorma-model-standoc
 [submodule "sources/models/metanorma-model-csd"]
-	path = sources/models/metanorma-model-csd
+	path = sources/models/metanorma-model-cc
 	url = https://github.com/metanorma/metanorma-model-csd
 [submodule "sources/models/concept-model"]
 	path = sources/models/concept-model
 	url = https://github.com/glossarist/concept-model
+[submodule "sources/models/basicdoc-models"]
+	path = sources/models/basicdoc-models
+	url = https://github.com/metanorma/basicdoc-models
+[submodule "sources/models/relaton-models"]
+	path = sources/models/relaton-models
+	url = https://github.com/relaton/relaton-models
+[submodule "metanorma-model-cc"]
+	url = https://github.com/metanorma/metanorma-model-cc

@@ -58,39 +58,40 @@ also apply here.
 ////
 
 The bibliographic modelling of CalConnect documents is further enriched compared
-to `BibliographicItem` as follows:
+to _BibliographicItem_ as follows:
 
 * The document type is constrained to be one of the following:
-** `Standards`,
-** `Reports`,
-** `Specifications`,
-** `Directives`,
-** `Guides`,
-** `Amendments`,
-** `Corrigenda and Administrative`.
+** _Standards_,
+** _Reports_,
+** _Specifications_,
+** _Directives_,
+** _Guides_,
+** _Amendments_,
+** _Corrigenda and Administrative_.
 
 * The document status is constrained to be one of the following:
-** `Proposal`,
-** `Working Draft`,
-** `Committee Draft`,
-** `Final Draft`,
-** `Published`,
-** `Withdrawn`.
+** _Proposal_,
+** _Working Draft_,
+** _Committee Draft_,
+** _Final Draft_,
+** _Published_,
+** _Withdrawn_.
 
 * The editorial group responsible for the document is defined with
 a single components: a mandatory Technical Committee. The Technical
-Committee has a type of either `Technical` or `Provisional`.
+Committee has a type of either _Technical_ or _Provisional_.
 
-[datamodel_diagram,./models/views/CcStandardDocument.yml]
+//[xdatamodel_diagram,./models/views/CcStandardDocument.yml]
 
-[datamodel_attributes_table,./models/models/cc/CcBibliographicItem.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcBibliographicItem]
 
-[datamodel_attributes_table,./models/models/cc/CcDocumentType.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcTechnicalCommittee]
 
-[datamodel_attributes_table,./models/models/cc/CcStandardDocument.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcDocumentStatus]
 
-[datamodel_attributes_table,./models/models/cc/CcStatusType.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcStatusType]
 
-[datamodel_attributes_table,./models/models/cc/CcTechnicalCommittee.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcDocumentType]
 
-[datamodel_attributes_table,./models/models/cc/CcTechnicalCommitteeType.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcTechnicalCommitteeType]
+
