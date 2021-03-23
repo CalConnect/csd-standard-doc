@@ -2,10 +2,10 @@
 [[standardsinline]]
 == Inline elements
 
-The inline elements of `StandardDocument` adhere to the inline element
-models from `BasicDocument`.
+The inline elements of _StandardDocument_ adhere to the inline element
+models from _BasicDocument_.
 
-Specializations and profiles of the `StandardDocument` model may
+Specializations and profiles of the _StandardDocument_ model may
 specialize the modelling of inline elements.
 
 

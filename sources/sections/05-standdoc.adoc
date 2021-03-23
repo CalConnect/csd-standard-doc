@@ -1,6 +1,7 @@
 [[standardsdocument]]
 == StandardDocument
 
+////
 [datamodel_diagram,./models/views/Document.yml]
 
 [datamodel_attributes_table,./models/models/BasicDocument.yml]
@@ -8,4 +9,14 @@
 [datamodel_attributes_table,./models/models/StandardDocument.yml]
 
 [datamodel_attributes_table,./models/models/BoilerplateType.yml]
+////
 
+
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml[]
+....
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/StandardDocument.lutaml, StandardDocument]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/sections/BoilerplateType.lutaml, BoilerplateType]

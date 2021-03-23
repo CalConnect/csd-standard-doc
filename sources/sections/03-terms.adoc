@@ -17,7 +17,7 @@ NOTE: Examples of bodies are organizations, authorities, companies and foundatio
 body that has recognized activities in standardization
 
 [.source]
-<<isoguide2,4.3>>
+<<isoguide2,clause=4.3>>
 
 
 [[term-document]]
@@ -26,7 +26,7 @@ body that has recognized activities in standardization
 medium with information recorded on or in it
 
 [.source]
-<<isoguide2,3.1 NOTE 2>>
+<<isoguide2,clause=3.1 NOTE 2>>
 
 
 [[term-standardization-document]]
@@ -42,7 +42,7 @@ codes of practice and regulations are considered part of
 this term.
 
 NOTE: This terms closely corresponds to "`normative document`"
-defined in <<isoguide2,3.1>>.
+defined in <<isoguide2,clause=3.1>>.
 
 ////
 model
@@ -120,7 +120,7 @@ hierarchical subdivision of a document, consisting of one or more term:[blocks,b
 a character, or group of characters, used to identify or name an item of data and possibly to indicate certain properties of that item
 
 [.source]
-<<IEV,714-21-07>>
+<<IEV,clause="714-21-07">>
 
 === term
 

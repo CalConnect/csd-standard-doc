@@ -8,9 +8,9 @@ The _StandardDocument_ document metamodel is a semantically
 oriented data model that depends on an underlying document model
 for implementation.
 
-_StandardDocument_ is closely aligned with the `BasicDocument`
+_StandardDocument_ is closely aligned with the _BasicDocument_
 model (<<basicdocument>>), but it can be implemented on top of any
-document model that is compatible with the `BasicDocument` model
+document model that is compatible with the _BasicDocument_ model
 or satisfies the requirements described in this document.
 
 
@@ -39,16 +39,16 @@ The _StandardDocument_ document metamodel is expressed hierarchically
 in the following structure:
 
 * Document representation: the underlying document model,
-described as `BasicDocument` in this document, is
+described as _BasicDocument_ in this document, is
 used to express the structure of generic documents
-(with specific requirements detailed in the `BasicDocument`
+(with specific requirements detailed in the _BasicDocument_
 model from <<basicdocument>>);
 
 * Standardization document structure: the _StandardDocument_ model
-is specialized from `BasicDocument`, conveying the structure particular
+is specialized from _BasicDocument_, conveying the structure particular
 to standardization documents as a class.
 
-* Specific types of standardization documents: the `StandardDocument`
+* Specific types of standardization documents: the _StandardDocument_
 model is further specialized into models specific to particular standards.
 Specific standards models can form the basis in turn of other
 standards models.
@@ -126,8 +126,8 @@ with regards to the unambiguous rendering of paragraphs.
 
 _StandardDocument_ can be specialized in the following ways:
 
-* specializing classes from the `BasicDocument` models;
-* specializing classes from the `StandardDocument` models;
+* specializing classes from the _BasicDocument_ models;
+* specializing classes from the _StandardDocument_ models;
 * adding new classes;
 * changing attributes of a class.
 

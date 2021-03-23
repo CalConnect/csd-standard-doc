@@ -24,7 +24,7 @@ as being normative or informative.
 
 === Reference item
 
-Each reference item is represented using the _BibliographicItem_
+Each reference item is represented using the `BibliographicItem`
 class defined in <<relaton>>.
 
 It is not necessary to specialize reference items amongst
@@ -34,7 +34,7 @@ can cite documents of any type.
 
 === Citation
 
-Each citation is represented by the _Citation_ class defined in
+Each citation is represented by the `Citation` class defined in
 <<relaton>>.
 
 It is not necessary to specialize citations since it is simply

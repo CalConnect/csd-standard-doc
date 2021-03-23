@@ -32,7 +32,7 @@ are often highly specific to a standardization body.
 Therefore, based on `BibliographicItem`, `StandardBibliographicItem`
 implements the following extension points:
 
-* the document type (already provided in the `BasicDocument` model),
+* the document type (already provided in the _BasicDocument_ model),
 it is assumed that particular specializations of the document metamodel
 will substitute their own enumerations of particular subclasses of
 document, which will be more granular;
@@ -47,24 +47,42 @@ Classification for Standards (ICS) code (<<ics>>);
 
 Other extension points may be added specific to the standardization body.
 
+////
 [datamodel_diagram,./models/views/Metadata.yml]
 
-[datamodel_attributes_table,./models/models/BibDataExtensionType.yml]
-
 [datamodel_attributes_table,./models/models/BibData.yml]
+
+[datamodel_attributes_table,./models/models/BibDataExtensionType.yml]
 
 [datamodel_attributes_table,./models/models/StandardBibData.yml]
 
 [datamodel_attributes_table,./models/models/StandardBibDataExtensionType.yml]
+////
+
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml[]
+....
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/basic_document/metadata/BibData.lutaml, BibData]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/basic_document/metadata/BibDataExtensionType.lutaml, BibDataExtensionType]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StandardBibData.lutaml, StandardBibData]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StandardBibDataExtensionType.lutaml, StandardBibDataExtensionType]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StructuredIdentifierType.lutaml, StructuredIdentifierType]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/EditorialGroupType.lutaml, EditorialGroupType]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/TechnicalCommitteeType.lutaml, TechnicalCommitteeType]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/IcsType.lutaml, IcsType]
+
+[lutaml_datamodel_attributes_table,../models/metanorma-model-standoc/models/standard_document/metadata/StandardBibDataExtensionType.lutaml, StandardBibDataExtensionType]
 
 
-
-[[structured-identifiers]]
-== Structured identifier
-
-[datamodel_diagram,./models/views/StructuredIdentifier.yml]
-
-[datamodel_attributes_table,./models/models/StructuredIdentifierType.yml]
 
 
 

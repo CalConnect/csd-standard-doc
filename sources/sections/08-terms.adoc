@@ -10,7 +10,7 @@ terms and definitions.
 
 === General
 
-The `StandardDocument` model provides two further subclasses of
+The _StandardDocument_ model provides two further subclasses of
 clause sections (`ClauseSection`):
 
 * Definition section, and
@@ -22,24 +22,16 @@ Both types of section can include prefatory text.
 === Definition sections
 
 
-[datamodel]
+//[datamodel]
 //....
 //include::../models/views/DefinitionSection.yml[]
 //....
-[datamodel_diagram,./models/views/References.yml]
-
-[datamodel_attributes_table,./models/models/StandardReferencesSection.yml]
-
-[datamodel_attributes_table,./models/models/BibliographicItem.yml]
-
-[datamodel_attributes_table,./models/models/Citation.yml]
 
 
+//[[termsection]]
+//=== Term sections
 
-[[termsection]]
-=== Term sections
-
-[datamodel]
+//[datamodel]
 //....
 //include::../models/views/TermSection.yml[]
 //....

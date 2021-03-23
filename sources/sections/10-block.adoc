@@ -2,9 +2,9 @@
 [[standardsblock]]
 == Block
 
-The block elements of `StandardDocument` adhere to the block element
-`BasicDocument` model and the `StandardDocument` model.
+The block elements of _StandardDocument_ adhere to the block element
+_BasicDocument_ model and the _StandardDocument_ model.
 
-Specializations and profiles of the `StandardDocument` model may
+Specializations and profiles of the _StandardDocument_ model may
 specialize the modelling of blocks.
 

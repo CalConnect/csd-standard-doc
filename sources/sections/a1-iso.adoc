@@ -9,7 +9,7 @@ This profile provides the specialization of the
 _StandardDocument_ document metamodel for ISO standardization deliverables
 described in <<isoiecdir2>>.
 
-The `IsoStandardDocument` model fully covers all ISO
+The _IsoStandardDocument_ model fully covers all ISO
 standardization deliverables, including International Standards,
 Guides, Technical Reports, Technical Specifications,
 International Workshop Agreements, Amendments and Corrigenda.
@@ -18,7 +18,7 @@ International Workshop Agreements, Amendments and Corrigenda.
 [[isodocument]]
 === Document and section specialization
 
-The `IsoStandardDocument` model extends the `StandardDocument`
+The _IsoStandardDocument_ model extends the _StandardDocument_
 modelling of the document by requiring the following specific types
 of section:
 
@@ -31,7 +31,7 @@ can optionally have numbered subsections).
 
 * Zero or more Annexes (<<standardssection>>).
 
-Annexes in the `IsoStandardDocument` can optionally contain one or
+Annexes in the _IsoStandardDocument_ can optionally contain one or
 more _Appendixes_, which can be thought of as annexes of the annex
 section.
 
@@ -42,12 +42,12 @@ Appendix 2 "High level structure, identical core text, common terms
 and core definitions" itself contains an Introduction and 10
 clauses, including a Terms clause.
 
-The `IsoStandardDocument` model document also includes zero or more
+The _IsoStandardDocument_ model document also includes zero or more
 `termSources` elements, giving the citations for the documents that
 the Terms Section draws on for its definitions and repertoire of
 terms.
 
-The `IsoStandardDocument` model document uses ISO-specific
+The _IsoStandardDocument_ model document uses ISO-specific
 extensions to the <<relaton>> metadata about a document
 (<<isobib>>).
 
@@ -64,7 +64,7 @@ extensions to the <<relaton>> metadata about a document
 [[isoblock]]
 === Block specialization
 
-The `IsoStandardDocument` model extends the `StandardDocument`
+The _IsoStandardDocument_ model extends the _StandardDocument_
 modelling of blocks for one block definition.
 
 [datamodel_diagram,./models/views/IsoBlocks.yml]
@@ -125,10 +125,6 @@ four components:
 The Technical Committee, Subcommittee and Workgroup, in turn, are
 instances of the ISO Subgroup class, defined as having a name, an
 optional type, and an optional number.
-
-* The document has one or more International Classification for
-Standards classifications <<ics>>. The ICS classification is
-defined as a code, and an optional text explaining the code.
 
 * The document has zero or more source URIs.
 
