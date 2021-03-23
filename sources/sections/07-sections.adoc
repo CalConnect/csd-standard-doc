@@ -11,11 +11,11 @@ of contents.
 
 === Structure
 
-The `StandardDocument` model is a specialization of the
-`BasicSection` class of the `BasicDocument` model by as
+The _StandardDocument_ model specializes the
+`BasicSection` class of the _BasicDocument_ model by as
 follows:
 
-* All sections in a `StandardDocument` model are instances of the
+* All sections in a _StandardDocument_ model are instances of the
 `StandardSection` class, which is a subclass of `BasicSection`.
 
 * The `StandardSection` class indicates its status as normative or
@@ -46,7 +46,7 @@ hierarchical levels.
 Content sections (`StandardHierarchicalSection`) are optionally
 not numbered, and lie outside the main flow of the document.
 
-In `StandardDocument`, there are four distinctly named
+In _StandardDocument_, there are four distinctly named
 content sections. These content sections are designated sections
 as they recur in standardization documents and have distinct semantics:
 
@@ -63,7 +63,7 @@ and need not be numbered.
 === Annex sections
 
 Annexes are implemented as ``ClauseSection``s in the
-`StandardDocument` metamodel.
+_StandardDocument_ metamodel.
 
 They are, however, expected to be numbered differently, and to be
 rendered as separate sequences from clause sections.
@@ -75,11 +75,11 @@ documents of its class by the standardization body, and that reflects
 various legal or policy requirements imposed on the document.
 
 Boilerplate sections are implemented  as ``ContentSection``s in the
-`StandardDocument` metamodel.
+_StandardDocument_ metamodel.
 
 They are, however, expected to be placed and rendered separately from the Content sections of the document.
 
-In `StandardDocument`, there are four distinctly named
+In _StandardDocument_, there are four distinctly named
 boilerplate sections. These content sections are designated sections
 as they recur in standardization documents and have distinct semantics:
 
@@ -114,7 +114,7 @@ Generally, in standardization documents there is a strong need
 to reference text in clauses unambiguously by clause number,
 which makes hanging paragraphs undesirable.
 
-Therefore, the `StandardDocument` model requires "hanging paragraphs"
+Therefore, the _StandardDocument_ model requires "hanging paragraphs"
 to be avoided. In particular, its sections should
 contain either blocks or subsections, but not both.
 

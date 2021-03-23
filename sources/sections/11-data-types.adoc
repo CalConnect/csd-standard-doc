@@ -1,8 +1,8 @@
 
 == Data types
 
-Data types in `StandardDocument` models are are fully inherited
-from those of the `BasicDocument` model.
+Data types in _StandardDocument_ models are are fully inherited
+from those of the _BasicDocument_ model.
 
-Specializations and profiles of the `StandardDocument` model may
+Specializations and profiles of the _StandardDocument_ model may
 specialize and extend the modelling of data types.

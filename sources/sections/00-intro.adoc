@@ -148,3 +148,9 @@ In many cases, the document model also enables alignment
 with capabilities of existing document production tools.
 The document metamodel has already been adopted by a number
 of standardization bodies listed above.
+
+=== Conventions
+
+In this document, italics is used to name document models, such as _StandardDocument_.
+Monospace is used to refer to elements of document models, such as `InlineElement`.
+

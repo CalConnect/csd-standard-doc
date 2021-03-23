@@ -1,0 +1,6 @@
+name: Definitions
+title: Definition classes
+caption: Definition class data models
+directive: standard-doc-terms
+imports:
+  Definition

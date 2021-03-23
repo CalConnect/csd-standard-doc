@@ -9,14 +9,14 @@ This profile provides the specialization of the
 _StandardDocument_ document metamodel for CalConnect standardization deliverables
 described in <<CC10002>>.
 
-The `CsdStandardDocument` model fully covers all CalConnect
+The _CsdStandardDocument_ model fully covers all CalConnect
 standardization deliverables, including Standards,
 Reports, Specifications, Directives, Guides, Amendments and Corrigenda.
 
 
 === Document and section specialization
 
-The `CsdStandardDocument` model extends the `StandardDocument`
+The _CsdStandardDocument_ model extends the _StandardDocument_
 modelling of the document by requiring the following specific types
 of section:
 
@@ -42,7 +42,7 @@ text, with whitespace treated as significant.
 
 === Inline elements specialization
 
-The `CsdStandardDocument` model extends the `StandardDocument`
+The _CsdStandardDocument_ model extends the _StandardDocument_
 modelling of inline elements by one element:
 
 * The `keyword` element is added as a subclass of Text Element

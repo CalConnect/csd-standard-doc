@@ -1,7 +1,7 @@
 name: StandardBibData
 modelType: class
 definition: |
-  The bibliographic description of a StandardDocument.
+  The bibliographic description of a _StandardDocument_.
 
 
 attributes:
