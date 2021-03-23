@@ -9,17 +9,14 @@ and as a result they usually contain one or more bibliography sections
 indicating its data sources. Bibliography sections may be differentiated
 as being normative or informative.
 
-=== References section
 
+//[xlutaml_diagram,./models/views/References.yml]
 
-[datamodel_diagram,./models/views/References.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
 
-[datamodel_attributes_table,./models/models/StandardReferencesSection.yml]
+[xlutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
 
-[datamodel_attributes_table,./models/models/BibliographicItem.yml]
-
-[datamodel_attributes_table,./models/models/Citation.yml]
-
+[xlutaml_uml_attributes_table,./models/models/Citation.yml]
 
 
 === Reference item

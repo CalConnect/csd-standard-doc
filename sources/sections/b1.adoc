@@ -8,76 +8,84 @@ This annex provides an informative reference model for management
 of concepts and concept collections, compliant with
 ISO 10241-1 and ISO 704.
 
-=== Concept
+//=== Concept
 
-[datamodel_diagram,./models/concept-model/datamodel/views/Concepts.yml]
+//[xdatamodel_diagram,./models/concept-model/datamodel/views/Concepts.yml]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/Concept.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Concept]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Designation]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,GlossaristDefinition]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,NonVerbRep]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConcept]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConceptType]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/GlossaristDefinition.yml]
+//[xdatamodel_attributes_table,./models/concept-model/datamodel/models/Concept.yml]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/NonVerbRep.yml]
+//[xdatamodel_attributes_table,./models/concept-model/datamodel/models/GlossaristDefinition.yml]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConcept.yml]
+//[xdatamodel_attributes_table,./models/concept-model/datamodel/models/NonVerbRep.yml]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConceptType.yml]
+//[xdatamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConcept.yml]
 
-
-=== Concept sources
-
-[datamodel_diagram,./models/concept-model/datamodel/views/ConceptSource.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptSource.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptSourceStatus.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptSourceType.yml]
+//[xdatamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConceptType.yml]
 
 
-=== Designation
+//=== Concept sources
 
-[datamodel_diagram,./models/concept-model/datamodel/views/Designations.yml]
+//[xdatamodel_diagram,./models/concept-model/datamodel/views/ConceptSource.yml]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/Designation.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSource]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/NormativeStatus.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSourceStatus]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ExpressionDesignation.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/GrammarInfo.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/SymbolDesignation.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/PrefixDesignation.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/SuffixDesignation.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/AbbreviationDesignation.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/AbbreviationType.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/LetterSymbolDesignation.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/GraphicalSymbolDesignation.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/DesignationGender.yml]
-
-[datamodel_attributes_table,./models/concept-model/datamodel/models/GrammarGender.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSourceType]
 
 
+//=== Designation
 
-=== Managed concepts and collection
+//[xdatamodel_diagram,./models/concept-model/datamodel/views/Designations.yml]
 
-[datamodel_diagram,./models/concept-model/datamodel/views/ManagedConcepts.yml]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ManagedConcept.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,Designation]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptStatus.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,NormativeStatus]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/LocalizedConcept.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,ExpressionDesignation]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptDate.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarInfo]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/ConceptDateType.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,SymbolDesignation]
 
-[datamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConceptType.yml]
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,PrefixDesignation]
+
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,SuffixDesignation]
+
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,AbbreviationDesignation]
+
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,AbbreviationType]
+
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,LetterSymbolDesignation]
+
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GraphicalSymbolDesignation]
+
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,DesignationGender]
+
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarGender]
+
+
+//=== Managed concepts and collection
+
+//[xdatamodel_diagram,./models/concept-model/datamodel/views/ManagedConcepts.yml]
+
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ManagedConcept]
+
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptStatus]
+
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,LocalizedConcept]
+
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptDate]
+
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptDateType]
+
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,RelatedConceptType]
+

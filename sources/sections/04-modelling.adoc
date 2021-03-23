@@ -145,7 +145,7 @@ be avoided in specialization.
 [example]
 The document model for the Chinese National Standard ("`GB Standard`"),
 as described in <<gbt11>>, is structurally modelled after
-ISO documents, explicitly described as a localization of <<isoiecdir2-2004>>.
+ISO documents, explicitly described as a localization of ISO/IEC Directives Part 2, 2004.
 Therefore, the Chinese National Standard model is best expressed
 as a specialization of the ISO Standards model.
 

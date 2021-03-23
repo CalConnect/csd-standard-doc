@@ -1,12 +1,12 @@
 = Standardization documents  -- Document metamodel
 :docnumber: 36100
-:copyright-year: 2020
+:copyright-year: 2021
 :language: en
 :doctype: standard
 :edition: 1
 :status: working-draft
-:revdate: 2019-06-05
-:published-date: 2019-06-05
+:revdate: 2021-03-22
+:published-date: 2021-03-22
 :script: Latn
 :technical-committee: VCARD
 :fullname: Ronald Tse
@@ -18,7 +18,7 @@
 :draft:
 :docfile: cc-36100.adoc
 :mn-document-class: csd
-:mn-output-extensions: xml,html,rxl
+:mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
 
@@ -56,6 +56,6 @@ include::sections/a1-iso.adoc[]
 
 include::sections/a2-cc.adoc[]
 
-//include::sections/b1.adoc[]
+include::sections/b1.adoc[]
 
 
