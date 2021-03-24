@@ -14,14 +14,14 @@ ISO 10241-1 and ISO 704.
 
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Concept]
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Designation]
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,GlossaristDefinition]
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,DetailedDefinition]
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,NonVerbRep]
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConcept]
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConceptType]
 
 //[xdatamodel_attributes_table,./models/concept-model/datamodel/models/Concept.yml]
 
-//[xdatamodel_attributes_table,./models/concept-model/datamodel/models/GlossaristDefinition.yml]
+//[xdatamodel_attributes_table,./models/concept-model/datamodel/models/DetailedDefinition.yml]
 
 //[xdatamodel_attributes_table,./models/concept-model/datamodel/models/NonVerbRep.yml]
 
