@@ -52,7 +52,10 @@ extensions to the <<relaton>> metadata about a document
 (<<isobib>>).
 
 
-//[xdatamodel_diagram,./models/views/IsoStandardDocument.yml]
+[lutaml_diagram]
+....
+include::../models/metanorma-model-iso/views/IsoStandardDocument_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoStandardDocument]
 
@@ -73,7 +76,10 @@ extensions to the <<relaton>> metadata about a document
 The _IsoStandardDocument_ model extends the _StandardDocument_
 modelling of blocks for one block definition.
 
-//[xdatamodel_diagram,./models/views/IsoBlocks.yml]
+[lutaml_diagram]
+....
+include::../models/metanorma-model-iso/views/IsoBlocks_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoAdmonitionBlock]
 
@@ -146,7 +152,10 @@ Part documents under the same project number (which makes it a
 multi-document description).
 
 
-//[xdatamodel_diagram,./models/views/IsoBibliographicItem.yml]
+[lutaml_diagram]
+....
+include::../models/metanorma-model-iso/views/IsoBibliographicItem_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoBibliographicItem]
 

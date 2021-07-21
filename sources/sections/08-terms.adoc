@@ -40,10 +40,13 @@ Both types of section can include prefatory text.
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,TermsSection]
 
-//[[term]]
-//=== Term
+[[term]]
+=== Term
 
-//[xdatamodel_diagram,./models/views/Term.yml]
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_Terms_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermCollection]
 

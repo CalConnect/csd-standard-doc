@@ -8,9 +8,12 @@ This annex provides an informative reference model for management
 of concepts and concept collections, compliant with
 ISO 10241-1 and ISO 704.
 
-//=== Concept
+=== Concept
 
-//[xdatamodel_diagram,./models/concept-model/datamodel/views/Concepts.yml]
+[lutaml_diagram]
+....
+include::../models/concept-model/views/Concepts_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Concept]
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Designation]
@@ -30,9 +33,12 @@ ISO 10241-1 and ISO 704.
 //[xdatamodel_attributes_table,./models/concept-model/datamodel/models/RelatedConceptType.yml]
 
 
-//=== Concept sources
+=== Concept sources
 
-//[xdatamodel_diagram,./models/concept-model/datamodel/views/ConceptSource.yml]
+[lutaml_diagram]
+....
+include::../models/concept-model/views/ConceptSource_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSource]
 
@@ -41,9 +47,12 @@ ISO 10241-1 and ISO 704.
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSourceType]
 
 
-//=== Designation
+=== Designation
 
-//[xdatamodel_diagram,./models/concept-model/datamodel/views/Designations.yml]
+[lutaml_diagram]
+....
+include::../models/concept-model/views/Designations_models.lutaml[]
+....
 
 
 [lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,Designation]
@@ -73,9 +82,12 @@ ISO 10241-1 and ISO 704.
 [lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarGender]
 
 
-//=== Managed concepts and collection
+=== Managed concepts and collection
 
-//[xdatamodel_diagram,./models/concept-model/datamodel/views/ManagedConcepts.yml]
+[lutaml_diagram]
+....
+include::../models/concept-model/views/ManagedConcepts_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ManagedConcept]
 

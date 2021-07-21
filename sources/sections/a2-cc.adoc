@@ -81,7 +81,10 @@ to _BibliographicItem_ as follows:
 a single components: a mandatory Technical Committee. The Technical
 Committee has a type of either _Technical_ or _Provisional_.
 
-//[xdatamodel_diagram,./models/views/CcStandardDocument.yml]
+[lutaml_diagram]
+....
+include::../models/metanorma-model-cc/views/CcMetadata_models.lutaml[]
+....
 
 [lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcBibliographicItem]
 
