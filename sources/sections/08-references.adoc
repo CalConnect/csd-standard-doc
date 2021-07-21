@@ -10,13 +10,17 @@ indicating its data sources. Bibliography sections may be differentiated
 as being normative or informative.
 
 
-//[xlutaml_diagram,./models/views/References.yml]
+// TODO: fix
+// [lutaml_diagram]
+// ....
+// include::../models/views/References.yml[]
+// ....
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
 
-[xlutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
 
-[xlutaml_uml_attributes_table,./models/models/Citation.yml]
+[lutaml_uml_attributes_table,./models/models/Citation.yml]
 
 
 === Reference item
