@@ -8,6 +8,22 @@ _BasicDocument_ model and the _StandardDocument_ model.
 Specializations and profiles of the _StandardDocument_ model may
 specialize the modelling of blocks.
 
+
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml[]
+....
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardUnorderedList]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,UnorderedCheckableListItem]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinitionList]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinition]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinitionTerm]
+
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardNoteBlock]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardTableBlock]
@@ -28,6 +44,11 @@ specialize the modelling of blocks.
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardAdmonitionBlock]
 
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml[]
+....
+
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,AmendBlock]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,AutoNumber]
@@ -35,6 +56,8 @@ specialize the modelling of blocks.
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,ImageMapBlock]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,ChangeType]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,Form]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,ElementName]
 

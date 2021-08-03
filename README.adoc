@@ -41,7 +41,7 @@ execute.
 
 [source,sh]
 ----
-make clean all
+bundle exec metanorma site generate
 ----
 
 The following outputs will be built:
@@ -51,12 +51,4 @@ The following outputs will be built:
 * PDF (`[filename].pdf`)
 * Word DOC (`[filename].doc`)
 
-
-== Iterating the document
-
-[source,sh]
-----
-make html
-open cc-*.html
-----
 

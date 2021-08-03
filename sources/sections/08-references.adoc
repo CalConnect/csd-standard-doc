@@ -18,9 +18,11 @@ as being normative or informative.
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,NormativeType]
 
-[lutaml_uml_attributes_table,./models/models/Citation.yml]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandocReferenceToCitationElement]
+
+// [lutaml_uml_attributes_table,./models/models/Citation.yml]
 
 
 === Reference item

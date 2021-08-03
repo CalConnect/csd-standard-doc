@@ -10,17 +10,44 @@ specialize the modelling of inline elements.
 
 //=== Text elements
 
+
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml[]
+....
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToTerm]
+
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToTermbase]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandocReferenceToIdElement]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml,XrefCaseType]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,XrefCaseType]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,PageBreakElement]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandardPageBreakElement]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,OrientationType]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Concept]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Add]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Del]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,FormInput]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Input]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,InputType]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Label]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Select]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Option]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Textarea]
 
 
-//=== Lists
-
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardUnorderedList]
-
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,UnorderedCheckableListItem]
-
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinitionList]

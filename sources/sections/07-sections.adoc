@@ -125,17 +125,28 @@ While this behavior is less pressing for Content sections (which are
 unnumbered), and Annexes (as exemplified in <<isoiecdir2>>), it is
 nonetheless not recommended.
 
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml[]
+....
 
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,HierarchicalSection]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardSection]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardHierarchicalSection]
 
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Abstract]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Foreword]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Introduction]
+
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Acknowledgements]
+
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseSection]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,AnnexSection]
-
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseHierarchicalSection]
 

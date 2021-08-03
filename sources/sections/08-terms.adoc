@@ -18,6 +18,10 @@ clause sections (`ClauseSection`):
 
 Both types of section can include prefatory text.
 
+[lutaml_diagram]
+....
+include::../models/metanorma-model-standoc/views/StandardDoc_Terms_models.lutaml[]
+....
 
 //=== Definition sections
 
@@ -40,16 +44,9 @@ Both types of section can include prefatory text.
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,TermsSection]
 
-[[term]]
-=== Term
-
-[lutaml_diagram]
-....
-include::../models/metanorma-model-standoc/views/StandardDoc_Terms_models.lutaml[]
-....
-
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermCollection]
 
+[[term]]
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Term]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTerm]
