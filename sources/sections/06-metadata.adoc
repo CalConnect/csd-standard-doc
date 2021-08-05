@@ -53,6 +53,10 @@ Other extension points may be added specific to the standardization body.
 include::../models/metanorma-model-standoc/views/StandardDoc_Metadata_models.lutaml[]
 ....
 
+// I am forced to do this, because UML stereotypes are not rendered. I also currently cannot nest lutaml sections, their depth is hardcoded in the macro
+
+(`BibData` and `BibDataExtensionType` are taken from <<basicdocument>>.)
+
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibData]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibDataExtensionType]

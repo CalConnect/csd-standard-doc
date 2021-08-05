@@ -18,9 +18,13 @@ as being normative or informative.
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardReferencesSection]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,NormativeType]
+// I am forced to do this, because UML stereotypes are not rendered. I also currently cannot nest lutaml sections, their depth is hardcoded in the macro
+
+(`ParagraphBlock` is taken from <<basicdocument>>. `BibliographicItem` is taken from <<relaton>>.)
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandocReferenceToCitationElement]
+
+(References to citations are specialisations of `ReferenceToCitationElement` taken from <<basicdocument>>.)
 
 // [lutaml_uml_attributes_table,./models/models/Citation.yml]
 
@@ -42,4 +46,6 @@ Each citation is represented by the `Citation` class defined in
 
 It is not necessary to specialize citations since it is simply
 a document data element reference linked to a reference item.
+
+References to citations are specialisations of `ReferenceToCitationElement` taken from <<basicdocument>>.
 

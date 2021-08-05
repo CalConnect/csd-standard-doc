@@ -3,7 +3,7 @@
 
 [lutaml_diagram]
 ....
-include::../models/metanorma-model-standoc/views/StandardDoc_StandardDocument_models.lutaml[]
+include::../models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml[]
 ....
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, StandardDocument]
