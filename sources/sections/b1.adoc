@@ -10,10 +10,7 @@ ISO 10241-1 and ISO 704.
 
 === Concept
 
-[lutaml_diagram]
-....
-include::../models/concept-model/views/Concepts_models.lutaml[]
-....
+lutaml_diagram::models/concept-model/views/Concepts.lutaml[]
 
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Concept]
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Designation]
@@ -35,10 +32,7 @@ include::../models/concept-model/views/Concepts_models.lutaml[]
 
 === Concept sources
 
-[lutaml_diagram]
-....
-include::../models/concept-model/views/ConceptSource_models.lutaml[]
-....
+lutaml_diagram::models/concept-model/views/ConceptSource.lutaml[]
 
 [lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSource]
 
@@ -49,11 +43,7 @@ include::../models/concept-model/views/ConceptSource_models.lutaml[]
 
 === Designation
 
-[lutaml_diagram]
-....
-include::../models/concept-model/views/Designations_models.lutaml[]
-....
-
+lutaml_diagram::models/concept-model/views/Designations.lutaml[]
 
 [lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,Designation]
 
@@ -84,10 +74,7 @@ include::../models/concept-model/views/Designations_models.lutaml[]
 
 === Managed concepts and collection
 
-[lutaml_diagram]
-....
-include::../models/concept-model/views/ManagedConcepts_models.lutaml[]
-....
+lutaml_diagram::models/concept-model/views/ManagedConcepts.lutaml[]
 
 [lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ManagedConcept]
 

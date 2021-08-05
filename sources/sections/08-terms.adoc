@@ -44,6 +44,11 @@ include::../models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
 
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,TermsSection]
 
+[[term]]
+=== Term
+
+lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
+
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermCollection]
 
 [[term]]
