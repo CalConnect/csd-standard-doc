@@ -125,39 +125,51 @@ While this behavior is less pressing for Content sections (which are
 unnumbered), and Annexes (as exemplified in <<isoiecdir2>>), it is
 nonetheless not recommended.
 
-[lutaml_diagram]
-....
-include::../models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml[]
-....
+lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml[]
 
-// I am forced to do this, because UML stereotypes are not rendered. I also currently cannot nest lutaml sections, their depth is hardcoded in the macro
+=== Inherited from <<basicdocument>>
 
-(`HierarchicalSection` and `BasicSection` are taken from <<basicdocument>>.)
+==== BasicSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,BasicSection, skip]
 
+==== HierarchicalSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,HierarchicalSection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,BasicSection]
+=== StandardDocument Elements, Generic
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,HierarchicalSection]
+==== StandardSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardSection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardSection]
+==== StandardHierarchicalSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardHierarchicalSection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardHierarchicalSection]
+==== ClauseSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseSection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Abstract]
+==== AnnexSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,AnnexSection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Foreword]
+==== ClauseHierarchicalSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseHierarchicalSection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Introduction]
+==== StandardContentSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardContentSection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Acknowledgements]
+==== NormativeType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,NormativeType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseSection]
+=== StandardDocument Elements, Prefatory
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,AnnexSection]
+==== Abstract
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Abstract, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,ClauseHierarchicalSection]
+==== Foreword
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Foreword, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,StandardContentSection]
+==== Introduction
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Introduction, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,NormativeType]
+==== Acknowledgements
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,Acknowledgements, skip]
+
 

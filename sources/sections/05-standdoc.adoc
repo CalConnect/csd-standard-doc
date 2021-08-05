@@ -3,11 +3,15 @@
 
 lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml[]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, StandardDocument]
+=== StandardDocument
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, StandardDocument, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, StandardDocumentType]
+=== StandardDocumentType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, StandardDocumentType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, MiscContainer]
+=== MiscContainer
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, MiscContainer, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, BoilerplateType]
+=== BoilerplateType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_StandardDocument.lutaml, BoilerplateType, skip]
 

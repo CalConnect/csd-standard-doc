@@ -18,49 +18,49 @@ clause sections (`ClauseSection`):
 
 Both types of section can include prefatory text.
 
-[lutaml_diagram]
-....
-include::../models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
-....
+lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
 
-//=== Definition sections
+
+=== Definition sections
 
 //[xdatamodel]
 //....
 //include::../models/views/DefinitionSection.yml[]
 //....
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,DefinitionSection]
+==== DefinitionSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,DefinitionSection, skip]
 
-//=== Definition
+==== DefinitionCollection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,DefinitionCollection, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,DefinitionCollection]
-
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Definition]
+(`Definition` is taken from <<basicdocument>>.)
 
 
-//[[termsection]]
-//=== Term sections
+[[termsection]]
+=== Term sections
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,TermsSection]
+==== TermsSection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,TermsSection, skip]
 
-[[term]]
-=== Term
-
-lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
-
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermCollection]
+==== TermCollection
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermCollection, skip]
 
 [[term]]
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Term]
+==== Term
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Term, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTerm]
+==== RelatedTerm
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTerm, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTermType]
+==== RelatedTermType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTermType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSource]
+==== TermSource
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSource, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSourceStatus]
+==== TermSourceStatus
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSourceStatus, skip]
 
 
 

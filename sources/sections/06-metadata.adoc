@@ -50,23 +50,31 @@ Other extension points may be added specific to the standardization body.
 
 lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml[]
 
-// I am forced to do this, because UML stereotypes are not rendered. I also currently cannot nest lutaml sections, their depth is hardcoded in the macro
+=== Inherited from <<basicdocument>>
 
-(`BibData` and `BibDataExtensionType` are taken from <<basicdocument>>.)
+==== BibData
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibData, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibData]
+==== BibDataExtensionType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibDataExtensionType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, BibDataExtensionType]
+=== StandardDocument Elements
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StandardBibData]
+==== StandardBibData
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StandardBibData, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StandardBibDataExtensionType]
+==== StandardBibDataExtensionType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StandardBibDataExtensionType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StructuredIdentifierType]
+==== StructuredIdentifierType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, StructuredIdentifierType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, EditorialGroupType]
+==== EditorialGroupType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, EditorialGroupType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, TechnicalCommitteeType]
+==== TechnicalCommitteeType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, TechnicalCommitteeType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, IcsType]
+==== IcsType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Metadata.lutaml, IcsType, skip]
 

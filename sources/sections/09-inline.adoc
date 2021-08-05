@@ -8,46 +8,79 @@ models from _BasicDocument_.
 Specializations and profiles of the _StandardDocument_ model may
 specialize the modelling of inline elements.
 
-//=== Text elements
+
+lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml[]
+
+=== Inherited from <<basicdocument>>
+
+==== TextElement
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,TextElement, skip]
+
+==== PageBreakElement
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,PageBreakElement, skip]
+
+==== ReferenceElement
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceElement, skip]
+
+==== ReferenceToIdElement
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToIdElement, skip]
+
+==== ReferenceToCitationElement
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToCitationElement, skip]
 
 
-[lutaml_diagram]
-....
-include::../models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml[]
-....
+=== Reference Elements
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToTerm]
+==== ReferenceToTerm
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToTerm, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToTermbase]
+==== ReferenceToTermbase
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,ReferenceToTermbase, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandocReferenceToIdElement]
+==== StandocReferenceToIdElement
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandocReferenceToIdElement, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,XrefCaseType]
+==== XrefCaseType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,XrefCaseType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,PageBreakElement]
+==== StandardPageBreakElement
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandardPageBreakElement, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,StandardPageBreakElement]
+==== OrientationType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,OrientationType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,OrientationType]
+==== Concept
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Concept, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Concept]
+=== Change Tracking Elements
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Add]
+==== Add
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Add, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Del]
+==== Del
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Del, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,FormInput]
+=== Form Elements
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Input]
+==== FormInput
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,FormInput, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,InputType]
+==== Input
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Input, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Label]
+==== InputType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,InputType, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Select]
+==== Label
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Label, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Option]
+==== Select
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Select, skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Textarea]
+==== Option
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Option, skip]
+
+==== Textarea
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Textarea, skip]
 
 
