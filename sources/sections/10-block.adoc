@@ -15,21 +15,6 @@ specialize the modelling of blocks.
 
 lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml[]
 
-==== StandardUnorderedList
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardUnorderedList, skip]
-
-==== UnorderedCheckableListItem
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,UnorderedCheckableListItem, skip]
-
-==== StandardDefinitionList
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinitionList, skip]
-
-==== StandardDefinition
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinition, skip]
-
-==== StandardDefinitionTerm
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardDefinitionTerm, skip]
-
 ==== StandardNoteBlock
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardNoteBlock, skip]
 
@@ -60,6 +45,30 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml[]
 ==== StandardAdmonitionBlock
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardAdmonitionBlock, skip]
 
+=== List Block Elements already defined in <<basicdocument>>
+
+==== General
+
+lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_List.lutaml[]
+
+==== StandardUnorderedList
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,StandardUnorderedList, skip]
+
+==== UnorderedCheckableListItem
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,UnorderedCheckableListItem, skip]
+
+==== StandardDefinitionList
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,StandardDefinitionList, skip]
+
+==== StandardDefinition
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,StandardDefinition, skip]
+
+==== StandardDefinitionTerm
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,StandardDefinitionTerm, skip]
+
+
+
+
 === Block Elements specific to StandardDocument
 
 ==== General
@@ -82,6 +91,9 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Blocks_New.luta
 
 ==== ElementName
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,ElementName, skip]
+
+==== ToC
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,ToC, skip]
 
 === Image Map Elements
 

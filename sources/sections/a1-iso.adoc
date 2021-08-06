@@ -18,6 +18,7 @@ International Workshop Agreements, Amendments and Corrigenda.
 [[isodocument]]
 === Document and section specialization
 
+==== General
 The _IsoStandardDocument_ model extends the _StandardDocument_
 modelling of the document by requiring the following specific types
 of section:
@@ -54,39 +55,51 @@ extensions to the <<relaton>> metadata about a document
 
 lutaml_diagram::models/metanorma-model-iso/views/IsoStandardDocument.lutaml[]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoStandardDocument]
+==== IsoStandardDocument
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoStandardDocument,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAmendmentDocument]
+==== IsoAmendmentDocument
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAmendmentDocument,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoSections]
+==== IsoSections
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoSections,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoPreface]
+==== IsoPreface
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoPreface,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAnnexSection]
+==== IsoAnnexSection
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAnnexSection,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAmendmentClause]
+==== IsoAmendmentClause
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoStandardDocument.lutaml,IsoAmendmentClause,skip]
 
 
 [[isoblock]]
 === Block specialization
 
+==== General
 The _IsoStandardDocument_ model extends the _StandardDocument_
 modelling of blocks for one block definition.
 
 lutaml_diagram::models/metanorma-model-iso/views/IsoBlocks.lutaml[]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoAdmonitionBlock]
+==== IsoAdmonitionBlock
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoAdmonitionBlock,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoAdmonitionType]
+==== IsoAdmonitionType
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoAdmonitionType,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoTermCollection]
+==== IsoTermCollection
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoTermCollection,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoTerm]
+==== IsoTerm
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBlocks.lutaml,IsoTerm,skip]
 
 
 [[isobib]]
 === Document metadata specialization
 
+==== General
 The `IsoBibliographicItem` model customizes parts
 of `BibliographicItem` to fully cover representations
 of ISO standardization deliverables' metadata.
@@ -148,26 +161,37 @@ multi-document description).
 
 lutaml_diagram::models/metanorma-model-iso/views/IsoBibliographicItem.lutaml[]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoBibliographicItem]
+==== IsoBibliographicItem
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoBibliographicItem,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentId]
+==== IsoDocumentId
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentId,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoLocalizedTitle]
+==== IsoLocalizedTitle
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoLocalizedTitle,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentStatus]
+==== IsoDocumentStatus
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentStatus,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoProjectGroup]
+==== IsoProjectGroup
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoProjectGroup,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoSubGroup]
+==== IsoSubGroup
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoSubGroup,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentType]
+==== IsoDocumentType
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentType,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IecDocumentCategory]
+==== IecDocumentCategory
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IecDocumentCategory,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentStageCodes]
+==== IsoDocumentStageCodes
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentStageCodes,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentSubstageCodes]
+==== IsoDocumentSubstageCodes
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoDocumentSubstageCodes,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoBibDataExtensionType]
+==== IsoBibDataExtensionType
+[lutaml_uml_attributes_table,models/metanorma-model-iso/views/IsoBibliographicItem.lutaml,IsoBibDataExtensionType,skip]
 
 

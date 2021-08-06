@@ -62,25 +62,27 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml[]
 
 === Form Elements
 
+==== General
+lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Form.lutaml[]
 ==== FormInput
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,FormInput, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Form.lutaml,FormInput, skip]
 
 ==== Input
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Input, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Form.lutaml,Input, skip]
 
 ==== InputType
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,InputType, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Form.lutaml,InputType, skip]
 
 ==== Label
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Label, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Form.lutaml,Label, skip]
 
 ==== Select
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Select, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Form.lutaml,Select, skip]
 
 ==== Option
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Option, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Form.lutaml,Option, skip]
 
 ==== Textarea
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Inline.lutaml,Textarea, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Form.lutaml,Textarea, skip]
 
 
