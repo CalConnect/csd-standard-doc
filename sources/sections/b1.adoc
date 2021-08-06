@@ -10,14 +10,26 @@ ISO 10241-1 and ISO 704.
 
 === Concept
 
+==== General
 lutaml_diagram::models/concept-model/views/Concepts.lutaml[]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Concept]
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Designation]
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,DetailedDefinition]
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,NonVerbRep]
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConcept]
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConceptType]
+==== Concept
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Concept,skip]
+
+==== Designation
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,Designation,skip]
+
+==== DetailedDefinition
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,DetailedDefinition,skip]
+
+==== NonVerbRep
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,NonVerbRep,skip]
+
+==== RelatedConcept
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConcept,skip]
+
+==== RelatedConceptType
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,RelatedConceptType,skip]
 
 //[xdatamodel_attributes_table,./models/concept-model/datamodel/models/Concept.yml]
 
@@ -32,59 +44,84 @@ lutaml_diagram::models/concept-model/views/Concepts.lutaml[]
 
 === Concept sources
 
+==== General
 lutaml_diagram::models/concept-model/views/ConceptSource.lutaml[]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSource]
+==== ConceptSource
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSource,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSourceStatus]
+==== ConceptSourceStatus
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSourceStatus,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSourceType]
+==== ConceptSourceType
+[lutaml_uml_attributes_table,models/concept-model/views/Concepts.lutaml,ConceptSourceType,skip]
 
 
 === Designation
 
+==== General
 lutaml_diagram::models/concept-model/views/Designations.lutaml[]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,Designation]
+==== Designation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,Designation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,NormativeStatus]
+==== NormativeStatus
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,NormativeStatus,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,ExpressionDesignation]
+==== ExpressionDesignation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,ExpressionDesignation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarInfo]
+==== GrammarInfo
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarInfo,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,SymbolDesignation]
+==== SymbolDesignation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,SymbolDesignation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,PrefixDesignation]
+==== PrefixDesignation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,PrefixDesignation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,SuffixDesignation]
+==== SuffixDesignation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,SuffixDesignation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,AbbreviationDesignation]
+==== AbbreviationDesignation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,AbbreviationDesignation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,AbbreviationType]
+==== AbbreviationType
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,AbbreviationType,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,LetterSymbolDesignation]
+==== LetterSymbolDesignation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,LetterSymbolDesignation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GraphicalSymbolDesignation]
+==== GraphicalSymbolDesignation
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GraphicalSymbolDesignation,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,DesignationGender]
+==== DesignationGender
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,DesignationGender,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarGender]
+==== GrammarGender
+[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarGender,skip]
 
 
 === Managed concepts and collection
 
+==== General
 lutaml_diagram::models/concept-model/views/ManagedConcepts.lutaml[]
 
-[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ManagedConcept]
+==== ManagedConcept
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ManagedConcept,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptStatus]
+==== ConceptStatus
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptStatus,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,LocalizedConcept]
+==== LocalizedConcept
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,LocalizedConcept,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptDate]
+==== ConceptDate
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptDate,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptDateType]
+==== ConceptDateType
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,ConceptDateType,skip]
 
-[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,RelatedConceptType]
+==== RelatedConceptType
+[lutaml_uml_attributes_table,models/concept-model/views/ManagedConcepts.lutaml,RelatedConceptType,skip]
 

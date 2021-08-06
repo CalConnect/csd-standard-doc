@@ -18,9 +18,9 @@
 :draft:
 :docfile: cc-36100.adoc
 :mn-document-class: csd
-:mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
+:mn-output-extensions: xml,html,pdf,rxl
 
 include::sections-cc/00-foreword.adoc[]
 

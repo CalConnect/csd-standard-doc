@@ -52,6 +52,7 @@ as with `code` in HTML, and should be rendered in monospace.
 
 === Document metadata specialization
 
+==== General
 ////
 The provisions which apply to ISO bibliographic entries (<<isobib>>)
 also apply here.
@@ -83,15 +84,21 @@ Committee has a type of either _Technical_ or _Provisional_.
 
 lutaml_diagram::models/metanorma-model-cc/views/CcMetadata.lutaml[]
 
-[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcBibliographicItem]
+==== CcBibliographicItem
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcBibliographicItem,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcTechnicalCommittee]
+==== CcTechnicalCommittee
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcTechnicalCommittee,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcDocumentStatus]
+==== CcDocumentStatus
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcDocumentStatus,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcStatusType]
+==== CcStatusType
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcStatusType,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcDocumentType]
+==== CcDocumentType
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcDocumentType,skip]
 
-[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcTechnicalCommitteeType]
+==== CcTechnicalCommitteeType
+[lutaml_uml_attributes_table,models/metanorma-model-cc/views/CcMetadata.lutaml,CcTechnicalCommitteeType,skip]
 
