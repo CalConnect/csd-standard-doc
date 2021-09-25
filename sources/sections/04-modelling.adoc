@@ -27,8 +27,9 @@ document itself.
 for a document.
 
 In this document, the  _BasicDocument_ document model from
-<<basicdocument>> is used as an exemplary document model,
-the _BibliographicItem_ and its related data models from
+<<basicdocument>> is used as an exemplary document model.
+The _BibliographicItem_ object and its related data objects in
+the _Relaton_ bibliographic data model from
 <<relaton>> are used for representing bibliographic and
 citation models.
 
@@ -86,7 +87,8 @@ For example, if a standardization document needs to adhere to the
 citation guidelines of <<iso690>>, data models that facilitate these
 rules such as <<relaton>> should be used.
 
-The `BibliographicItem`, `Citation` and related models from <<relaton>> are
+The `BibliographicItem`, `Citation` and related objects from the _Relaton_
+bibliographic data model, <<relaton>> are
 used in the reference metamodel for its expression of bibliographic
 references and citations.
 

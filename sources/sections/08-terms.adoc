@@ -29,7 +29,7 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
 //....
 
 ==== DefinitionSection
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,DefinitionSection, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,DefinitionSection, skip]
 
 ==== DefinitionCollection
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,DefinitionCollection, skip]
@@ -41,7 +41,7 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
 === Term sections
 
 ==== TermsSection
-[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,TermsSection, skip]
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermsSection, skip]
 
 ==== TermCollection
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermCollection, skip]

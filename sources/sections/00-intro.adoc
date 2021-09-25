@@ -134,14 +134,14 @@ to reflect the needs and expressiveness of existing
 standardization processes, requirements and outputs
 of the following standardization bodies:
 
-* ISO and IEC (<<isoiecdir1>>, <<isoiecdir2>>)
-* ITU (TTP, ATP)
+* International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC) (<<isoiecdir1>>, <<isoiecdir2>>)
+* International Telecommunication Union (ITU) (TTP, ATP)
 * CalConnect (<<CC10001>>, <<CC10002>>)
-* IETF (<<RFC7749>>, <<RFC7991>>)
-* OGC (<<OGC-05-020r26>>)
-* NIST Special Publications
-* BIPM
-* IHO
+* Internet Engineering Task Force (IETF) (<<RFC7749>>, <<RFC7991>>)
+* Open Geospatial Consortium (OGC) (<<OGC-05-020r26>>)
+* National Institute of Standards and Technology (NIST) Special Publications
+* International Bureau of Weights and Measures (BIPM)
+* International Hydrographic Organization (IHO)
 // * China standards (national, local, industry, social group) (<<gbt11>>)
 
 In many cases, the document model also enables alignment
