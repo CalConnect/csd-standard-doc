@@ -95,9 +95,6 @@ lutaml_diagram::models/concept-model/views/Designations.lutaml[]
 ==== GraphicalSymbolDesignation
 [lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GraphicalSymbolDesignation,skip]
 
-==== DesignationGender
-[lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,DesignationGender,skip]
-
 ==== GrammarGender
 [lutaml_uml_attributes_table,models/concept-model/views/Designations.lutaml,GrammarGender,skip]
 
