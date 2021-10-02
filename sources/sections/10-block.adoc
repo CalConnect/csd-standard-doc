@@ -15,6 +15,15 @@ specialize the modelling of blocks.
 
 lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml[]
 
+==== StandardBlockNoNotes
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardBlockNoNotes, skip]
+
+==== MultilingualRenderingType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,MultilingualRenderingType, skip]
+
+==== StandardBlock
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardBlock, skip]
+
 ==== StandardNoteBlock
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks.lutaml,StandardNoteBlock, skip]
 
@@ -53,6 +62,9 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_List.lutaml[]
 
 ==== StandardUnorderedList
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,StandardUnorderedList, skip]
+
+==== StandardOrderedList
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,StandardOrderedList, skip]
 
 ==== UnorderedCheckableListItem
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_List.lutaml,UnorderedCheckableListItem, skip]
