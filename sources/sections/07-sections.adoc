@@ -12,7 +12,7 @@ of contents.
 === Structure
 
 The _StandardDocument_ model specializes the
-`BasicSection` class of the _BasicDocument_ model by as
+`BasicSection` class of the _BasicDocument_ model as
 follows:
 
 * All sections in a _StandardDocument_ model are instances of the
@@ -157,6 +157,9 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml
 
 ==== NormativeType
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,NormativeType, skip]
+
+==== FloatingTitle
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml,FloatingTitle, skip]
 
 === StandardDocument Elements, Prefatory
 

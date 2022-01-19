@@ -107,6 +107,9 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Blocks_New.luta
 ==== ToC
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,ToC, skip]
 
+==== Passthrough
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Blocks_New.lutaml,Passthrough, skip]
+
 === Image Map Elements
 
 ==== SvgMapBlock

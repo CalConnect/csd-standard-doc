@@ -12,6 +12,6 @@
 
 * [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
 
-* [[[isoguide2,ISO/IEC Guide 2]]], _ISO/IEC Guide 2: Standardization and related activities -- General vocabulary_
+* [[[isoguide2,ISO/IEC Guide 2:2004]]], _ISO/IEC Guide 2: Standardization and related activities -- General vocabulary_
 
 * [[[RFC3986,IETF RFC 3986]]], _Uniform Resource Identifier (URI): Generic Syntax_

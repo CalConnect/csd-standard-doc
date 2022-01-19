@@ -10,6 +10,10 @@
 
 * [[[iso5127,ISO 5127:2017]]], _Information and documentation -- Foundation and vocabulary_
 
+* [[[iso10241-1,ISO 10241-1]]]
+
+* [[[iso704,ISO 704]]]
+
 // Later, change CC 6900 and 36010 into ISO standards
 
 * [[[relaton,CC 6900]]] footnote:[In draft], _CalConnect Standard 6900: Information and documentation -- Bibliographic reference model and serialization_

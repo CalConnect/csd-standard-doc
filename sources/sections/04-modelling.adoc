@@ -88,7 +88,7 @@ citation guidelines of <<iso690>>, data models that facilitate these
 rules such as <<relaton>> should be used.
 
 The `BibliographicItem`, `Citation` and related objects from the _Relaton_
-bibliographic data model, <<relaton>> are
+bibliographic data model, <<relaton>>, are
 used in the reference metamodel for its expression of bibliographic
 references and citations.
 

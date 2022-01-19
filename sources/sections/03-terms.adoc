@@ -117,7 +117,7 @@ hierarchical subdivision of a document, consisting of one or more term:[block,bl
 
 === identifier
 
-a character, or group of characters, used to identify or name an item of data and possibly to indicate certain properties of that item
+character, or group of characters, used to identify or name an item of data and possibly to indicate certain properties of that item
 
 [.source]
 <<IEV,clause="714-21-07">>

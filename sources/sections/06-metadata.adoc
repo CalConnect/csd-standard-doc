@@ -32,7 +32,7 @@ are often highly specific to a standardization body.
 Therefore, based on `BibliographicItem`, `StandardBibliographicItem`
 implements the following extension points:
 
-* the document type (already provided in the _BasicDocument_ model),
+* the document type (already provided in the _BasicDocument_ model):
 it is assumed that particular specializations of the document metamodel
 will substitute their own enumerations of particular subclasses of
 document, which will be more granular;

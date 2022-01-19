@@ -6,7 +6,8 @@
 
 Standardization documents are used to convey normative information;
 to achieve so it is imperative to provide a standardized set of
-terms and definitions.
+terms and definitions. The model given here is compliant with
+<<iso10241-1>> and <<iso704>>.
 
 === General
 
@@ -50,17 +51,50 @@ lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml[]
 ==== Term
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Term, skip]
 
+==== Designation
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,Designation, skip]
+
+==== LetterSymbolDesignation
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,LetterSymbolDesignation, skip]
+
+==== ExpressionDesignation
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,ExpressionDesignation, skip]
+
+==== ExpressionType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,ExpressionType, skip]
+
+==== AbbreviationType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,AbbreviationType, skip]
+
+==== GrammarInfo
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,GrammarInfo, skip]
+
+==== GrammarGender
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,GrammarGender, skip]
+
 ==== RelatedTerm
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTerm, skip]
 
 ==== RelatedTermType
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,RelatedTermType, skip]
 
+==== TermDefinition
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermDefinition, skip]
+
+==== VerbalExpression
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,VerbalExpression, skip]
+
+==== NonVerbalRepresentation
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,NonVerbalRepresentation, skip]
+
 ==== TermSource
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSource, skip]
 
 ==== TermSourceStatus
 [lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSourceStatus, skip]
+
+==== TermSourceType
+[lutaml_uml_attributes_table,models/metanorma-model-standoc/views/StandardDoc_Terms.lutaml,TermSourceType, skip]
 
 
 
