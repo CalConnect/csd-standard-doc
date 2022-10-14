@@ -1,5 +1,4 @@
 [[introduction]]
-:sectnums!:
 == Introduction
 
 === General
@@ -57,7 +56,7 @@ requires replicating a significant amount of work.
 The _StandardDocument_ document metamodel aims to treat a
 standardization document as a set of standardized data structures,
 used to enable an end-to-end standardization document production
-process.  This process is 
+process.  This process is
 designed to focus on semantics and encompasses core similarities
 between standardization documents of different
 standardization bodies.
@@ -119,7 +118,7 @@ generating tables of contents.
 That
 means that a Metanorma-based process can provide substantial
 feedback to authors on the extent to which they comply with the
-rules expressed in specifications like <<isoiecdir2>> -- including
+rules expressed in specifications like <<ISOIECDIR2>> -- including
 rules around wording (e.g. where requirements can occur), as well
 as document structure.
 
@@ -134,23 +133,28 @@ to reflect the needs and expressiveness of existing
 standardization processes, requirements and outputs
 of the following standardization bodies:
 
-* International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC) (<<isoiecdir1>>, <<isoiecdir2>>)
-* International Telecommunication Union (ITU) (TTP, ATP)
+* ISO and IEC (<<ISOIECDIR1>>, <<ISOIECDIR2>>)
+* ITU (TTP, ATP)
 * CalConnect (<<CC10001>>, <<CC10002>>)
-* Internet Engineering Task Force (IETF) (<<RFC7749>>, <<RFC7991>>)
-* Open Geospatial Consortium (OGC) (<<OGC-05-020r26>>)
-* National Institute of Standards and Technology (NIST) Special Publications
-* International Bureau of Weights and Measures (BIPM)
-* International Hydrographic Organization (IHO)
+* IETF (<<RFC7991>>)
+* OGC (<<OGC-05-020r26>>)
+* NIST Special Publications
+* BIPM
+* IHO
+
 // * China standards (national, local, industry, social group) (<<gbt11>>)
 
-In many cases, the document model also enables alignment
-with capabilities of existing document production tools.
-The document metamodel has already been adopted by a number
-of standardization bodies listed above.
+In many cases, the document model also enables alignment with capabilities of
+existing document production tools.
+
+The document metamodel has already been adopted by a number of standardization
+bodies listed above.
 
 === Conventions
 
-In this document, italics is used to name document models, such as _StandardDocument_.
-Monospace is used to refer to elements of document models, such as `InlineElement`.
+In this document, italics is used to name document models, such as
+_StandardDocument_.
+
+Monospace is used to refer to elements of document models, such as
+_InlineElement_.
 

@@ -7,7 +7,7 @@
 Standardization documents are used to convey normative information;
 to achieve so it is imperative to provide a standardized set of
 terms and definitions. The model given here is compliant with
-<<iso10241-1>> and <<iso704>>.
+<<ISO10241-1>> and <<ISO704>>.
 
 === General
 

@@ -9,7 +9,7 @@ responsible for standards and regulations: legal or administrative entity that h
 NOTE: Examples of bodies are organizations, authorities, companies and foundations.
 
 [.source]
-<<isoguide2,4.1>>
+<<ISOguide2,4.1>>
 ////
 
 === standardizing body
@@ -17,7 +17,7 @@ NOTE: Examples of bodies are organizations, authorities, companies and foundatio
 body that has recognized activities in standardization
 
 [.source]
-<<isoguide2,clause=4.3>>
+<<ISOguide2,clause=4.3>>
 
 
 [[term-document]]
@@ -26,7 +26,7 @@ body that has recognized activities in standardization
 medium with information recorded on or in it
 
 [.source]
-<<isoguide2,clause=3.1 NOTE 2>>
+<<ISOguide2,clause=3.1 NOTE 2>>
 
 
 [[term-standardization-document]]
@@ -34,15 +34,14 @@ medium with information recorded on or in it
 
 //[alt]#standard#
 
-document that provides rules, guidelines or characteristics
-for activities or their results
+document that provides rules, guidelines or characteristics for activities or
+their results
 
-NOTE: Documents such as standards, technical specifications,
-codes of practice and regulations are considered part of
-this term.
+NOTE: Documents such as standards, technical specifications, codes of practice
+and regulations are considered part of this term.
 
-NOTE: This terms closely corresponds to "`normative document`"
-defined in <<isoguide2,clause=3.1>>.
+NOTE: This terms closely corresponds to "`normative document`" defined in
+<<ISOguide2,clause=3.1>>.
 
 ////
 model
@@ -77,16 +76,19 @@ structure containing a description of an entity in terms of its components
 
 === subclass
 
-term:[class] which inherits from another class its component descriptions, and optionally adds to them its own component descriptions
+term:[class] which inherits from another class its component descriptions, and
+optionally adds to them its own component descriptions
 
 === document metamodel
 
-formal specification of the structure of a document model in terms of its components and their arrangement, expressed through term:[class,classes]
+formal specification of the structure of a document model in terms of its
+components and their arrangement, expressed through term:[class,classes]
 
 
 === document model
 
-formal specification of the structure of a document in terms of its components and their arrangement, expressed through term:[class,classes]
+formal specification of the structure of a document in terms of its components
+and their arrangement, expressed through term:[class,classes]
 
 
 === standards model
@@ -97,10 +99,12 @@ term:[standardization document,standardization documents]
 
 === paragraph
 
-subdivision of running text, normally run on throughout, that is separated from text before and after by a change of line and stands below any chapters or term:[section,sections]
+subdivision of running text, normally run on throughout, that is separated from
+text before and after by a change of line and stands below any chapters or
+term:[section,sections]
 
 [.source]
-<<iso5127,clause 3.5.8.07>>
+<<ISO5127,clause 3.5.8.07>>
 
 === block
 
@@ -108,20 +112,24 @@ grouping of text at the term:[paragraph] level
 
 === inline element
 
-grouping of text that can be contained within a term:[paragraph], including plain strings
+grouping of text that can be contained within a term:[paragraph], including
+plain strings
 
 
 === section
 
-hierarchical subdivision of a document, consisting of one or more term:[block,blocks], and/or one or more sections
+hierarchical subdivision of a document, consisting of one or more
+term:[block,blocks], and/or one or more sections
 
 === identifier
 
-character, or group of characters, used to identify or name an item of data and possibly to indicate certain properties of that item
+a character, or group of characters, used to identify or name an item of data
+and possibly to indicate certain properties of that item
 
 [.source]
 <<IEV,clause="714-21-07">>
 
 === term
 
-expression with a particular meaning that is part of the specialized vocabulary of a field
+expression with a particular meaning that is part of the specialized vocabulary
+of a field

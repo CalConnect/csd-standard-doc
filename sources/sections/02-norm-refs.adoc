@@ -2,16 +2,18 @@
 [bibliography]
 == Normative References
 
-* [[[iso639,ISO 639 (all parts)]]], _Codes for the representation of names of languages_
+* [[[ISO639,ISO 639 (all parts)]]], _Codes for the representation of names of languages_
 
-* [[[iso8601,ISO 8601-1]]], _Date and time -- Representation for information interchange -- Part 1: Basic rules_
+* [[[ISO690,ISO 690]]]
 
-* [[[iso10118,ISO/IEC 10118 (all parts)]]], _Information technology -- Security techniques -- Hash-functions_
+* [[[ISO8601,ISO 8601 (all parts)]]]
 
-* [[[iso14888,ISO/IEC 14888 (all parts)]]], _Information technology -- Security techniques -- Digital signatures with appendix_
+* [[[ISO10118,ISO/IEC 10118 (all parts)]]]
 
-* [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
+* [[[ISO14888,ISO/IEC 14888 (all parts)]]]
 
-* [[[isoguide2,ISO/IEC Guide 2:2004]]], _ISO/IEC Guide 2: Standardization and related activities -- General vocabulary_
+* [[[ISO15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
+
+* [[[ISOguide2,ISO/IEC Guide 2]]], _ISO/IEC Guide 2: Standardization and related activities -- General vocabulary_
 
 * [[[RFC3986,IETF RFC 3986]]], _Uniform Resource Identifier (URI): Generic Syntax_

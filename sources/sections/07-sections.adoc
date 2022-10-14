@@ -25,7 +25,7 @@ document is pertinent.
 
 ====
 The necessity of indicating normative or informative `status`
-is specified in <<isoiecdir2>> for ISO deliverables.
+is specified in <<ISOIECDIR2>> for ISO deliverables.
 ====
 
 There are two major types of sections, namely, clause sections and
@@ -119,10 +119,10 @@ to be avoided. In particular, its sections should
 contain either blocks or subsections, but not both.
 
 NOTE: The avoidance of "hanging paragraphs" is also a requirement in
-<<isoiecdir2>>.
+<<ISOIECDIR2>>.
 
 While this behavior is less pressing for Content sections (which are
-unnumbered), and Annexes (as exemplified in <<isoiecdir2>>), it is
+unnumbered), and Annexes (as exemplified in <<ISOIECDIR2>>), it is
 nonetheless not recommended.
 
 lutaml_diagram::models/metanorma-model-standoc/views/StandardDoc_Sections.lutaml[]

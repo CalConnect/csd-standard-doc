@@ -7,7 +7,7 @@
 
 This profile provides the specialization of the
 _StandardDocument_ document metamodel for ISO standardization deliverables
-described in <<isoiecdir2>>.
+described in <<ISOIECDIR2>>.
 
 The _IsoStandardDocument_ model fully covers all ISO
 standardization deliverables, including International Standards,
@@ -36,9 +36,9 @@ Annexes in the _IsoStandardDocument_ can optionally contain one or
 more _Appendixes_, which can be thought of as annexes of the annex
 section.
 
-NOTE: Appendixes are not defined in <<isoiecdir2>>, but they appear
-in the companion standard <<isoiecdir1>>. For example, Annex SL of
-<<isoiecdir1>> includes Appendix 1, Appendix 2, and Appendix 3;
+NOTE: Appendixes are not defined in <<ISOIECDIR2>>, but they appear
+in the companion standard <<ISOIECDIR1>>. For example, Annex SL of
+<<ISOIECDIR1>> includes Appendix 1, Appendix 2, and Appendix 3;
 Appendix 2 "High level structure, identical core text, common terms
 and core definitions" itself contains an Introduction and 10
 clauses, including a Terms clause.
@@ -133,8 +133,8 @@ parts:
 
 * The document status is broken down into:
 
-** an ISO Document Stage code (<<isostage>>),
-** an ISO Document Substage code (<<isostage>>), and
+** an ISO Document Stage code (<<ISOSTAGE>>),
+** an ISO Document Substage code (<<ISOSTAGE>>), and
 ** an Iteration number.
 
 * The editorial group responsible for the document is defined with
