@@ -133,8 +133,8 @@ parts:
 
 * The document status is broken down into:
 
-** an ISO Document Stage code (<<ISOSTAGE>>),
-** an ISO Document Substage code (<<ISOSTAGE>>), and
+** an ISO Document Stage code (<<ISOSTAGES>>),
+** an ISO Document Substage code (<<ISOSTAGES>>), and
 ** an Iteration number.
 
 * The editorial group responsible for the document is defined with

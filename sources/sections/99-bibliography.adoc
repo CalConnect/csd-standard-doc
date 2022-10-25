@@ -6,8 +6,6 @@
 
 * [[[ISOIECDIR2,ISO/IEC DIR 2 ISO]]], _Principles and rules for the structure and drafting of ISO and IEC documents_
 
-* [[[ISO690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
-
 * [[[ISO5127,ISO 5127]]], _Information and documentation -- Foundation and vocabulary_
 
 * [[[relaton,CC 6900]]] footnote:[In draft], _CalConnect Standard 6900: Information and documentation -- Bibliographic reference model and serialization_
